@@ -1,0 +1,59 @@
+{
+  "name": "Forest",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-sands",
+  "order": 240,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế thư giãn",
+    "en": "Lounge chair"
+  },
+  "summary": {
+    "vi": "",
+    "en": ""
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/forest-chair/hero.jpg",
+  "heroStyle": "photo",
+  "cardImage": "/images/products/forest-chair/room-01.jpg",
+  "heroAlt": {
+    "vi": "Forest, toàn bộ sản phẩm",
+    "en": "Forest, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/forest-chair/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Forest trong không gian kiến trúc",
+        "en": "Forest in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 870,
+    "depth": 770,
+    "height": 910,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

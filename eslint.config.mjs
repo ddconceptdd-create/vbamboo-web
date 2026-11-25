@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // One-off build scripts (brand tracing, catalogue import)
+    "scripts/**",
   ]),
 ]);
 

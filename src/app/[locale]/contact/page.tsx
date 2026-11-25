@@ -16,6 +16,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     slug: p.slug,
     name: productName(p, locale),
     image: p.heroImage,
+    cutout: p.heroStyle !== 'photo',
     collection: collections.find((c) => c.slug === p.collection)?.name ?? null,
     finishes: p.frameFinishes.map((f) => ({ key: f.key, name: t(f.name, locale) })),
     fabrics: p.upholstery.map((f) => ({ key: f.key, name: t(f.name, locale) })),

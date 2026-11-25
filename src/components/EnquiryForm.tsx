@@ -9,6 +9,7 @@ export type FormProduct = {
   slug: string;
   name: string;
   image: string | null;
+  cutout?: boolean;
   collection: string | null;
   finishes: { key: string; name: string }[];
   fabrics: { key: string; name: string }[];
@@ -164,7 +165,7 @@ function EnquiryFormInner({
       {showProduct && (
         <div className="enquiry__product">
           {current?.image && (
-            <div className="enquiry__thumb media">
+            <div className={`enquiry__thumb media${current.cutout ? ' media--contain media--silhouette' : ''}`}>
               <Image src={current.image} alt="" fill sizes="160px" unoptimized={current.image.endsWith('.svg')} />
             </div>
           )}

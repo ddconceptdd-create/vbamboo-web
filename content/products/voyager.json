@@ -1,0 +1,50 @@
+{
+  "name": "Voyager",
+  "nameVi": "",
+  "sample": true,
+  "category": "ottomans",
+  "collection": "the-nobility",
+  "order": 90,
+  "featured": false,
+  "typeLabel": {
+    "vi": "",
+    "en": ""
+  },
+  "summary": {
+    "vi": "",
+    "en": ""
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/voyager/silhouette.jpg",
+  "heroStyle": "cutout",
+  "cardImage": null,
+  "heroAlt": {
+    "vi": "Voyager, toàn bộ sản phẩm",
+    "en": "Voyager, full view"
+  },
+  "gallery": [],
+  "dimensions": {
+    "width": 430,
+    "depth": 430,
+    "height": 410,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

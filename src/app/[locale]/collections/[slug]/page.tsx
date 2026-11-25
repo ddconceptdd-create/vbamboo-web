@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Media from '@/components/Media';
@@ -44,7 +45,14 @@ export default async function CollectionPage({ params }: { params: Promise<{ loc
             <p className="collection-title__tagline" data-reveal>{t(c.tagline, locale)}</p>
             {!IS_PRODUCTION && c.sample && <span className="badge-sample" style={{ color: 'var(--gold)' }}>{d.common.sample}</span>}
           </div>
-          <p className="collection-title__intro" data-reveal style={{ '--d': '150ms' } as React.CSSProperties}>{t(c.intro, locale)}</p>
+          <div className="collection-title__side">
+            {c.sketch && (
+              <div className="collection-title__sketch" aria-hidden="true" data-reveal="fade">
+                <Image src={c.sketch} alt="" fill sizes="(min-width: 960px) 40vw, 80vw" />
+              </div>
+            )}
+            <p className="collection-title__intro" data-reveal style={{ '--d': '150ms' } as React.CSSProperties}>{t(c.intro, locale)}</p>
+          </div>
         </div>
       </section>
 
@@ -59,7 +67,11 @@ export default async function CollectionPage({ params }: { params: Promise<{ loc
                 </figure>
               ))}
             </div>
-            {t(c.story, locale) && <p className="lead textures__story" data-reveal>{t(c.story, locale)}</p>}
+            {t(c.story, locale) && (
+              <blockquote className="textures__story" data-reveal>
+                <p>{t(c.story, locale)}</p>
+              </blockquote>
+            )}
           </div>
         </section>
       )}
@@ -87,7 +99,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ loc
                     <span className="piece__num">{String(i + 1).padStart(2, '0')}</span>
                     <div>
                       <h3 className="piece__name">{productName(p, locale)}</h3>
-                      <p className="piece__type">{categoryLabel(p.category, locale, true)}</p>
+                      <p className="piece__type">{t(p.typeLabel, locale) || categoryLabel(p.category, locale, true)}</p>
                     </div>
                     <span className="link-line piece__cta">{d.common.viewProduct} <span className="arrow" aria-hidden="true">→</span></span>
                   </div>

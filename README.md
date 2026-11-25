@@ -29,10 +29,11 @@ npm run build && npm start
 
 - **Language switch keeps place**: `/vi/products/sands-sofa?finish=smoked&fabric=clay` ↔ `/en/products/sands-sofa?finish=smoked&fabric=clay`.
 - **Product versions live in the URL** (`?finish=&fabric=`), so a version can be shared, and "Enquire to purchase" carries it into the contact form.
-- **Sample content never reaches production**: every placeholder entry has `sample: true`. On the production deployment (`VERCEL_ENV=production`) sample entries are removed. Preview deployments show them with a "Sample content" badge.
-- **Dimensions are only published when approved**: tick "Dimensions approved for publication" per product. Until then, previews show them marked "Sample figures" and production shows "Dimensions available on request".
+- **Drafts never reach production**: tick "Draft (hidden on the live site)" on any product, collection or store that is incomplete or unconfirmed. On the production deployment (`VERCEL_ENV=production`) drafts are removed; preview deployments show them with a "Draft" badge.
+- **Dimensions are only published when approved**: tick "Dimensions approved for publication" per product. Until then, previews show them marked "not yet confirmed" and production shows "Dimensions available on request".
 - **Prices**: hidden at launch (request a quote). Each product has VND and USD prices plus an "approved" tick; turn on "Show prices publicly" in *Contact details & footer* to show VND on `/vi` and USD on `/en`.
-- **Technical drawings**: upload front/side/plan per product. If none are uploaded, a scaled schematic is drawn from the dimensions.
+- **Product introduction photo**: choose "Cut-out / studio on white" for a clear silhouette (shown whole on an ivory panel; white studio backgrounds melt into it) or "Full photograph". The architectural photo for product cards appears when a visitor hovers over a card.
+- **Technical drawings**: add any number of drawings per product, each with a caption (e.g. Mặt đứng / Front elevation) and a panel colour: ivory for drawings with dark lines, green for drawings with light lines. Visitors can open each drawing full size. If none are uploaded, a scaled schematic is drawn from the dimensions.
 - **Motion**: entrance effects and image cross-fades use only opacity/transform and switch off under "reduce motion". Specification, swatch and drawing sections are intentionally static.
 
 ## Deploy on Vercel
@@ -58,10 +59,26 @@ npm run build && npm start
 
 ### Before connecting the domain
 
-- Replace all sample entries with real ones (or untick "Sample content" once an entry is real).
+- Review the drafts and the items listed under *Content status* below.
 - Approve dimensions per product.
-- Fill in *Contact details & footer* (address, email, phone, social links).
+- Fill in *Contact details & footer* (enquiries email, social links).
 
-## Placeholder imagery
+## Content status (catalogue import, 25 Nov 2026)
 
-`scripts/placeholders/generate.mjs` produced the labelled illustrations in `public/images` and the sample JSON in `content/`. Re-running it overwrites sample content, so don't run it after real content has been entered.
+Content comes from the 2026 catalogue (Canva). English is a draft translation for VBamboo to review.
+
+| Item | State on the live site |
+| --- | --- |
+| Voyager, Oasis Parasol | Drafts: only a small overview photo exists, no product page in the catalogue |
+| Borsani, Baroness, Sandy, Captain | Dimensions hidden: the catalogue gives conflicting figures |
+| Tabouret Table, Nan, Lotus, Forest, XChair, Baroness, Explorer | No product description (missing or copied from another product in the catalogue) |
+| Gentleman seat/back material, Moonlight fibre | Not shown: marked "[xác nhận]" in the catalogue |
+| A-Line Bamboo | Opening photo from the catalogue shows the Kink lamp, so it is left out; the studio shot is only 512 px |
+| Showroom "VBamboo Hồ Chí Minh" | Draft: address from the catalogue, opening hours and photo still needed |
+| Prices, finishes/upholstery options, product sheets, 2D/3D files | Not in the catalogue yet |
+
+Photos are the catalogue exports (mostly 1,376 px wide) and several carry a small sparkle mark in a corner; higher-resolution originals will look sharper on large screens.
+
+## Catalogue import
+
+`scripts/catalogue/import.py` (Python 3 + Pillow) imported the catalogue export: it picks the clearest image per product, removes near-duplicate photos, sets the drawing panel colours and writes everything into `content/` and `public/images/`. Re-running it overwrites the catalogue entries, so don't run it again once the team has edited content in `/keystatic`.

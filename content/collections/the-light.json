@@ -1,0 +1,51 @@
+{
+  "name": "The Light",
+  "sample": false,
+  "order": 5,
+  "tagline": {
+    "vi": "Ánh sáng trong ống tre",
+    "en": "Light held in a bamboo cylinder"
+  },
+  "intro": {
+    "vi": "Hai mẫu đèn bàn kết hợp đầu đèn tre hình trụ với khung kim loại đen mờ. Vân tre ấm làm mềm những đường nét đồ họa, tạo điểm nhấn cho bàn làm việc, bàn đầu giường hay kệ sách.",
+    "en": "Two table lamps pairing a cylindrical bamboo head with a matte black metal frame. Warm bamboo grain softens their graphic lines, accenting a desk, bedside or bookshelf."
+  },
+  "story": {
+    "vi": "Một mắt tre nhô nhẹ dưới lòng bàn tay. Chỉ một chi tiết nhỏ cũng đủ để ta nhận ra vật liệu quen thuộc ấy. Đó là cảm giác VBamboo muốn giữ lại khi tạo dáng cho một chiếc ghế hay một chụp đèn.",
+    "en": "A bamboo node rises gently under the palm. A small detail is enough to recognise that familiar material. That is the feeling VBamboo wants to keep when shaping a chair or a lampshade."
+  },
+  "heroImage": "/images/collections/the-light/hero.jpg",
+  "heroAlt": {
+    "vi": "Không gian mở đầu bộ sưu tập The Light",
+    "en": "Opening view of the The Light collection"
+  },
+  "sketch": "/images/collections/the-light/sketch.webp",
+  "textures": [
+    {
+      "image": "/images/collections/the-light/texture-1.jpg",
+      "caption": {
+        "vi": "Đầu đèn tre hình trụ",
+        "en": "The cylindrical bamboo head"
+      }
+    },
+    {
+      "image": "/images/collections/the-light/texture-2.jpg",
+      "caption": {
+        "vi": "Đế kim loại đen mờ",
+        "en": "Matte black metal base"
+      }
+    },
+    {
+      "image": "/images/collections/the-light/texture-3.jpg",
+      "caption": {
+        "vi": "Khung kim loại gấp khúc",
+        "en": "The folded metal frame"
+      }
+    }
+  ],
+  "settingImage": "/images/collections/the-light/setting.jpg",
+  "settingAlt": {
+    "vi": "Các thiết kế The Light trong không gian",
+    "en": "The Light pieces in their setting"
+  }
+}

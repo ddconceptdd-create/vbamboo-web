@@ -1,0 +1,67 @@
+{
+  "name": "Lotus",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-sands",
+  "order": 230,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế thư giãn",
+    "en": "Lounge chair"
+  },
+  "summary": {
+    "vi": "",
+    "en": ""
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/lotus-chair/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/lotus-chair/hero.jpg",
+  "heroAlt": {
+    "vi": "Lotus, toàn bộ sản phẩm",
+    "en": "Lotus, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/lotus-chair/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Lotus trong không gian kiến trúc",
+        "en": "Lotus in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/lotus-chair/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Lotus trong không gian kiến trúc",
+        "en": "Lotus in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1000,
+    "depth": 1000,
+    "height": 1500,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

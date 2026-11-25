@@ -1,18 +1,10 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import ProductCard from './ProductCard';
+import ProductCard, { type CardProduct } from './ProductCard';
 import { CATEGORIES, getDict, type Locale } from '@/i18n';
 
-type Card = {
-  slug: string;
-  title: string;
-  category: string;
-  collection: string | null;
-  collectionName: string | null;
-  image: string | null;
-  alt: string;
-};
+type Card = CardProduct & { collection: string | null };
 
 /** Browse by furniture type or filter by collection. Filters are kept in the URL. */
 export default function ProductCatalog({

@@ -6,7 +6,7 @@ import '@fontsource/be-vietnam-pro/500.css';
 import '@/styles/globals.css';
 import '@/styles/site.css';
 import { LOCALES, getDict, isLocale, type Locale } from '@/i18n';
-import { getSearchIndex, getSite, IS_PRODUCTION } from '@/lib/content';
+import { getCategoriesInUse, getSearchIndex, getSite, IS_PRODUCTION } from '@/lib/content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RevealObserver from '@/components/RevealObserver';
@@ -48,7 +48,7 @@ export default async function LocaleLayout({
   if (!isLocale(raw)) notFound();
   const locale: Locale = raw;
   const dict = getDict(locale);
-  const [index, site] = await Promise.all([getSearchIndex(locale), getSite()]);
+  const [index, site, categories] = await Promise.all([getSearchIndex(locale), getSite(), getCategoriesInUse()]);
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -62,7 +62,7 @@ export default async function LocaleLayout({
         </a>
         <Header locale={locale} dict={dict.nav} searchDict={dict.search} index={index} />
         <main id="main">{children}</main>
-        <Footer locale={locale} site={site} />
+        <Footer locale={locale} site={site} categories={[...categories]} />
         <RevealObserver />
       </body>
     </html>

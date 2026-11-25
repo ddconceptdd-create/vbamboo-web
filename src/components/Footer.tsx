@@ -4,7 +4,7 @@ import type { getSite } from '@/lib/content';
 
 type Site = Awaited<ReturnType<typeof getSite>>;
 
-export default function Footer({ locale, site }: { locale: Locale; site: Site }) {
+export default function Footer({ locale, site, categories }: { locale: Locale; site: Site; categories: string[] }) {
   const d = getDict(locale);
   const year = new Date().getFullYear();
   return (
@@ -31,7 +31,7 @@ export default function Footer({ locale, site }: { locale: Locale; site: Site })
         <nav className="site-footer__col" aria-label={d.nav.products}>
           <h2 className="eyebrow">{d.nav.products}</h2>
           <ul className="site-footer__cats">
-            {CATEGORIES.map((c) => (
+            {CATEGORIES.filter((c) => categories.includes(c.slug)).map((c) => (
               <li key={c.slug}>
                 <Link href={`/${locale}/products?category=${c.slug}`}>{c[locale]}</Link>
               </li>

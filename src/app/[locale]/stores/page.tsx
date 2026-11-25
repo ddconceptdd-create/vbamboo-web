@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Media from '@/components/Media';
 import BookingForm from '@/components/BookingForm';
 import { getDict, t, type Locale } from '@/i18n';
@@ -22,7 +23,12 @@ export default async function StoresPage({ params }: { params: Promise<{ locale:
         <p className="lead page-head__lead" data-reveal style={{ '--d': '100ms' } as React.CSSProperties}>{ds.lead}</p>
       </header>
       <section className="container stores">
-        {stores.length === 0 && <p className="prose">{ds.empty}</p>}
+        {stores.length === 0 && (
+          <div className="stores__empty" data-reveal>
+            <p className="prose">{ds.empty}</p>
+            <Link href={`/${locale}/contact?type=general`} className="btn btn--ghost">{d.nav.contact}</Link>
+          </div>
+        )}
         {stores.map((s, i) => (
           <article key={s.slug} className="store" data-reveal style={{ '--d': `${(i % 2) * 100}ms` } as React.CSSProperties}>
             <Media src={s.image} alt={s.name} ratio="3 / 2" sizes="(min-width: 960px) 40vw, 100vw" className="store__img" />

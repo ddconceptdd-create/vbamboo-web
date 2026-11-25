@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   if (!p) return {};
   return {
     title: productName(p, locale),
-    description: t(p.summary, locale),
-    openGraph: { images: p.heroImage && !p.heroImage.endsWith('.svg') ? [p.heroImage] : ['/brand/cover.webp'] },
+    description: t(p.summary, locale) || `${t(p.typeLabel, locale)} · VBamboo`,
+    openGraph: { images: [p.cardImage ?? p.heroImage ?? '/brand/cover.webp'] },
     alternates: { languages: { vi: `/vi/products/${slug}`, en: `/en/products/${slug}` } },
   };
 }
@@ -65,6 +65,13 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
   const studio = p.gallery.find((g) => g.kind === 'studio')?.image ?? p.heroImage;
   const related = products.filter((x) => x.collection === p.collection && x.slug !== p.slug).slice(0, 3).map((x) => toCard(x, locale, collections));
   const downloads = p.downloads.filter((x) => x.file);
+  const features = p.features.map((f) => t(f, locale)).filter(Boolean);
+  const materials = p.materials.map((m) => ({ label: t(m.label, locale), value: t(m.value, locale) })).filter((m) => m.value);
+  const swatches = p.materialSwatches.filter((s) => s.image).map((s) => ({ image: s.image as string, name: t(s.name, locale) }));
+  const hasConfigurator = finishes.length > 0 || fabrics.length > 0;
+  const hasSpecs = hasConfigurator || features.length > 0 || materials.length > 0 || swatches.length > 0;
+  const cutout = p.heroStyle !== 'photo';
+  const summary = t(p.summary, locale);
   const defaults = { finish: finishes[0]?.key ?? null, fabric: fabrics[0]?.key ?? null };
 
   return (
@@ -72,7 +79,15 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
       {/* 1 — Introduction */}
       <header className="product-intro">
         <div className="product-intro__media container">
-          <Media src={p.heroImage} alt={t(p.heroAlt, locale) || name} ratio="20 / 13" sizes="(min-width: 1440px) 1328px, 100vw" priority />
+          <Media
+            src={p.heroImage}
+            alt={t(p.heroAlt, locale) || name}
+            ratio={cutout ? '16 / 9' : '20 / 13'}
+            contain={cutout}
+            className={cutout ? 'media--silhouette' : ''}
+            sizes="(min-width: 1440px) 1328px, 100vw"
+            priority
+          />
         </div>
         <div className="container product-intro__text">
           <div data-reveal>
@@ -83,10 +98,10 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
               </Link>
             )}
             <h1 className="product-intro__name">{name}</h1>
-            <p className="product-intro__type">{categoryLabel(p.category, locale, true)}</p>
+            <p className="product-intro__type">{t(p.typeLabel, locale) || categoryLabel(p.category, locale, true)}</p>
           </div>
           <div data-reveal style={{ '--d': '120ms' } as React.CSSProperties}>
-            <p className="lead">{t(p.summary, locale)}</p>
+            {summary && <p className="lead">{summary}</p>}
             {t(p.story, locale) && <p className="prose product-intro__story">{t(p.story, locale)}</p>}
           </div>
         </div>
@@ -106,11 +121,13 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
       )}
 
       {/* 3 — Materials and versions (static, for comparison) */}
+      {hasSpecs && (
       <section className="section product-specs" aria-labelledby="specs-h">
         <div className="container">
           <h2 id="specs-h" className="section-head__title product-section-title">{dp.specs}</h2>
           <div className="specs-grid">
-            {(finishes.length > 0 || fabrics.length > 0) && (
+            <div className="specs-main">
+            {hasConfigurator && (
               <ProductConfigurator
                 productName={name}
                 finishes={finishes}
@@ -120,14 +137,38 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
                 labels={{ finish: dp.finish, upholstery: dp.upholstery, selected: dp.selected, missing: dp.versionPhotoMissing }}
               />
             )}
-            {p.materials.length > 0 && (
+            {features.length > 0 && (
+              <div className="features">
+                <h3 className="eyebrow">{dp.features}</h3>
+                <ul>
+                  {features.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {swatches.length > 0 && (
+              <div className="material-swatches">
+                <h3 className="eyebrow">{dp.swatches}</h3>
+                <ul>
+                  {swatches.map((s, i) => (
+                    <li key={i}>
+                      <Media src={s.image} alt={s.name} ratio="1 / 1" sizes="160px" />
+                      <span>{s.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            </div>
+            {materials.length > 0 && (
               <div className="materials">
                 <h3 className="eyebrow">{dp.materials}</h3>
                 <dl>
-                  {p.materials.map((m, i) => (
-                    <div key={i}>
-                      <dt>{t(m.label, locale)}</dt>
-                      <dd>{t(m.value, locale)}</dd>
+                  {materials.map((m, i) => (
+                    <div key={i} className={m.label ? undefined : 'materials__row--plain'}>
+                      {m.label && <dt>{m.label}</dt>}
+                      <dd>{m.value}</dd>
                     </div>
                   ))}
                 </dl>
@@ -136,6 +177,7 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
           </div>
         </div>
       </section>
+      )}
 
       {/* 4 — Dimensions, drawings and downloads (static) */}
       <section className="section product-tech" aria-labelledby="tech-h">
@@ -185,9 +227,9 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
               </div>
             </div>
             <TechnicalDrawings
-              drawings={p.drawings}
+              drawings={p.drawings.map((x) => ({ image: x.image, caption: t(x.caption, locale), background: x.background }))}
               dims={dims}
-              labels={{ front: dp.front, side: dp.side, plan: dp.plan, schematic: dp.schematic, mm: dp.mm }}
+              labels={{ front: dp.front, side: dp.side, plan: dp.plan, schematic: dp.schematic, mm: dp.mm, open: dp.openDrawing }}
             />
           </div>
         </div>

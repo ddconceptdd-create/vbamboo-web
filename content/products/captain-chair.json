@@ -1,0 +1,127 @@
+{
+  "name": "Captain",
+  "nameVi": "",
+  "sample": false,
+  "category": "chairs",
+  "collection": "the-nobility",
+  "order": 100,
+  "featured": true,
+  "typeLabel": {
+    "vi": "Ghế tựa & đôn gác chân",
+    "en": "Armchair & footstool"
+  },
+  "summary": {
+    "vi": "CAPTAIN gợi tinh thần của chiếc ghế đạo diễn trong một hình thức đương đại. Khung tre nâu trầm tạo nên dáng chân chữ X rõ nét, kết hợp mặt ngồi, lưng tựa và tay vịn bằng da nâu. Những chi tiết kim loại tông đồng nhấn vào các điểm giao của vật liệu, tạo vẻ thanh lịch có phần cổ điển. Đặt riêng hoặc phối cùng đôn gác chân, CAPTAIN mang đến một góc nghỉ ngơi giàu cá tính.",
+    "en": "CAPTAIN brings the spirit of the director’s chair into a contemporary form. A dark brown bamboo frame forms a clear X-leg, paired with a seat, backrest and armrests in brown leather. Bronze-toned metal details mark the points where materials meet, for an elegance with a classic edge. On its own or with its footstool, CAPTAIN makes a characterful corner for rest."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/captain-chair/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/captain-chair/hero.jpg",
+  "heroAlt": {
+    "vi": "Captain, toàn bộ sản phẩm",
+    "en": "Captain, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/captain-chair/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Captain trong không gian kiến trúc",
+        "en": "Captain in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/captain-chair/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Captain trong không gian kiến trúc",
+        "en": "Captain in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/captain-chair/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Captain trong không gian kiến trúc",
+        "en": "Captain in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/captain-chair/detail-01.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Captain",
+        "en": "Captain, detail"
+      }
+    },
+    {
+      "image": "/images/products/captain-chair/detail-02.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Captain",
+        "en": "Captain, detail"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 580,
+    "depth": 530,
+    "height": 930,
+    "seatHeight": null,
+    "approved": false
+  },
+  "features": [
+    {
+      "vi": "Phom ghế đạo diễn với lưng tựa cao, tay vịn da và chân tre giao chéo. Đôn gác chân tiếp nối cùng ngôn ngữ vật liệu, tạo thành một bộ đôi đồng nhất.",
+      "en": "Director’s-chair form with a high back, leather armrests and crossed bamboo legs. The footstool continues the same material language, forming a matching pair."
+    }
+  ],
+  "materials": [
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Tre nâu trầm",
+        "en": "Dark brown bamboo"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Da nâu cognac",
+        "en": "Cognac leather"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Chi tiết kim loại tông đồng",
+        "en": "Bronze-toned metal details"
+      }
+    }
+  ],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

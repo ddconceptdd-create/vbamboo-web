@@ -1,51 +1,51 @@
 {
-  "heroCollection": "the-sands",
-  "heroImage": "/images/pages/home-hero.svg",
-  "heroImageMobile": "/images/pages/home-hero-mobile.svg",
+  "heroCollection": "the-nobility",
+  "heroImage": "/images/pages/home-hero.jpg",
+  "heroImageMobile": "/images/pages/home-hero-mobile.jpg",
   "heroAlt": {
-    "vi": "Sofa Sands trong một không gian kiến trúc mở ra biển",
-    "en": "The Sands sofa in an architectural space opening onto the sea"
+    "vi": "Ghế Captain và đôn gác chân trong một không gian kiến trúc mở ra mặt nước",
+    "en": "The Captain chair and footstool in an architectural space opening onto water"
   },
   "introTitle": {
-    "vi": "Tre Việt Nam, cho không gian đương đại",
-    "en": "Vietnamese bamboo, for contemporary interiors"
+    "vi": "Cây tre Việt – chất xám người Việt",
+    "en": "Vietnamese bamboo, Vietnamese ingenuity"
   },
   "introText": {
-    "vi": "VBamboo thiết kế và chế tác nội thất tre cho kiến trúc sư, nhà thiết kế nội thất và các dự án khách sạn tại Việt Nam và trên thế giới. Mỗi thiết kế bắt đầu từ cây tre, và từ đôi tay của người thợ.",
-    "en": "VBamboo designs and crafts bamboo furniture for architects, interior designers and hospitality projects in Vietnam and around the world. Every piece begins with the culm, and with the hands of an artisan."
+    "vi": "VBamboo thiết kế nội thất tre cho không gian sống đương đại, nơi vẻ đẹp mộc mạc và độc bản của tre Việt gặp tư duy thiết kế hiện đại. Mỗi sản phẩm là một bước trên hành trình đưa nội thất tre Việt ra thế giới.",
+    "en": "VBamboo designs bamboo furniture for contemporary living, where the simple, one-of-a-kind beauty of Vietnamese bamboo meets modern design thinking. Each piece is a step on the journey of bringing Vietnamese bamboo furniture to the world."
   },
   "curatedTitle": {
     "vi": "Những thiết kế tiêu biểu",
     "en": "Signature pieces"
   },
   "workshopTitle": {
-    "vi": "Từ rừng tre đến xưởng",
-    "en": "From the grove to the workshop"
+    "vi": "Những người thợ hiểu tre",
+    "en": "The craftsmen who understand bamboo"
   },
   "workshopText": {
-    "vi": "Tại xưởng, tre được phơi khô tự nhiên, uốn nhiệt và đan bằng tay bởi những nghệ nhân có hàng chục năm kinh nghiệm. Chúng tôi chọn từng cây, và biết tên người làm ra từng sản phẩm.",
-    "en": "In our workshop, bamboo is air-dried, heat-bent and hand-woven by artisans with decades of experience. We select every culm, and we know the name of the person who made each piece."
+    "vi": "Trong nghề mộc thủ công, có những kinh nghiệm chỉ được trao truyền qua năm tháng làm việc bên nhau. VBamboo trân trọng những người thợ đã dành cả đời để hiểu tre, rồi kiên nhẫn truyền lại điều mình biết cho người đến sau.",
+    "en": "In handcrafted woodwork, some knowledge is only passed on through years of working side by side. VBamboo honours the craftsmen who have spent their lives understanding bamboo, and who patiently hand down what they know to those who come after."
   },
   "workshopImages": [
     {
-      "image": "/images/pages/workshop-1.svg",
+      "image": "/images/pages/workshop-1.jpg",
       "caption": {
-        "vi": "Phơi tre tự nhiên",
-        "en": "Air-drying the culms"
+        "vi": "Tre nguyên liệu",
+        "en": "Raw bamboo"
       }
     },
     {
-      "image": "/images/pages/workshop-2.svg",
+      "image": "/images/pages/workshop-2.jpg",
       "caption": {
-        "vi": "Uốn nhiệt bằng tay",
-        "en": "Heat-bending by hand"
+        "vi": "Chọn từng cây tre",
+        "en": "Choosing each culm"
       }
     },
     {
-      "image": "/images/pages/workshop-3.svg",
+      "image": "/images/pages/workshop-3.jpg",
       "caption": {
-        "vi": "Chọn và cắt tre",
-        "en": "Selecting and cutting"
+        "vi": "Đôi tay người thợ đan",
+        "en": "A weaver’s hands"
       }
     }
   ]

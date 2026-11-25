@@ -1,0 +1,115 @@
+{
+  "name": "Nan Chair",
+  "nameVi": "",
+  "sample": false,
+  "category": "chairs",
+  "collection": "slender-lines",
+  "order": 70,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế ăn",
+    "en": "Dining chair"
+  },
+  "summary": {
+    "vi": "",
+    "en": ""
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/nan-chair/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/nan-chair/hero.jpg",
+  "heroAlt": {
+    "vi": "Nan Chair, toàn bộ sản phẩm",
+    "en": "Nan Chair, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/nan-chair/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Nan Chair trong không gian kiến trúc",
+        "en": "Nan Chair in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/nan-chair/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Nan Chair trong không gian kiến trúc",
+        "en": "Nan Chair in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 440,
+    "depth": 392,
+    "height": 900,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [
+    {
+      "vi": "Ghế ăn bốn chân, không tay vịn.",
+      "en": "Four-legged dining chair without armrests."
+    },
+    {
+      "vi": "Tựa lưng và mặt ngồi chuyển cong.",
+      "en": "Backrest curves into the seat."
+    },
+    {
+      "vi": "Hệ nan song song, tạo bề mặt thoáng.",
+      "en": "Parallel strips for an open, airy surface."
+    },
+    {
+      "vi": "Khung chân kim loại thanh mảnh.",
+      "en": "Slender metal leg frame."
+    }
+  ],
+  "materials": [
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Hệ nan tạo hình tông nâu ấm",
+        "en": "Shaped strips in warm brown"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Khung chân kim loại màu xám",
+        "en": "Grey metal leg frame"
+      }
+    },
+    {
+      "label": {
+        "vi": "Lớp hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "TRE MÂY VIỆT NAM",
+        "en": "Vietnamese bamboo and rattan"
+      }
+    }
+  ],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

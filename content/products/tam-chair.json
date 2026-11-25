@@ -1,0 +1,67 @@
+{
+  "name": "Tăm",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-nobility",
+  "order": 130,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế thư giãn có tay vịn",
+    "en": "Lounge chair with armrests"
+  },
+  "summary": {
+    "vi": "Một vòng tre uốn ôm lấy lưng người ngồi rồi mở về phía trước thành hai tay vịn. Bên dưới, mép mây đan cuộn nhẹ quanh tấm đệm. Khoảng hở rộng giữa vòng tre và mặt ngồi để lộ những thanh thép mảnh nâng đỡ thân ghế.",
+    "en": "A loop of bent bamboo wraps around the sitter’s back, then opens forward into two armrests. Below, a woven rattan edge curls softly around the cushion. The wide gap between the bamboo loop and the seat reveals slim steel bars supporting the chair."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/tam-chair/hero.jpg",
+  "heroStyle": "photo",
+  "cardImage": "/images/products/tam-chair/room-01.jpg",
+  "heroAlt": {
+    "vi": "Tăm, toàn bộ sản phẩm",
+    "en": "Tăm, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/tam-chair/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Tăm trong không gian kiến trúc",
+        "en": "Tăm in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/tam-chair/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Tăm trong không gian kiến trúc",
+        "en": "Tăm in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 612,
+    "depth": 465,
+    "height": 708,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

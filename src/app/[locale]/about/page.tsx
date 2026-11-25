@@ -21,7 +21,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
         <div className="hero__shade" aria-hidden="true" />
         <div className="hero__content container">
-          <p className="hero__eyebrow caps">{d.nav.about}</p>
+          <p className="hero__eyebrow caps">{d.nav.about} VBamboo</p>
           <h1 className="hero__title hero__title--sentence">{t(a?.title, locale)}</h1>
         </div>
       </section>
@@ -39,16 +39,36 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="chapter__text">
               <span className="eyebrow" data-reveal>{String(i + 1).padStart(2, '0')} · {t(c.eyebrow, locale)}</span>
               <h2 className="section-head__title" data-reveal>{t(c.title, locale)}</h2>
-              <p className="prose" data-reveal style={{ '--d': '120ms' } as React.CSSProperties}>{t(c.text, locale)}</p>
+              <div className="prose" data-reveal style={{ '--d': '120ms' } as React.CSSProperties}>
+                {t(c.text, locale)
+                  .split(/\n\s*\n/)
+                  .map((para, j) => (
+                    <p key={j}>{para}</p>
+                  ))}
+              </div>
             </div>
           </section>
         ))}
       </div>
 
+      {a?.quote && t(a.quote, locale) && (
+        <section className="about-quote">
+          {a.quoteImage && (
+            <div className="about-quote__media" aria-hidden="true">
+              <Media src={a.quoteImage} alt="" sizes="100vw" />
+            </div>
+          )}
+          <blockquote className="container about-quote__text" data-reveal>
+            <p>{t(a.quote, locale)}</p>
+          </blockquote>
+        </section>
+      )}
+
       {(a?.principles?.length ?? 0) > 0 && (
-        <section className="section principles woven">
+        <section className="section principles woven" aria-labelledby="values-h">
           <div className="container">
             <span className="logo logo--emblem principles__mark" aria-hidden="true" data-reveal="fade" />
+            <h2 id="values-h" className="principles__title caps" data-reveal>{d.common.values}</h2>
             <ol className="principles__list">
               {a!.principles.map((p, i) => (
                 <li key={i} data-reveal style={{ '--d': `${i * 120}ms` } as React.CSSProperties}>

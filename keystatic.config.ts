@@ -34,9 +34,9 @@ const img = (label: string, dir: string, description?: string) =>
   fields.image({ label, directory: `public/images/${dir}`, publicPath: `/images/${dir}/`, description });
 
 const sampleFlag = fields.checkbox({
-  label: 'Sample content (hidden on the live site)',
+  label: 'Draft (hidden on the live site)',
   description:
-    'Tick for placeholder entries. Sample entries are shown on preview links only and never on the production domain.',
+    'Tick while an entry is incomplete or unconfirmed. Drafts are shown on preview links only and never on the production domain.',
   defaultValue: false,
 });
 
@@ -89,9 +89,19 @@ export default config({
         collection: fields.relationship({ label: 'Collection', collection: 'collections' }),
         order: fields.integer({ label: 'Sort order', defaultValue: 10 }),
         featured: fields.checkbox({ label: 'Show on the home page', defaultValue: false }),
+        typeLabel: bi('Furniture type shown under the name', { description: 'e.g. "Sofa đơn thư giãn" / "Single lounge sofa". Falls back to the category.' }),
         summary: bi('What distinguishes the design', { multiline: true, description: 'One short paragraph under the product name.' }),
         story: bi('Design narrative', { multiline: true }),
         heroImage: img('Introduction photo (clear silhouette)', 'products'),
+        heroStyle: fields.select({
+          label: 'Introduction photo style',
+          options: [
+            { label: 'Cut-out / studio on white (shown whole on ivory)', value: 'cutout' },
+            { label: 'Full photograph (fills the frame)', value: 'photo' },
+          ],
+          defaultValue: 'cutout',
+        }),
+        cardImage: img('Architectural photo for product cards (shown on hover)', 'products'),
         heroAlt: bi('Introduction photo description (for screen readers)'),
         gallery: fields.array(
           fields.object({
@@ -123,10 +133,18 @@ export default config({
           },
           { label: 'Dimensions' },
         ),
-        materials: fields.array(fields.object({ label: bi('Label'), value: bi('Value') }), {
-          label: 'Material specifications',
-          itemLabel: (p) => p.fields.label.fields.en.value || 'Material',
+        features: fields.array(bi('Feature'), {
+          label: 'Design features',
+          itemLabel: (p) => p.fields.en.value || p.fields.vi.value || 'Feature',
         }),
+        materials: fields.array(fields.object({ label: bi('Label (optional)'), value: bi('Value') }), {
+          label: 'Material specifications',
+          itemLabel: (p) => p.fields.value.fields.en.value || p.fields.value.fields.vi.value || 'Material',
+        }),
+        materialSwatches: fields.array(
+          fields.object({ image: img('Swatch photo', 'products/swatches'), name: bi('Name') }),
+          { label: 'Material swatches', itemLabel: (p) => p.fields.name.fields.en.value || 'Swatch' },
+        ),
         frameFinishes: fields.array(optionSchema('products/swatches'), {
           label: 'Frame finishes',
           itemLabel: (p) => p.fields.name.fields.en.value || p.fields.key.value,
@@ -148,13 +166,25 @@ export default config({
             itemLabel: (p) => `${p.fields.finish.value || 'any'} / ${p.fields.fabric.value || 'any'}`,
           },
         ),
-        drawings: fields.object(
+        drawings: fields.array(
+          fields.object({
+            image: img('Drawing', 'drawings'),
+            caption: bi('View (e.g. Mặt đứng / Front elevation)'),
+            background: fields.select({
+              label: 'Panel colour',
+              description: 'Use green for drawings with light lines, ivory for drawings with dark lines.',
+              options: [
+                { label: 'Ivory (dark lines)', value: 'light' },
+                { label: 'Green (light lines)', value: 'dark' },
+              ],
+              defaultValue: 'light',
+            }),
+          }),
           {
-            front: img('Front view', 'drawings'),
-            side: img('Side view', 'drawings'),
-            plan: img('Plan view', 'drawings'),
+            label: 'Technical drawings (front, side, plan)',
+            description: 'When empty, a scaled schematic is drawn from the dimensions.',
+            itemLabel: (p) => p.fields.caption.fields.en.value || 'Drawing',
           },
-          { label: 'Technical drawings' },
         ),
         downloads: fields.array(
           fields.object({
@@ -200,6 +230,7 @@ export default config({
         story: bi('Story', { multiline: true }),
         heroImage: img('Opening wide photograph', 'collections'),
         heroAlt: bi('Opening photo description'),
+        sketch: img('Line sketch for the title panel (light lines, transparent background)', 'collections'),
         textures: fields.array(
           fields.object({ image: img('Texture close-up', 'collections'), caption: bi('Caption') }),
           { label: 'Texture close-ups', itemLabel: (p) => p.fields.caption.fields.en.value || 'Texture' },
@@ -280,8 +311,10 @@ export default config({
           }),
           { label: 'Chapters (origins, craft, materials, responsibility)', itemLabel: (p) => p.fields.title.fields.en.value || 'Chapter' },
         ),
+        quote: bi('Quote', { multiline: true }),
+        quoteImage: img('Quote background image', 'pages'),
         principles: fields.array(fields.object({ title: bi('Title'), text: bi('Text', { multiline: true }) }), {
-          label: 'Philosophy',
+          label: 'Core values',
           itemLabel: (p) => p.fields.title.fields.en.value || 'Principle',
         }),
       },

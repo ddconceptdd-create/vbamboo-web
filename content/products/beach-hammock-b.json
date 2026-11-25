@@ -1,0 +1,140 @@
+{
+  "name": "Beach Hammock (B)",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-sands",
+  "order": 210,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế thư giãn",
+    "en": "Lounge chair"
+  },
+  "summary": {
+    "vi": "Hai dải da nâu nối lưng tựa với thanh tre phía trước, tạo thành đường chéo đặc trưng của BEACH HAMMOCK (B). Giữa hai dải da, tấm vải màu cát võng nhẹ theo dáng ngồi. Khung tre vàng mật gợi nét cổ điển của những chiếc ghế bãi biển.",
+    "en": "Two brown leather straps connect the backrest to the front bamboo bar, forming the signature diagonal of BEACH HAMMOCK (B). Between the straps, sand-coloured fabric dips gently with the seat. The honey bamboo frame recalls the classic beach chair."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/beach-hammock-b/silhouette.jpg",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/beach-hammock-b/hero.jpg",
+  "heroAlt": {
+    "vi": "Beach Hammock (B), toàn bộ sản phẩm",
+    "en": "Beach Hammock (B), full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/beach-hammock-b/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Beach Hammock (B) trong không gian kiến trúc",
+        "en": "Beach Hammock (B) in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Beach Hammock (B) trong không gian kiến trúc",
+        "en": "Beach Hammock (B) in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Beach Hammock (B) trong không gian kiến trúc",
+        "en": "Beach Hammock (B) in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/studio-01.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Beach Hammock (B), ảnh studio",
+        "en": "Beach Hammock (B), studio view"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/studio-02.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Beach Hammock (B), ảnh studio",
+        "en": "Beach Hammock (B), studio view"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/studio-03.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Beach Hammock (B), ảnh studio",
+        "en": "Beach Hammock (B), studio view"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/detail-01.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Beach Hammock (B)",
+        "en": "Beach Hammock (B), detail"
+      }
+    },
+    {
+      "image": "/images/products/beach-hammock-b/detail-02.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Beach Hammock (B)",
+        "en": "Beach Hammock (B), detail"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1120,
+    "depth": 790,
+    "height": 850,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [
+    {
+      "image": "/images/drawings/beach-hammock-b/drawing-02.webp",
+      "caption": {
+        "vi": "Mặt đứng chính",
+        "en": "Front elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/beach-hammock-b/drawing-03.webp",
+      "caption": {
+        "vi": "Mặt đứng bên",
+        "en": "Side elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/beach-hammock-b/drawing-01.webp",
+      "caption": {
+        "vi": "Mặt bằng",
+        "en": "Top plan"
+      },
+      "background": "dark"
+    }
+  ],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

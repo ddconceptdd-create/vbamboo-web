@@ -1,0 +1,108 @@
+{
+  "name": "Embrace Sofa (A)",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "sofa",
+  "order": 40,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Sofa đơn thư giãn",
+    "en": "Single lounge sofa"
+  },
+  "summary": {
+    "vi": "Embrace mang dáng của một cái ôm. Hai tay vịn bọc da ôm lấy mặt ngồi rộng, còn gối tựa đầu nằm ngang trên lưng ghế hơi ngả. Giữa những lớp đệm xanh ô liu, khung tre vàng mật vẫn lộ rõ từng đốt và đường vân.",
+    "en": "Embrace takes the shape of a hug. Two leather-wrapped armrests hold a wide seat, and a headrest lies across the gently reclined back. Between the olive-green cushions, the honey bamboo frame still shows every node and grain."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/embrace-sofa-a/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/embrace-sofa-a/hero.jpg",
+  "heroAlt": {
+    "vi": "Embrace Sofa (A), toàn bộ sản phẩm",
+    "en": "Embrace Sofa (A), full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/embrace-sofa-a/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Embrace Sofa (A) trong không gian kiến trúc",
+        "en": "Embrace Sofa (A) in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/embrace-sofa-a/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Embrace Sofa (A) trong không gian kiến trúc",
+        "en": "Embrace Sofa (A) in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/embrace-sofa-a/detail-01.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Embrace Sofa (A)",
+        "en": "Embrace Sofa (A), detail"
+      }
+    },
+    {
+      "image": "/images/products/embrace-sofa-a/detail-02.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Embrace Sofa (A)",
+        "en": "Embrace Sofa (A), detail"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1052,
+    "depth": 958,
+    "height": 857,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [
+    {
+      "image": "/images/drawings/embrace-sofa-a/drawing-02.webp",
+      "caption": {
+        "vi": "Mặt đứng chính",
+        "en": "Front elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/embrace-sofa-a/drawing-03.webp",
+      "caption": {
+        "vi": "Mặt đứng bên",
+        "en": "Side elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/embrace-sofa-a/drawing-01.webp",
+      "caption": {
+        "vi": "Mặt bằng",
+        "en": "Top plan"
+      },
+      "background": "dark"
+    }
+  ],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

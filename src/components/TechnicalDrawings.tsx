@@ -1,48 +1,56 @@
 import Image from 'next/image';
 
 type Dims = { width: number | null; depth: number | null; height: number | null; seatHeight: number | null };
-type Labels = { front: string; side: string; plan: string; schematic: string; mm: string };
+type Labels = { front: string; side: string; plan: string; schematic: string; mm: string; open: string };
+export type Drawing = { image: string | null; caption: string; background: 'light' | 'dark' };
 
 /**
- * Front, side and plan views. Uses the uploaded technical drawings when present;
- * otherwise draws a scaled schematic from the published dimensions.
+ * Technical drawings. Uses the uploaded drawings when present, each on the
+ * panel colour that suits its line work (ivory for dark lines, moss green for
+ * light lines); otherwise draws a scaled schematic from the published dimensions.
  * Deliberately static: no animation, so details can be examined.
  */
-export default function TechnicalDrawings({
-  drawings,
-  dims,
-  labels,
-}: {
-  drawings: { front: string | null; side: string | null; plan: string | null };
-  dims: Dims | null;
-  labels: Labels;
-}) {
+export default function TechnicalDrawings({ drawings, dims, labels }: { drawings: Drawing[]; dims: Dims | null; labels: Labels }) {
+  const uploaded = drawings.filter((d): d is Drawing & { image: string } => Boolean(d.image));
+
+  if (uploaded.length > 0) {
+    return (
+      <div className="drawings" data-count={uploaded.length}>
+        <div className="drawings__grid">
+          {uploaded.map((d, i) => (
+            <figure key={i} className={`drawing drawing--${d.background}`}>
+              <a href={d.image} target="_blank" rel="noopener" className="drawing__frame" aria-label={`${labels.open}: ${d.caption}`}>
+                <Image src={d.image} alt={d.caption} fill sizes="(min-width: 960px) 40vw, 100vw" unoptimized={d.image.endsWith('.svg')} />
+              </a>
+              {d.caption && <figcaption>{d.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (!dims) return null;
   const views = [
-    { key: 'front', label: labels.front, src: drawings.front, w: dims?.width, h: dims?.height, seat: dims?.seatHeight },
-    { key: 'side', label: labels.side, src: drawings.side, w: dims?.depth, h: dims?.height, seat: dims?.seatHeight },
-    { key: 'plan', label: labels.plan, src: drawings.plan, w: dims?.width, h: dims?.depth, seat: null },
+    { key: 'front', label: labels.front, w: dims.width, h: dims.height, seat: dims.seatHeight },
+    { key: 'side', label: labels.side, w: dims.depth, h: dims.height, seat: dims.seatHeight },
+    { key: 'plan', label: labels.plan, w: dims.width, h: dims.depth, seat: null },
   ] as const;
-  const anyDrawing = views.some((v) => v.src);
-  if (!anyDrawing && !dims) return null;
-  const max = Math.max(dims?.width ?? 0, dims?.depth ?? 0, dims?.height ?? 0) || 1;
+  const max = Math.max(dims.width ?? 0, dims.depth ?? 0, dims.height ?? 0) || 1;
 
   return (
-    <div className="drawings">
+    <div className="drawings drawings--schematic" data-count={3}>
       <div className="drawings__grid">
         {views.map((v) => (
-          <figure key={v.key} className="drawing">
+          <figure key={v.key} className="drawing drawing--light">
             <div className="drawing__frame">
-              {v.src ? (
-                <Image src={v.src} alt={v.label} fill sizes="(min-width: 960px) 20vw, 33vw" unoptimized={v.src.endsWith('.svg')} />
-              ) : v.w && v.h ? (
-                <Schematic w={v.w} h={v.h} seat={v.seat ?? null} max={max} mm={labels.mm} plan={v.key === 'plan'} />
-              ) : null}
+              {v.w && v.h ? <Schematic w={v.w} h={v.h} seat={v.seat ?? null} max={max} mm={labels.mm} plan={v.key === 'plan'} /> : null}
             </div>
             <figcaption>{v.label}</figcaption>
           </figure>
         ))}
       </div>
-      {!anyDrawing && <p className="drawings__note">{labels.schematic}</p>}
+      <p className="drawings__note">{labels.schematic}</p>
     </div>
   );
 }

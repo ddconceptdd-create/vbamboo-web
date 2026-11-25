@@ -1,0 +1,141 @@
+{
+  "name": "Borsani Sofa",
+  "nameVi": "",
+  "sample": false,
+  "category": "sofas",
+  "collection": "sofa",
+  "order": 20,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Sofa đơn thư giãn",
+    "en": "Single lounge sofa"
+  },
+  "summary": {
+    "vi": "Khung tre vòng cung kết hợp cùng đệm bọc kem ngà tạo nên dáng vẻ mềm mại của BORSANI. Đường viền đệm và dải đai nâu làm rõ cấu trúc, trong khi nhịp thanh tre ở mặt lưng tạo chiều sâu cho thiết kế. Bảng màu sáng, ấm đem đến sự thanh nhã cho không gian sống đương đại.",
+    "en": "An arched bamboo frame and ivory-cream cushions give BORSANI its soft presence. Piping and a brown strap define the structure, while bamboo slats across the back add depth. The light, warm palette brings quiet elegance to contemporary living spaces."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/borsani-sofa/silhouette.jpg",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/borsani-sofa/hero.jpg",
+  "heroAlt": {
+    "vi": "Borsani Sofa, toàn bộ sản phẩm",
+    "en": "Borsani Sofa, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/borsani-sofa/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Borsani Sofa trong không gian kiến trúc",
+        "en": "Borsani Sofa in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/borsani-sofa/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Borsani Sofa trong không gian kiến trúc",
+        "en": "Borsani Sofa in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/borsani-sofa/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Borsani Sofa trong không gian kiến trúc",
+        "en": "Borsani Sofa in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/borsani-sofa/detail-01.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết Borsani Sofa",
+        "en": "Borsani Sofa, detail"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1000,
+    "depth": 800,
+    "height": 820,
+    "seatHeight": null,
+    "approved": false
+  },
+  "features": [
+    {
+      "vi": "Phom ngồi thấp, không tay vịn.",
+      "en": "Low seat without armrests."
+    },
+    {
+      "vi": "Khối đệm bo tròn, đường viền rõ.",
+      "en": "Rounded cushions with defined piping."
+    },
+    {
+      "vi": "Khung tre vòng cung.",
+      "en": "Arched bamboo frame."
+    },
+    {
+      "vi": "Mặt lưng tạo nhịp bằng hệ thanh tre",
+      "en": "Back given rhythm by bamboo slats."
+    }
+  ],
+  "materials": [
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Khung và hệ thanh tre",
+        "en": "Bamboo frame and slats"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Mặt bọc tông kem ngà",
+        "en": "Ivory-cream upholstery"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Đai bên hông màu nâu trầm",
+        "en": "Deep brown side strap"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Khóa và chi tiết kim loại",
+        "en": "Buckle and metal details"
+      }
+    }
+  ],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

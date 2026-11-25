@@ -1896,3 +1896,241 @@ main:has(> .page-enter > .hero) {
 .hero__content {
   text-shadow: 0 1px 28px rgb(34 43 29 / 0.35);
 }
+
+/* ==========================================================================
+   Catalogue content
+   ========================================================================== */
+
+/* Studio shots on white and cut-outs, shown whole on a paper panel.
+   Multiply lets a white studio background melt into the panel. */
+.media--silhouette {
+  background: var(--paper);
+}
+.media--silhouette img {
+  padding: clamp(14px, 6%, 72px);
+  mix-blend-mode: multiply;
+}
+.product-intro__media .media--silhouette img {
+  padding: clamp(16px, 4%, 56px);
+}
+@media (max-width: 699px) {
+  .product-intro__media .media--silhouette {
+    aspect-ratio: 5 / 4 !important;
+  }
+}
+
+/* Cards: silhouette, cross-fading to the architectural photo on hover */
+.product-card__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--paper);
+}
+.product-card__media > .media {
+  position: absolute;
+  inset: 0;
+}
+.product-card__hover {
+  opacity: 0;
+  transition: opacity 700ms var(--ease-out);
+}
+@media (hover: hover) {
+  .product-card__link:hover .product-card__hover,
+  .product-card__link:focus-visible .product-card__hover {
+    opacity: 1;
+  }
+}
+.product-card__media .media img {
+  transition: transform 1200ms var(--ease-out);
+}
+.product-card__link:hover .product-card__media .media img {
+  transform: scale(1.03);
+}
+
+/* Specs: features, swatches and materials (static) */
+.specs-main {
+  display: grid;
+  gap: 48px;
+  align-content: start;
+}
+.features ul {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.features li {
+  position: relative;
+  padding: 14px 0 14px 28px;
+  border-top: 1px solid var(--line);
+}
+.features li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 1.45em;
+  width: 12px;
+  height: 1px;
+  background: var(--bronze);
+}
+.material-swatches ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 20px 16px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.material-swatches li span {
+  display: block;
+  margin-top: 10px;
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+}
+.materials dl > .materials__row--plain {
+  grid-template-columns: 1fr;
+}
+
+/* Technical drawings: uploaded line drawings on ivory or moss panels */
+.drawings:not(.drawings--schematic) .drawings__grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 600px) {
+  .drawings[data-count='2']:not(.drawings--schematic) .drawings__grid,
+  .drawings[data-count='3']:not(.drawings--schematic) .drawings__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .drawings[data-count='3']:not(.drawings--schematic) .drawing:first-child {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 599px) {
+  .drawings:not(.drawings--schematic) .drawing:first-child {
+    grid-column: auto;
+  }
+}
+.drawings:not(.drawings--schematic) .drawing__frame {
+  display: block;
+  aspect-ratio: 4 / 3;
+  cursor: zoom-in;
+}
+.drawing--dark .drawing__frame {
+  background-color: var(--moss);
+  background-image: none;
+  border-color: var(--moss);
+}
+.drawings:not(.drawings--schematic) .drawing__frame img {
+  padding: 5%;
+  background: transparent;
+}
+.drawing__frame:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 3px;
+}
+
+/* Collection title panel: line sketch on the woven green */
+.collection-title__side {
+  display: grid;
+  gap: 28px;
+  align-content: end;
+}
+.collection-title__sketch {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  justify-self: center;
+  opacity: 0.9;
+}
+.collection-title__sketch img {
+  object-fit: contain;
+}
+@media (min-width: 960px) {
+  .collection-title__sketch {
+    justify-self: end;
+    margin-top: -24px;
+  }
+}
+blockquote.textures__story {
+  max-width: 46ch;
+  font-size: var(--fs-lg);
+  font-weight: 300;
+  line-height: 1.55;
+}
+blockquote.textures__story::before {
+  content: '“';
+  display: block;
+  margin-bottom: 4px;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+/* About */
+.chapter__text .prose p + p {
+  margin-top: 1em;
+}
+.about-quote {
+  position: relative;
+  display: grid;
+  min-height: clamp(420px, 70vh, 720px);
+  align-items: center;
+  overflow: hidden;
+  background: var(--moss-deep);
+  color: var(--on-moss);
+}
+.about-quote__media {
+  position: absolute;
+  inset: 0;
+}
+.about-quote__media .media {
+  height: 100%;
+  background: var(--moss-deep);
+}
+.about-quote__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(34 43 29 / 0.82), rgb(34 43 29 / 0.45));
+}
+.about-quote__text {
+  position: relative;
+  margin-block: clamp(64px, 10vw, 140px);
+}
+.about-quote__text p {
+  max-width: 34ch;
+  font-size: var(--fs-xl);
+  font-weight: 300;
+  line-height: 1.45;
+}
+.about-quote__text::before {
+  content: '“';
+  display: block;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+}
+.principles__title {
+  margin-bottom: 48px;
+  text-align: center;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.2em;
+  color: var(--on-moss);
+}
+@media (min-width: 1100px) {
+  .principles__list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+}
+
+.stores__empty {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+  max-width: 52ch;
+}
+.about-lead__text {
+  font-size: var(--fs-lg);
+  max-width: 44ch;
+  line-height: 1.6;
+}

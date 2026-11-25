@@ -1,0 +1,134 @@
+{
+  "name": "A-Line Bamboo",
+  "nameVi": "",
+  "sample": false,
+  "category": "lamps",
+  "collection": "the-light",
+  "order": 250,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Đèn bàn tre & kim loại",
+    "en": "Bamboo and metal table lamp"
+  },
+  "summary": {
+    "vi": "A-LINE kết hợp đầu đèn bằng tre với khung kim loại đen thanh mảnh trong một hình dáng gọn, rõ nét. Đường cong ở đỉnh khung làm mềm các nét thẳng, đồng thời tạo dấu hiệu nhận diện riêng. Bề mặt vân tre và sắc đen mờ mang đến chiều sâu cho thiết kế, tạo điểm nhấn thanh lịch trên bàn phụ, bàn đầu giường hay góc làm việc.",
+    "en": "A-LINE combines a bamboo lamp head with a slender black metal frame in a compact, clear-cut form. The curve at the top of the frame softens its straight lines and gives the lamp its signature. Bamboo grain and matte black add depth, making an elegant accent on a side table, bedside or desk."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/a-line-lamp/silhouette.jpg",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/a-line-lamp/room-01.jpg",
+  "heroAlt": {
+    "vi": "A-Line Bamboo, toàn bộ sản phẩm",
+    "en": "A-Line Bamboo, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/a-line-lamp/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "A-Line Bamboo trong không gian kiến trúc",
+        "en": "A-Line Bamboo in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/a-line-lamp/studio-01.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "A-Line Bamboo, ảnh studio",
+        "en": "A-Line Bamboo, studio view"
+      }
+    },
+    {
+      "image": "/images/products/a-line-lamp/studio-02.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "A-Line Bamboo, ảnh studio",
+        "en": "A-Line Bamboo, studio view"
+      }
+    },
+    {
+      "image": "/images/products/a-line-lamp/studio-03.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "A-Line Bamboo, ảnh studio",
+        "en": "A-Line Bamboo, studio view"
+      }
+    },
+    {
+      "image": "/images/products/a-line-lamp/detail-01.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết A-Line Bamboo",
+        "en": "A-Line Bamboo, detail"
+      }
+    },
+    {
+      "image": "/images/products/a-line-lamp/detail-02.jpg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết A-Line Bamboo",
+        "en": "A-Line Bamboo, detail"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 180,
+    "depth": 200,
+    "height": 420,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [
+    {
+      "vi": "Đầu đèn hình trụ bằng tre, khung kim loại có nét uốn ở đỉnh và chân đế thấp. Các chi tiết được tiết chế để làm nổi bật tỷ lệ và bề mặt vật liệu.",
+      "en": "A cylindrical bamboo head, a metal frame with a bend at the top and a low base. Details are kept to a minimum to bring out proportion and material."
+    }
+  ],
+  "materials": [
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Tre sắc nâu tự nhiên",
+        "en": "Natural brown bamboo"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Khung và đế kim loại đen mờ",
+        "en": "Matte black metal frame and base"
+      }
+    }
+  ],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [
+    {
+      "image": "/images/drawings/a-line-lamp/drawing-01.webp",
+      "caption": {
+        "vi": "Các hình chiếu",
+        "en": "Elevations and plan"
+      },
+      "background": "light"
+    }
+  ],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

@@ -86,7 +86,7 @@ export const getSearchIndex = cache(async (locale: Locale): Promise<SearchItem[]
       title: productName(p, locale),
       sub: (p.collection && cName.get(p.collection)) || '',
       image: p.heroImage,
-      terms: [p.name, p.nameVi, p.category, p.collection, p.summary.vi, p.summary.en].join(' '),
+      terms: [p.name, p.nameVi, p.category, p.collection, p.typeLabel.vi, p.typeLabel.en, p.summary.vi, p.summary.en].join(' '),
     })),
   ];
 });
@@ -97,7 +97,16 @@ export const toCard = (p: Product, locale: Locale, collections: Collection[]) =>
   category: p.category,
   collection: p.collection,
   collectionName: collections.find((c) => c.slug === p.collection)?.name ?? null,
+  typeLabel: t(p.typeLabel, locale),
   image: p.heroImage,
+  imageStyle: p.heroStyle,
+  hoverImage: p.cardImage && p.cardImage !== p.heroImage ? p.cardImage : null,
   alt: t(p.heroAlt, locale) || productName(p, locale),
   sample: p.sample,
+});
+
+/** Categories that currently have at least one visible product, in menu order. */
+export const getCategoriesInUse = cache(async () => {
+  const used = new Set((await getProducts()).map((p) => p.category));
+  return used;
 });

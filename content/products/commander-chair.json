@@ -1,0 +1,72 @@
+{
+  "name": "Commander",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-nobility",
+  "order": 150,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế tựa có tay vịn",
+    "en": "Armchair"
+  },
+  "summary": {
+    "vi": "Hai tay vịn bằng tre sẫm màu chạy ngang rồi uốn xuống ở đầu ghế. Giữa khung tre, mặt ngồi và lưng tựa bọc vải xanh ô liu, tách nhau bằng một khoảng hở. Một thanh nối ánh vàng mảnh như nét kẻ kéo dài tay vịn về phía sau.",
+    "en": "Two dark bamboo armrests run level, then curve down at the front. Within the bamboo frame, the seat and backrest are upholstered in olive-green fabric, separated by an open gap. A slim gold-toned rod, fine as a drawn line, extends the armrests towards the back."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/commander-chair/hero.jpg",
+  "heroStyle": "photo",
+  "cardImage": "/images/products/commander-chair/room-01.jpg",
+  "heroAlt": {
+    "vi": "Commander, toàn bộ sản phẩm",
+    "en": "Commander, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/commander-chair/room-01.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Commander trong không gian kiến trúc",
+        "en": "Commander in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/commander-chair/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Commander trong không gian kiến trúc",
+        "en": "Commander in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 680,
+    "depth": 600,
+    "height": 600,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [
+    {
+      "vi": "Nhìn nghiêng, lưng tựa hơi ngả trong khi tay vịn gần như nằm ngang. Bên dưới mặt ngồi, những thanh giằng nối bốn chân ghế, để lộ kết cấu từ cả phía trước lẫn hai bên.",
+      "en": "In profile, the backrest reclines slightly while the armrests stay almost level. Beneath the seat, stretchers join the four legs, revealing the structure from the front and both sides."
+    }
+  ],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

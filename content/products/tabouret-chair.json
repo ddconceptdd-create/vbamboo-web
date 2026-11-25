@@ -1,0 +1,156 @@
+{
+  "name": "Tabouret Chair",
+  "nameVi": "",
+  "sample": false,
+  "category": "chairs",
+  "collection": "slender-lines",
+  "order": 60,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế ăn khung kim loại",
+    "en": "Metal-frame dining chair"
+  },
+  "summary": {
+    "vi": "TABOURET chair tạo dấu ấn bằng hệ nan song song, chuyển cong từ lưng tựa xuống mặt ngồi. Sắc nâu ấm kết hợp với khung chân kim loại thanh mảnh, tạo nên tổng thể gọn và thoáng. Đường nét mềm mại giúp chiếc ghế hòa vào không gian bàn ăn đương đại.",
+    "en": "The TABOURET chair is defined by parallel strips that curve from the backrest into the seat. Warm brown tones meet a slender metal base for a compact, airy whole. Its soft lines let the chair settle easily into a contemporary dining room."
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/tabouret-chair/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/tabouret-chair/hero.jpg",
+  "heroAlt": {
+    "vi": "Tabouret Chair, toàn bộ sản phẩm",
+    "en": "Tabouret Chair, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/tabouret-chair/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Tabouret Chair trong không gian kiến trúc",
+        "en": "Tabouret Chair in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/tabouret-chair/room-02.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Tabouret Chair trong không gian kiến trúc",
+        "en": "Tabouret Chair in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/tabouret-chair/studio-01.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Tabouret Chair, ảnh studio",
+        "en": "Tabouret Chair, studio view"
+      }
+    },
+    {
+      "image": "/images/products/tabouret-chair/studio-02.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Tabouret Chair, ảnh studio",
+        "en": "Tabouret Chair, studio view"
+      }
+    },
+    {
+      "image": "/images/products/tabouret-chair/studio-03.jpg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Tabouret Chair, ảnh studio",
+        "en": "Tabouret Chair, studio view"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 440,
+    "depth": 450,
+    "height": 900,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [
+    {
+      "vi": "Ghế ăn bốn chân, không tay vịn.",
+      "en": "Four-legged dining chair without armrests."
+    },
+    {
+      "vi": "Tựa lưng và mặt ngồi chuyển cong.",
+      "en": "Backrest curves into the seat."
+    },
+    {
+      "vi": "Hệ nan song song, tạo bề mặt thoáng.",
+      "en": "Parallel strips for an open, airy surface."
+    },
+    {
+      "vi": "Khung chân kim loại thanh mảnh.",
+      "en": "Slender metal leg frame."
+    }
+  ],
+  "materials": [
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Hệ nan tạo hình tông nâu ấm",
+        "en": "Shaped strips in warm brown"
+      }
+    },
+    {
+      "label": {
+        "vi": "",
+        "en": ""
+      },
+      "value": {
+        "vi": "Khung chân kim loại màu xám",
+        "en": "Grey metal leg frame"
+      }
+    },
+    {
+      "label": {
+        "vi": "Lớp hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "TRE MÂY VIỆT NAM",
+        "en": "Vietnamese bamboo and rattan"
+      }
+    }
+  ],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [
+    {
+      "image": "/images/drawings/tabouret-chair/drawing-02.webp",
+      "caption": {
+        "vi": "Mặt đứng chính",
+        "en": "Front elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/tabouret-chair/drawing-01.webp",
+      "caption": {
+        "vi": "Mặt bằng",
+        "en": "Top plan"
+      },
+      "background": "dark"
+    }
+  ],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

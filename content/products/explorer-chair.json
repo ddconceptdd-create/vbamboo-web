@@ -1,0 +1,84 @@
+{
+  "name": "Explorer",
+  "nameVi": "",
+  "sample": false,
+  "category": "lounge-chairs",
+  "collection": "the-nobility",
+  "order": 140,
+  "featured": false,
+  "typeLabel": {
+    "vi": "Ghế thư giãn",
+    "en": "Lounge chair"
+  },
+  "summary": {
+    "vi": "",
+    "en": ""
+  },
+  "story": {
+    "vi": "",
+    "en": ""
+  },
+  "heroImage": "/images/products/explorer-chair/silhouette.webp",
+  "heroStyle": "cutout",
+  "cardImage": "/images/products/explorer-chair/hero.jpg",
+  "heroAlt": {
+    "vi": "Explorer, toàn bộ sản phẩm",
+    "en": "Explorer, full view"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/explorer-chair/hero.jpg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Explorer trong không gian kiến trúc",
+        "en": "Explorer in an architectural setting"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 680,
+    "depth": 600,
+    "height": 600,
+    "seatHeight": null,
+    "approved": true
+  },
+  "features": [],
+  "materials": [],
+  "materialSwatches": [],
+  "frameFinishes": [],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": [
+    {
+      "image": "/images/drawings/explorer-chair/drawing-01.webp",
+      "caption": {
+        "vi": "Mặt đứng chính",
+        "en": "Front elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/explorer-chair/drawing-02.webp",
+      "caption": {
+        "vi": "Mặt đứng bên",
+        "en": "Side elevation"
+      },
+      "background": "dark"
+    },
+    {
+      "image": "/images/drawings/explorer-chair/drawing-03.webp",
+      "caption": {
+        "vi": "Mặt bằng",
+        "en": "Top plan"
+      },
+      "background": "dark"
+    }
+  ],
+  "downloads": [],
+  "collectionImage": null,
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}
