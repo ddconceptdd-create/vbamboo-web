@@ -1,0 +1,49 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: A-Line Bamboo
+Collection: the-light
+Category: lamps
+Type: Đèn bàn tre & kim loại | Bamboo and metal table lamp
+Featured: no
+Draft: no
+Size: 180 x 200 x 420
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.jpg
+PhotoStyle: cutout
+CardPhoto: room-01.jpg
+Images: all
+Drawing: drawing-01.webp | Các hình chiếu | Elevations and plan | ivory
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+A-LINE kết hợp đầu đèn bằng tre với khung kim loại đen thanh mảnh trong một hình dáng gọn, rõ nét. Đường cong ở đỉnh khung làm mềm các nét thẳng, đồng thời tạo dấu hiệu nhận diện riêng. Bề mặt vân tre và sắc đen mờ mang đến chiều sâu cho thiết kế, tạo điểm nhấn thanh lịch trên bàn phụ, bàn đầu giường hay góc làm việc.
+
+## Đặc điểm thiết kế
+- Đầu đèn hình trụ bằng tre, khung kim loại có nét uốn ở đỉnh và chân đế thấp. Các chi tiết được tiết chế để làm nổi bật tỷ lệ và bề mặt vật liệu.
+
+## Chất liệu
+- Tre sắc nâu tự nhiên
+- Khung và đế kim loại đen mờ
+
+[EN]
+A-LINE combines a bamboo lamp head with a slender black metal frame in a compact, clear-cut form. The curve at the top of the frame softens its straight lines and gives the lamp its signature. Bamboo grain and matte black add depth, making an elegant accent on a side table, bedside or desk.
+
+## Design features
+- A cylindrical bamboo head, a metal frame with a bend at the top and a low base. Details are kept to a minimum to bring out proportion and material.
+
+## Materials
+- Natural brown bamboo
+- Matte black metal frame and base

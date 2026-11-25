@@ -1,0 +1,29 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+# Chép thư mục này thành "06-ten-bo-suu-tap", rồi thêm tên thư mục vào content/collections/index.txt
+# Trong info.txt của từng sản phẩm, ghi Collection: ten-bo-suu-tap (tên thư mục, bỏ số đầu).
+
+Name: 
+Tagline: Câu giới thiệu ngắn | Short tagline
+Draft: yes
+Photo: hero.jpg
+Sketch: sketch.png
+Setting: setting.jpg
+Texture: texture-1.jpg | Chú thích | Caption
+Texture: texture-2.jpg | Chú thích | Caption
+Texture: texture-3.jpg | Chú thích | Caption
+---
+[VI]
+Đoạn giới thiệu bộ sưu tập.
+
+## Trích dẫn
+Câu trích dẫn (không bắt buộc).
+
+[EN]
+Collection introduction.
+
+## Quote
+Quote (optional).

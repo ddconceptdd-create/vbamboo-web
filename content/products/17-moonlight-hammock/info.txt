@@ -1,0 +1,47 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Moonlight Hammock
+Collection: the-sands
+Category: lounge-chairs
+Type: Võng ngồi thư giãn khung tre | Bamboo-frame hammock seat
+Featured: no
+Draft: no
+Size: 1550 x 800 x 1400
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+Drawing: drawing-02.webp | Mặt đứng chính | Front elevation | ivory
+Drawing: drawing-01.webp | Mặt đứng bên | Side elevation | ivory
+Drawing: drawing-03.webp | Mặt sau | Rear elevation | ivory
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Thiết kế thư giãn ngoài trời với khung tre uốn cong thanh thoát và mặt võng mềm mại, tạo cảm giác nghỉ ngơi nhẹ nhàng, tự nhiên. Moonlight Hammock mang đến vẻ đẹp thủ công tinh tế, phù hợp cho nơi cần một điểm nhấn thư giãn sang trọng và yên tĩnh.
+
+## Chất liệu
+- Khung tre tông vàng nâu
+- Mặt võng màu kem ngà
+- Dây buộc cùng tông nâu
+
+[EN]
+An outdoor lounging piece with a gracefully curved bamboo frame and a soft hammock seat, made for light, natural rest. Moonlight Hammock brings refined craftsmanship to any place that calls for a quiet, luxurious point of relaxation.
+
+## Materials
+- Golden-brown bamboo frame
+- Ivory-cream hammock
+- Ties in matching brown

@@ -1,0 +1,27 @@
+# Mỗi dòng là tên 1 thư mục sản phẩm, theo thứ tự hiển thị. Xóa dòng = ẩn sản phẩm khỏi website.
+01-bosento-sofa
+02-borsani-sofa
+03-wave-sofa
+04-embrace-sofa-a
+05-tabouret-table
+06-tabouret-chair
+07-nan-chair
+08-gentleman-chair
+09-voyager
+10-captain-chair
+11-baron-chair
+12-baroness-chair
+13-tam-chair
+14-explorer-chair
+15-commander-chair
+16-verner-hammock
+17-moonlight-hammock
+18-xchair
+19-sandy-chair
+20-beach-hammock-a
+21-beach-hammock-b
+22-oasis-parasol
+23-lotus-chair
+24-forest-chair
+25-a-line-lamp
+26-kink-lamp

@@ -1,0 +1,34 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Sandy Chair
+Collection: the-sands
+Category: lounge-chairs
+Type: Ghế thư giãn ngoài trời | Outdoor lounge chair
+Featured: no
+Draft: no
+Size: 694 x 690 x 990
+SeatHeight: 
+SizeApproved: no
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Giữa hai tay vịn tre tròn, tấm vải màu cát võng nhẹ từ lưng tựa cao xuống mặt ngồi. Nhìn nghiêng, đường cong của vải nổi bật trên đôi chân chữ X thanh mảnh. Ở đỉnh tựa, hai quai nhỏ giữ chiếc gối da nâu cognac.
+
+[EN]
+Between two round bamboo armrests, sand-coloured fabric dips gently from the high backrest to the seat. In profile, the curve of the fabric stands out above slender X-shaped legs. At the top, two small loops hold a cognac leather cushion.

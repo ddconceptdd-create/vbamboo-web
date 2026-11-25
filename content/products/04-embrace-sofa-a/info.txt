@@ -1,0 +1,37 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Embrace Sofa (A)
+Collection: sofa
+Category: lounge-chairs
+Type: Sofa đơn thư giãn | Single lounge sofa
+Featured: no
+Draft: no
+Size: 1052 x 958 x 857
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+Drawing: drawing-02.webp | Mặt đứng chính | Front elevation | green
+Drawing: drawing-03.webp | Mặt đứng bên | Side elevation | green
+Drawing: drawing-01.webp | Mặt bằng | Top plan | green
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Embrace mang dáng của một cái ôm. Hai tay vịn bọc da ôm lấy mặt ngồi rộng, còn gối tựa đầu nằm ngang trên lưng ghế hơi ngả. Giữa những lớp đệm xanh ô liu, khung tre vàng mật vẫn lộ rõ từng đốt và đường vân.
+
+[EN]
+Embrace takes the shape of a hug. Two leather-wrapped armrests hold a wide seat, and a headrest lies across the gently reclined back. Between the olive-green cushions, the honey bamboo frame still shows every node and grain.

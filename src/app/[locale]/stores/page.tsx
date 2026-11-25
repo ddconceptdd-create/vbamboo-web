@@ -48,10 +48,12 @@ export default async function StoresPage({ params }: { params: Promise<{ locale:
                     {s.email && <a href={`mailto:${s.email}`}>{s.email}</a>}
                   </dd>
                 </div>
-                <div>
-                  <dt>{ds.hours}</dt>
-                  <dd style={{ whiteSpace: 'pre-line' }}>{t(s.hours, locale)}</dd>
-                </div>
+                {t(s.hours, locale) && (
+                  <div>
+                    <dt>{ds.hours}</dt>
+                    <dd style={{ whiteSpace: 'pre-line' }}>{t(s.hours, locale)}</dd>
+                  </div>
+                )}
               </dl>
               {s.appointmentRequired && <p className="store__appt">{ds.appointment}</p>}
               <div className="store__actions">

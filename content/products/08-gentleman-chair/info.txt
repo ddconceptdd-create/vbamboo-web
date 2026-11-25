@@ -1,0 +1,62 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Gentleman
+Collection: the-nobility
+Category: chairs
+Type: Ghế tựa có tay khung tre | Bamboo-frame armchair
+Featured: yes
+Draft: no
+Size: 580 x 530 x 930
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+Drawing: drawing-01.webp | Mặt đứng chính | Front elevation | green
+Drawing: drawing-02.webp | Mặt đứng bên | Side elevation | green
+Swatch: swatch-leather-cognac.jpg | Da nâu cognac | Cognac leather
+Swatch: swatch-bamboo.jpg | Tre | Bamboo
+Swatch: swatch-brass-fitting.jpg | Phụ kiện đồng thau | Brass fitting
+Swatch: swatch-leather-strap.jpg | Đai da khâu tay | Hand-stitched leather strap
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+GENTLEMAN kết hợp khung tre thanh gọn với mặt ngồi và tựa lưng tông nâu cognac. Các thanh giằng chữ X tạo điểm nhấn cho cấu trúc mở, trong khi tay vịn dạng đai và khóa kim loại bổ sung sắc thái lịch lãm. Nhịp đốt tre cùng chi tiết đầu nối đem đến vẻ trầm ấm cho không gian tiếp khách riêng.
+
+## Đặc điểm thiết kế
+- Ghế tựa có tay, phom dáng thanh gọn.
+- Các thanh giằng tre chữ X.
+- Tay vịn dạng đai thanh mảnh.
+- Lưng ghế có chi tiết đai và khóa.
+
+## Chất liệu
+- Khung và thanh giằng tre
+- Phối màu: tre ấm, nâu cognac
+- Chi tiết kim loại tông vàng trầm
+
+[EN]
+GENTLEMAN pairs a slender bamboo frame with a seat and backrest in cognac brown. X-shaped braces accent the open structure, while strap armrests and metal buckles add a refined note. The rhythm of bamboo nodes and the joint details bring warmth to a private sitting room.
+
+## Design features
+- Armchair with a slender silhouette.
+- X-shaped bamboo braces.
+- Slim strap armrests.
+- Strap and buckle detail on the back.
+
+## Materials
+- Bamboo frame and braces
+- Palette: warm bamboo, cognac brown
+- Antique-gold metal details

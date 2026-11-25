@@ -1,0 +1,49 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Wave Sofa
+Collection: sofa
+Category: sofas
+Type: Sofa đơn bằng tre và mây | Bamboo and rattan single sofa
+Featured: yes
+Draft: no
+Size: 940 x 770 x 750
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.jpg
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+Drawing: drawing-02.webp | Mặt đứng chính | Front elevation | ivory
+Drawing: drawing-03.webp | Mặt đứng bên | Side elevation | ivory
+Drawing: drawing-01.webp | Mặt bằng | Top plan | ivory
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Các nan tre của WAVE uốn từ lưng tựa xuống mặt ngồi rồi cuộn lại ở mép trước. Dọc mép ghế, dây mây đan chéo thành một hàng chữ X trên nền tre màu mật ong. Nhìn nghiêng, khoảng rỗng trong nếp uốn hiện rõ phía trên những chân thép mảnh.
+
+## Chất liệu
+- Tre tự nhiên: Mật ong
+- Mây đan: Vàng nhạt
+- Thép sơn tĩnh điện: Tông than
+- Gối tựa rời: Xanh ô liu
+
+[EN]
+WAVE’s bamboo strips bend from the backrest down into the seat, then curl over at the front edge. Along the edge, woven rattan crosses into a row of Xs on honey-coloured bamboo. In profile, the hollow of the curve sits clearly above slender steel legs.
+
+## Materials
+- Natural bamboo: Honey
+- Woven rattan: Pale gold
+- Powder-coated steel: Charcoal
+- Loose back cushion: Olive green

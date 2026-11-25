@@ -1,0 +1,30 @@
+# TRANG CHỦ. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Collection: bộ sưu tập giới thiệu trên ảnh mở đầu (tên thư mục, bỏ số đầu).
+# Photo: ảnh mở đầu toàn màn hình (ngang). PhotoMobile: ảnh dọc cho điện thoại (không bắt buộc).
+# Sản phẩm tiêu biểu: đánh dấu Featured: yes trong info.txt của sản phẩm.
+# Workshop: file | chú thích | caption (ảnh xưởng & con người, nên có 3 ảnh).
+# Sau dấu ---: [VI] ## Giới thiệu, ## Xưởng; [EN] ## Introduction, ## Workshop.
+Collection: the-nobility
+Photo: hero.jpg
+PhotoMobile: hero-mobile.jpg
+PhotoAlt: Ghế Captain và đôn gác chân trong một không gian kiến trúc mở ra mặt nước | The Captain chair and footstool in an architectural space opening onto water
+IntroTitle: Cây tre Việt – chất xám người Việt | Vietnamese bamboo, Vietnamese ingenuity
+CuratedTitle: Những thiết kế tiêu biểu | Signature pieces
+WorkshopTitle: Những người thợ hiểu tre | The craftsmen who understand bamboo
+Workshop: workshop-1.jpg | Tre nguyên liệu | Raw bamboo
+Workshop: workshop-2.jpg | Chọn từng cây tre | Choosing each culm
+Workshop: workshop-3.jpg | Đôi tay người thợ đan | A weaver’s hands
+---
+[VI]
+## Giới thiệu
+VBamboo thiết kế nội thất tre cho không gian sống đương đại, nơi vẻ đẹp mộc mạc và độc bản của tre Việt gặp tư duy thiết kế hiện đại. Mỗi sản phẩm là một bước trên hành trình đưa nội thất tre Việt ra thế giới.
+
+## Xưởng
+Trong nghề mộc thủ công, có những kinh nghiệm chỉ được trao truyền qua năm tháng làm việc bên nhau. VBamboo trân trọng những người thợ đã dành cả đời để hiểu tre, rồi kiên nhẫn truyền lại điều mình biết cho người đến sau.
+
+[EN]
+## Introduction
+VBamboo designs bamboo furniture for contemporary living, where the simple, one-of-a-kind beauty of Vietnamese bamboo meets modern design thinking. Each piece is a step on the journey of bringing Vietnamese bamboo furniture to the world.
+
+## Workshop
+In handcrafted woodwork, some knowledge is only passed on through years of working side by side. VBamboo honours the craftsmen who have spent their lives understanding bamboo, and who patiently hand down what they know to those who come after.

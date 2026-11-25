@@ -1,0 +1,35 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Baron
+Collection: the-nobility
+Category: chairs
+Type: Ghế thư giãn có tay vịn | Lounge chair with armrests
+Featured: no
+Draft: no
+Size: 580 x 530 x 930
+SeatHeight: 
+SizeApproved: yes
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+Drawing: drawing-01.webp | Các hình chiếu | Elevations and plan | ivory
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Lưng tựa bọc da đen uốn thành vòng cung, nối liền hai tay vịn. Khoảng hở giữa vòng tựa và mặt ngồi cho ánh sáng đi qua, làm nhẹ dáng ghế. Ở bốn chân tre sẫm màu, sắc vàng trầm của đồng thau gợi một nét cổ điển.
+
+[EN]
+A black leather backrest curves into an arc that joins both armrests. The gap between the arc and the seat lets light through, lightening the chair’s form. On the four dark bamboo legs, the muted gold of brass adds a classic note.

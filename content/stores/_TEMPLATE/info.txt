@@ -1,0 +1,21 @@
+# CỬA HÀNG / ĐẠI LÝ. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Kind: showroom (showroom VBamboo) hoặc dealer (đại lý chính thức).
+# Hours: xuống dòng bằng dấu ; (vd: Thứ Hai – Thứ Sáu 9:00 – 17:30; Thứ Bảy 9:00 – 12:00 | Mon – Fri ...; Sat ...)
+# Map: link Google Maps để chỉ đường. Appointment: yes = tham quan theo lịch hẹn (hiện form đặt lịch).
+# Booking: link đặt lịch bên ngoài (không bắt buộc). Photo: ảnh cửa hàng (ngang 3:2).
+
+# Chép thư mục này thành "02-ten-cua-hang", rồi thêm tên thư mục vào content/stores/index.txt
+
+Name: 
+Kind: dealer
+Draft: yes
+City: Hà Nội | Hanoi
+Country: Việt Nam | Vietnam
+Address: 
+Hours: Thứ Hai – Thứ Bảy, 9:00 – 18:00 | Monday – Saturday, 9:00 – 18:00
+Tel: 
+Email: 
+Map: 
+Appointment: no
+Booking: 
+Photo: photo.jpg

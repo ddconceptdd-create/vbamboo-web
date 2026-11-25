@@ -1,0 +1,148 @@
+HƯỚNG DẪN CẬP NHẬT WEBSITE VBAMBOO
+==================================
+
+CẤU TRÚC
+  content/                     <- TOÀN BỘ NỘI DUNG WEBSITE (chỉ cần sửa thư mục này)
+    products/     index.txt + mỗi sản phẩm 1 thư mục (info.txt, ảnh, bản vẽ, mẫu vật liệu)  + _TEMPLATE
+    collections/  index.txt + mỗi bộ sưu tập 1 thư mục (info.txt, ảnh)                      + _TEMPLATE
+    stores/       index.txt + mỗi showroom / đại lý 1 thư mục (info.txt, ảnh)               + _TEMPLATE
+    home/         info.txt + ảnh trang chủ
+    about/        info.txt + ảnh trang Giới thiệu
+    contact/      info.txt (địa chỉ, điện thoại, email, mạng xã hội, chân trang, bật/tắt giá)
+  HUONG-DAN.txt                <- file này
+  src/, public/, scripts/, package.json ...   <- giao diện website (không cần sửa)
+
+QUY TẮC CHUNG (giống website DDConcept v11)
+  - Dòng bắt đầu bằng # là ghi chú, website bỏ qua.
+  - Trong info.txt: phần trên dấu --- là các trường (Name: ...), phần dưới là nội dung.
+  - Trường có 2 ngôn ngữ viết:  Tiếng Việt | English
+    Chỉ ghi 1 giá trị (không có dấu |) = dùng chung cho cả 2 ngôn ngữ.
+  - Nội dung dưới dấu --- gồm 2 phần: [VI] (tiếng Việt) rồi [EN] (tiếng Anh).
+    Các đoạn văn cách nhau 1 dòng trống. Dòng "## Tiêu đề" mở một mục. Dòng "- " là 1 ý trong danh sách.
+    Thiếu bản tiếng Anh thì trang tiếng Anh tự dùng bản tiếng Việt (và ngược lại).
+  - yes / no: có thể ghi yes, no (hoặc có, không).
+  - Thứ tự hiển thị = thứ tự các dòng trong index.txt của từng mục.
+  - Ẩn 1 mục: xóa dòng tên của nó trong index.txt (có thể xóa luôn thư mục).
+  - Draft: yes = BẢN NHÁP: không hiện trên website chính thức, chỉ hiện ở link xem trước (có nhãn "Bản nháp").
+  - Tên file ảnh: chữ không dấu, không khoảng trắng (vd hero.jpg, room-01.jpg).
+    Ảnh nên rộng 1600–2400px, mỗi ảnh dưới ~800KB (JPG chất lượng 75–80). Website tự nén và thu nhỏ cho điện thoại.
+
+ĐỊA CHỈ TRANG (LINK)
+  Tên thư mục bỏ số đầu = địa chỉ trang. Ví dụ thư mục products/01-bosento-sofa:
+    https://ten-mien/vi/products/bosento-sofa   và   https://ten-mien/en/products/bosento-sofa
+  Đổi số đầu (01-, 02-) không đổi link. Đã gửi link cho khách thì đừng đổi phần chữ phía sau;
+  nếu cần link khác tên thư mục, thêm dòng "Slug: ten-moi" vào info.txt.
+  Khi khách chọn phiên bản (màu khung, vải), link giữ phiên bản đó: ...?finish=natural&fabric=sand-linen
+
+THÊM SẢN PHẨM MỚI
+  1. Chép content/products/_TEMPLATE thành content/products/27-ten-san-pham
+  2. Bỏ ảnh vào thư mục đó. Website nhận loại ảnh theo TÊN FILE:
+       silhouette.jpg / .png / .webp   ảnh giới thiệu: sản phẩm tách nền hoặc chụp studio nền trắng
+       hero.jpg, room-01.jpg, ...      ảnh sản phẩm trong không gian kiến trúc
+       studio-01.jpg, ...              ảnh studio
+       detail-01.jpg, ...              ảnh cận chi tiết
+       drawing-01.png, ...             bản vẽ kỹ thuật (mặt đứng, mặt bên, mặt bằng)
+       swatch-....jpg                  ảnh mẫu vật liệu (vuông)
+  3. Mở info.txt, điền các trường (xem ghi chú # ở đầu file) và phần mô tả [VI] / [EN].
+  4. Thêm tên thư mục "27-ten-san-pham" vào 1 dòng mới trong content/products/index.txt
+
+  Các trường của sản phẩm:
+    Name          tên sản phẩm (vd Bosento Sofa). Muốn tên tiếng Việt khác: Ghế Bosento | Bosento Sofa
+    Collection    tên thư mục bộ sưu tập, bỏ số đầu (01-sofa -> sofa)
+    Category      1 trong: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+                  (chỉ những loại đang có sản phẩm mới hiện trên menu lọc và chân trang)
+    Type          loại cụ thể hiện dưới tên: Sofa đơn thư giãn | Single lounge sofa
+    Featured      yes = hiện trong "Những thiết kế tiêu biểu" ở trang chủ
+    Size          Rộng x Sâu x Cao, đơn vị mm (vd 1000 x 800 x 820).  SeatHeight: chiều cao mặt ngồi
+    SizeApproved  yes = cho phép đăng kích thước. Chưa duyệt thì website chính thức ghi
+                  "Kích thước sẽ được cung cấp theo yêu cầu".
+    Photo         ảnh giới thiệu.   PhotoStyle: cutout (ảnh tách nền / studio nền trắng, hiện nguyên chiếc)
+                  hoặc photo (ảnh không gian, phủ kín khung)
+    CardPhoto     ảnh không gian hiện khi rê chuột lên thẻ sản phẩm
+    Images        all = tự lấy hết ảnh hero, room, studio, detail trong thư mục (theo thứ tự đó, theo số)
+                  hoặc liệt kê tên từng ảnh cách nhau dấu phẩy để tự chọn và sắp xếp
+    Drawing       file | Tên hình chiếu | View name | green hoặc ivory     (mỗi bản vẽ 1 dòng)
+                  green = nền xanh rêu cho bản vẽ nét trắng/sáng; ivory = nền ngà cho bản vẽ nét đen.
+                  Không có bản vẽ: website tự vẽ sơ đồ tỉ lệ từ kích thước đã duyệt.
+    Swatch        file | Tên vật liệu | Material name                    (mỗi mẫu 1 dòng)
+    Download      file | sheet / 2d / 3d | Nhãn | Label                  (catalogue PDF, bản vẽ 2D, mô hình 3D)
+    PriceVND / PriceUSD / PriceApproved   giá theo bảng giá đã duyệt (xem mục GIÁ)
+
+  Phần mô tả dưới dấu ---:
+    Đoạn đầu tiên = đoạn giới thiệu ngắn dưới tên sản phẩm; các đoạn sau = câu chuyện thiết kế.
+    ## Đặc điểm thiết kế   (EN: ## Design features)  mỗi dòng "- " là 1 đặc điểm
+    ## Chất liệu          (EN: ## Materials)        mỗi dòng "- "; viết "Nhãn: giá trị" để tách 2 cột
+                                                    (vd - Khung: Tre tự nhiên), hoặc chỉ ghi giá trị.
+
+  Phiên bản (màu khung, vải bọc) – không bắt buộc:
+    Finish: natural | Tre tự nhiên | Natural bamboo | #C9A36A          (mã | tên | name | mã màu hoặc file ảnh mẫu)
+    Fabric: sand-linen | Lanh màu cát | Sand linen | swatch-sand.jpg
+    VersionPhoto: natural + sand-linen | version-natural-sand.jpg     (ảnh của đúng phiên bản; dùng * cho "bất kỳ")
+    Khi khách chọn phiên bản, nút "Liên hệ mua hàng" mang theo tên sản phẩm + phiên bản vào form Liên hệ.
+
+BỘ SƯU TẬP
+  Chép collections/_TEMPLATE thành collections/06-ten-bo-suu-tap, thêm tên thư mục vào collections/index.txt.
+    Name      tên bộ sưu tập (hiện chữ in hoa giãn cách)
+    Tagline   câu ngắn dưới tên:  Tiếng Việt | English
+    Photo     ảnh mở đầu rộng (ngang, toàn chiều ngang màn hình)
+    Sketch    nét vẽ màu sáng trên nền trong suốt (PNG/WebP), hiện trên tấm nền xanh dệt
+    Texture   file | chú thích | caption   (3 ảnh cận chất liệu)
+    Setting   ảnh các sản phẩm trong không gian (ngang)
+  Phần dưới ---: đoạn giới thiệu; ## Trích dẫn (EN: ## Quote) là câu trích dẫn (không bắt buộc).
+  Sản phẩm thuộc bộ sưu tập nào do dòng Collection: trong info.txt của sản phẩm quyết định.
+
+SHOWROOM / ĐẠI LÝ
+  Chép stores/_TEMPLATE thành stores/02-ten-cua-hang, thêm tên thư mục vào stores/index.txt.
+    Kind: showroom hoặc dealer.  Hours: giờ mở cửa, xuống dòng bằng dấu ;
+    Map: link Google Maps (nút "Chỉ đường").  Appointment: yes = tham quan theo lịch hẹn (hiện form đặt lịch).
+    Booking: link đặt lịch bên ngoài (nếu có, thay cho form).  Photo: ảnh cửa hàng (ngang 3:2).
+  Chưa có cửa hàng nào hiện trên website chính thức thì trang Cửa hàng mời khách liên hệ để hẹn lịch.
+
+TRANG CHỦ (content/home/info.txt)
+  Collection: bộ sưu tập giới thiệu trên ảnh mở đầu.  Photo: ảnh mở đầu (ngang).
+  PhotoMobile: ảnh dọc cho điện thoại (không bắt buộc).  Workshop: file | chú thích | caption (3 ảnh xưởng).
+  Phần dưới ---: ## Giới thiệu và ## Xưởng (EN: ## Introduction, ## Workshop).
+
+GIỚI THIỆU (content/about/info.txt)
+  Title, Photo (ảnh mở đầu), QuotePhoto (ảnh nền sau câu trích dẫn).
+  Phần dưới ---: đoạn đầu là lời mở đầu. Mỗi chương:
+      ## Tiêu đề nhỏ | Tiêu đề chương
+      Ảnh: chapter-1.jpg        (ảnh dọc 4:5; chỉ cần ghi trong phần [VI])
+      các đoạn văn...
+  ## Trích dẫn (EN: ## Quote) và ## Giá trị cốt lõi (EN: ## Core values; mỗi dòng "- Tên: nội dung").
+
+LIÊN HỆ & CHÂN TRANG (content/contact/info.txt)
+  Address, Tel, Email (hiện ở chân trang), Facebook, Instagram, LinkedIn (link đầy đủ https://...),
+  Footer (dòng chữ cuối trang), ShowPrices.
+  Email NHẬN yêu cầu từ form được cài trên Vercel (mục ĐƯA LÊN WEBSITE), không ghi ở đây.
+
+GIÁ
+  Lúc ra mắt website không hiện giá (khách gửi yêu cầu báo giá). Khi có bảng giá đã duyệt:
+    1. Trong info.txt từng sản phẩm: PriceVND: 25000000   PriceUSD: 990   PriceApproved: yes
+    2. Trong content/contact/info.txt: ShowPrices: yes
+  Trang tiếng Việt hiện giá VND, trang tiếng Anh hiện giá USD. Sản phẩm chưa PriceApproved: yes thì không hiện giá.
+
+ĐƯA LÊN WEBSITE (Vercel tự cập nhật từ GitHub)
+  Lần đầu (1 lần):
+    1. Vào vercel.com/new, đăng nhập bằng GitHub, chọn repo ddconceptdd-create/vbamboo-web, bấm Deploy.
+    2. Để form gửi email: Vercel > Project > Settings > Environment Variables, thêm
+         RESEND_API_KEY  (tạo ở resend.com)     ENQUIRY_TO    email nhận yêu cầu (nhiều email cách nhau dấu phẩy)
+         ENQUIRY_FROM    vd VBamboo website <web@vbamboo.vn>   NEXT_PUBLIC_SITE_URL  vd https://vbamboo.vn
+       Chưa cài thì yêu cầu vẫn được ghi lại trong Vercel > Logs.
+    3. Gắn tên miền: Vercel > Project > Settings > Domains.
+  Sửa nội dung (mỗi lần):
+    - Sửa chữ: trên github.com mở repo > content > ... > info.txt > bấm biểu tượng bút chì > sửa > "Commit changes".
+    - Thêm / thay ảnh: mở thư mục > "Add file" > "Upload files" > kéo ảnh vào > "Commit changes".
+      (Ảnh trùng tên sẽ được thay bằng ảnh mới.)
+    - Thêm sản phẩm mới: chuẩn bị thư mục trên máy (chép từ _TEMPLATE), rồi vào content/products >
+      "Add file" > "Upload files" > kéo CẢ THƯ MỤC vào > "Commit changes". Nhớ sửa products/index.txt.
+    - Hoặc dùng GitHub Desktop: sửa thư mục content/ ngay trên máy, rồi bấm Commit và Push.
+    Khoảng 1–2 phút sau, Vercel tự build lại và website cập nhật. Không cần sửa code.
+  Kiểm tra lỗi: Vercel > Deployments > bấm vào lần cập nhật > Build Logs. Dòng bắt đầu bằng [content]
+    cho biết file nào ghi sai tên hoặc bị thiếu (website vẫn chạy, chỉ bỏ qua phần lỗi).
+  Xem trước khi đăng: sửa trên một nhánh (branch) khác main; Vercel tạo link xem trước, có hiện các bản nháp.
+
+LƯU Ý
+  - Website chính thức (nhánh main) ẩn các bản nháp và kích thước chưa duyệt.
+  - Giữ nguyên các dòng trường (Name:, Photo: ...) kể cả khi để trống.
+  - Mỗi file nên dưới 25MB (giới hạn upload trên trang GitHub).

@@ -1,0 +1,34 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Tăm
+Collection: the-nobility
+Category: lounge-chairs
+Type: Ghế thư giãn có tay vịn | Lounge chair with armrests
+Featured: no
+Draft: no
+Size: 612 x 465 x 708
+SeatHeight: 
+SizeApproved: yes
+Photo: hero.jpg
+PhotoStyle: photo
+CardPhoto: room-01.jpg
+Images: all
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Một vòng tre uốn ôm lấy lưng người ngồi rồi mở về phía trước thành hai tay vịn. Bên dưới, mép mây đan cuộn nhẹ quanh tấm đệm. Khoảng hở rộng giữa vòng tre và mặt ngồi để lộ những thanh thép mảnh nâng đỡ thân ghế.
+
+[EN]
+A loop of bent bamboo wraps around the sitter’s back, then opens forward into two armrests. Below, a woven rattan edge curls softly around the cushion. The wide gap between the bamboo loop and the seat reveals slim steel bars supporting the chair.

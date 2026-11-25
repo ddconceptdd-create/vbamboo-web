@@ -1,0 +1,26 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+Name: Sofa
+Tagline: Khung tre uốn vòng, đệm mềm ôm dáng ngồi | Arched bamboo frames, softly embracing cushions
+Draft: no
+Photo: hero.jpg
+Sketch: sketch.webp
+Setting: setting.jpg
+Texture: texture-1.jpg | Đai da và khóa kim loại | Leather strap and metal buckle
+Texture: texture-2.jpg | Mây đan chữ X trên nan tre | Rattan crossed over bamboo strips
+Texture: texture-3.jpg | Nhịp thanh tre và đai nâu | Bamboo slats and a brown strap
+---
+[VI]
+Bốn mẫu sofa đơn của VBamboo cùng chia sẻ một ý tưởng: khung tre uốn cong làm nên đường viền, còn đệm, da và mây làm nên cảm giác ngồi. Từ BOSENTO chần ô đen đến WAVE nan tre và mây đan, mỗi thiết kế là một cách để tre bước vào phòng khách đương đại.
+
+## Trích dẫn
+Có ý tưởng ra đời từ mong muốn đem hơi ấm vào một căn phòng rộng, có ý tưởng bắt đầu từ nỗi nhớ quê nhà. Mỗi thiết kế của VBamboo đều mang theo một lý do gần với đời sống như thế.
+
+[EN]
+VBamboo’s four single sofas share one idea: a curved bamboo frame draws the outline, while cushions, leather and rattan shape the way you sit. From the black quilted BOSENTO to the woven WAVE, each is a way for bamboo to enter the contemporary living room.
+
+## Quote
+Some ideas are born from a wish to bring warmth to a large room; others begin with longing for home. Every VBamboo design carries a reason as close to everyday life as that.

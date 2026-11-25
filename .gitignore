@@ -42,3 +42,6 @@ next-env.d.ts
 
 # python
 __pycache__/
+
+# copied from content/ at build time
+/public/content/

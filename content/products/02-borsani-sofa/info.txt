@@ -1,0 +1,58 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+
+Name: Borsani Sofa
+Collection: sofa
+Category: sofas
+Type: Sofa đơn thư giãn | Single lounge sofa
+Featured: no
+Draft: no
+Size: 1000 x 800 x 820
+SeatHeight: 
+SizeApproved: no
+Photo: silhouette.jpg
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+Khung tre vòng cung kết hợp cùng đệm bọc kem ngà tạo nên dáng vẻ mềm mại của BORSANI. Đường viền đệm và dải đai nâu làm rõ cấu trúc, trong khi nhịp thanh tre ở mặt lưng tạo chiều sâu cho thiết kế. Bảng màu sáng, ấm đem đến sự thanh nhã cho không gian sống đương đại.
+
+## Đặc điểm thiết kế
+- Phom ngồi thấp, không tay vịn.
+- Khối đệm bo tròn, đường viền rõ.
+- Khung tre vòng cung.
+- Mặt lưng tạo nhịp bằng hệ thanh tre
+
+## Chất liệu
+- Khung và hệ thanh tre
+- Mặt bọc tông kem ngà
+- Đai bên hông màu nâu trầm
+- Khóa và chi tiết kim loại
+
+[EN]
+An arched bamboo frame and ivory-cream cushions give BORSANI its soft presence. Piping and a brown strap define the structure, while bamboo slats across the back add depth. The light, warm palette brings quiet elegance to contemporary living spaces.
+
+## Design features
+- Low seat without armrests.
+- Rounded cushions with defined piping.
+- Arched bamboo frame.
+- Back given rhythm by bamboo slats.
+
+## Materials
+- Bamboo frame and slats
+- Ivory-cream upholstery
+- Deep brown side strap
+- Buckle and metal details
