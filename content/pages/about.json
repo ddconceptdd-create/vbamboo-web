@@ -1,0 +1,102 @@
+{
+  "title": {
+    "vi": "Về VBamboo",
+    "en": "About VBamboo"
+  },
+  "lead": {
+    "vi": "Chúng tôi tin rằng tre Việt Nam xứng đáng có mặt trong những không gian nội thất đẹp nhất thế giới.",
+    "en": "We believe Vietnamese bamboo belongs in the finest interiors in the world."
+  },
+  "heroImage": "/images/pages/about-hero.svg",
+  "chapters": [
+    {
+      "eyebrow": {
+        "vi": "Khởi nguồn",
+        "en": "Origins"
+      },
+      "title": {
+        "vi": "Bắt đầu từ làng nghề",
+        "en": "It began in a craft village"
+      },
+      "text": {
+        "vi": "[Nội dung mẫu] VBamboo ra đời từ những làng nghề tre truyền thống ở miền Bắc Việt Nam, với mong muốn đưa kỹ thuật của thế hệ trước vào ngôn ngữ thiết kế hôm nay.",
+        "en": "[Sample text] VBamboo grew out of the traditional bamboo villages of northern Vietnam, with the aim of bringing the techniques of earlier generations into today’s design language."
+      },
+      "image": "/images/pages/about-artisans.svg",
+      "alt": {
+        "vi": "Nghệ nhân đang uốn tre",
+        "en": "Artisans bending bamboo"
+      }
+    },
+    {
+      "eyebrow": {
+        "vi": "Vật liệu",
+        "en": "Material"
+      },
+      "title": {
+        "vi": "Chọn tre như chọn gỗ quý",
+        "en": "Selecting bamboo like fine timber"
+      },
+      "text": {
+        "vi": "[Nội dung mẫu] Chúng tôi chỉ dùng tre trên năm năm tuổi, khai thác có chọn lọc để rừng tre tiếp tục tái sinh. Mỗi cây được phân loại theo độ dày, độ thẳng và màu sắc.",
+        "en": "[Sample text] We use only culms over five years old, selectively harvested so the grove keeps regenerating. Each is graded by wall thickness, straightness and colour."
+      },
+      "image": "/images/pages/about-material.svg",
+      "alt": {
+        "vi": "Thớ tre cận cảnh",
+        "en": "Close-up of bamboo grain"
+      }
+    },
+    {
+      "eyebrow": {
+        "vi": "Trách nhiệm",
+        "en": "Responsibility"
+      },
+      "title": {
+        "vi": "Sản xuất có trách nhiệm",
+        "en": "Responsible production"
+      },
+      "text": {
+        "vi": "[Nội dung mẫu] Hoàn thiện gốc nước, đóng gói giảm nhựa, và chế độ đãi ngộ công bằng cho người thợ. Chúng tôi muốn mỗi sản phẩm bền lâu, sửa được và tái chế được.",
+        "en": "[Sample text] Water-based finishes, reduced-plastic packaging and fair conditions for our artisans. We want every piece to last, to be repairable and recyclable."
+      },
+      "image": "/images/pages/about-finished.svg",
+      "alt": {
+        "vi": "Ghế Grove hoàn thiện",
+        "en": "A finished Grove chair"
+      }
+    }
+  ],
+  "principles": [
+    {
+      "title": {
+        "vi": "Thủ công",
+        "en": "Craftsmanship"
+      },
+      "text": {
+        "vi": "Kỹ thuật truyền thống, độ chính xác của xưởng hiện đại.",
+        "en": "Traditional techniques with the precision of a modern workshop."
+      }
+    },
+    {
+      "title": {
+        "vi": "Vật liệu",
+        "en": "Material"
+      },
+      "text": {
+        "vi": "Tre Việt Nam được chọn lọc, xử lý và hoàn thiện tự nhiên.",
+        "en": "Vietnamese bamboo, carefully selected, treated and naturally finished."
+      }
+    },
+    {
+      "title": {
+        "vi": "Trách nhiệm",
+        "en": "Responsibility"
+      },
+      "text": {
+        "vi": "Rừng tre tái sinh, người thợ được trân trọng.",
+        "en": "Regenerating groves, and artisans who are valued."
+      }
+    }
+  ]
+}

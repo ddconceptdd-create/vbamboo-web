@@ -1,0 +1,142 @@
+{
+  "name": "Sands Coffee Table",
+  "nameVi": "Bàn trà Sands",
+  "sample": true,
+  "category": "coffee-tables",
+  "collection": "the-sands",
+  "order": 4,
+  "featured": true,
+  "summary": {
+    "vi": "Mặt tre ép hình bầu dục trên đế đan, đường cong mềm như cồn cát.",
+    "en": "An oval pressed-bamboo top on a woven base, curved like a dune."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập The Sands. Mỗi thanh tre được chọn từ những cây trên năm năm tuổi, xử lý chống ẩm và uốn nhiệt bằng tay. Kết quả là một bộ sưu tập nhẹ, bền, sẵn sàng cho cả không gian trong nhà lẫn hiên có mái che.",
+    "en": "Part of the The Sands collection. Each culm is selected from plants over five years old, treated against humidity and heat-bent by hand. The result is a light, durable collection that sits as easily indoors as on a covered terrace."
+  },
+  "heroImage": "/images/products/sands-coffee-table/hero.svg",
+  "heroAlt": {
+    "vi": "Bàn trà Sands, dáng tổng thể",
+    "en": "Sands Coffee Table, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/sands-coffee-table/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Bàn trà Sands trong không gian kiến trúc",
+        "en": "Sands Coffee Table in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/sands-coffee-table/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Bàn trà Sands, ảnh studio",
+        "en": "Sands Coffee Table, studio view"
+      }
+    },
+    {
+      "image": "/images/products/sands-coffee-table/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Bàn trà Sands",
+        "en": "Bamboo detail of the Sands Coffee Table"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1200,
+    "depth": 700,
+    "height": 380,
+    "seatHeight": null,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    },
+    {
+      "key": "smoked",
+      "name": {
+        "vi": "Tre hun khói",
+        "en": "Smoked bamboo"
+      },
+      "detail": {
+        "vi": "Hun nhiệt, sơn mờ",
+        "en": "Heat-carbonised, matte lacquer"
+      },
+      "swatchColor": "#8A6438",
+      "swatchImage": null
+    },
+    {
+      "key": "espresso",
+      "name": {
+        "vi": "Nâu trầm",
+        "en": "Espresso"
+      },
+      "detail": {
+        "vi": "Màu nhuộm gốc nước, sơn mờ",
+        "en": "Water-based stain, matte lacquer"
+      },
+      "swatchColor": "#4A3A28",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/sands-coffee-table/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

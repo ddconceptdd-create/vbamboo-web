@@ -1,0 +1,52 @@
+{
+  "heroCollection": "the-sands",
+  "heroImage": "/images/pages/home-hero.svg",
+  "heroImageMobile": "/images/pages/home-hero-mobile.svg",
+  "heroAlt": {
+    "vi": "Sofa Sands trong một không gian kiến trúc mở ra biển",
+    "en": "The Sands sofa in an architectural space opening onto the sea"
+  },
+  "introTitle": {
+    "vi": "Tre Việt Nam, cho không gian đương đại",
+    "en": "Vietnamese bamboo, for contemporary interiors"
+  },
+  "introText": {
+    "vi": "VBamboo thiết kế và chế tác nội thất tre cho kiến trúc sư, nhà thiết kế nội thất và các dự án khách sạn tại Việt Nam và trên thế giới. Mỗi thiết kế bắt đầu từ cây tre, và từ đôi tay của người thợ.",
+    "en": "VBamboo designs and crafts bamboo furniture for architects, interior designers and hospitality projects in Vietnam and around the world. Every piece begins with the culm, and with the hands of an artisan."
+  },
+  "curatedTitle": {
+    "vi": "Những thiết kế tiêu biểu",
+    "en": "Signature pieces"
+  },
+  "workshopTitle": {
+    "vi": "Từ rừng tre đến xưởng",
+    "en": "From the grove to the workshop"
+  },
+  "workshopText": {
+    "vi": "Tại xưởng, tre được phơi khô tự nhiên, uốn nhiệt và đan bằng tay bởi những nghệ nhân có hàng chục năm kinh nghiệm. Chúng tôi chọn từng cây, và biết tên người làm ra từng sản phẩm.",
+    "en": "In our workshop, bamboo is air-dried, heat-bent and hand-woven by artisans with decades of experience. We select every culm, and we know the name of the person who made each piece."
+  },
+  "workshopImages": [
+    {
+      "image": "/images/pages/workshop-1.svg",
+      "caption": {
+        "vi": "Phơi tre tự nhiên",
+        "en": "Air-drying the culms"
+      }
+    },
+    {
+      "image": "/images/pages/workshop-2.svg",
+      "caption": {
+        "vi": "Uốn nhiệt bằng tay",
+        "en": "Heat-bending by hand"
+      }
+    },
+    {
+      "image": "/images/pages/workshop-3.svg",
+      "caption": {
+        "vi": "Chọn và cắt tre",
+        "en": "Selecting and cutting"
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "name": "Sands Sofa",
+  "nameVi": "Sofa Sands",
+  "sample": true,
+  "category": "sofas",
+  "collection": "the-sands",
+  "order": 1,
+  "featured": true,
+  "summary": {
+    "vi": "Khung tre uốn liền một nét ôm trọn đệm ngồi sâu, tay vịn mảnh như đường bờ biển.",
+    "en": "A single heat-bent bamboo line wraps a deep seat, with arms as slim as a shoreline."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập The Sands. Mỗi thanh tre được chọn từ những cây trên năm năm tuổi, xử lý chống ẩm và uốn nhiệt bằng tay. Kết quả là một bộ sưu tập nhẹ, bền, sẵn sàng cho cả không gian trong nhà lẫn hiên có mái che.",
+    "en": "Part of the The Sands collection. Each culm is selected from plants over five years old, treated against humidity and heat-bent by hand. The result is a light, durable collection that sits as easily indoors as on a covered terrace."
+  },
+  "heroImage": "/images/products/sands-sofa/hero.svg",
+  "heroAlt": {
+    "vi": "Sofa Sands, dáng tổng thể",
+    "en": "Sands Sofa, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/sands-sofa/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Sofa Sands trong không gian kiến trúc",
+        "en": "Sands Sofa in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/sands-sofa/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Sofa Sands, ảnh studio",
+        "en": "Sands Sofa, studio view"
+      }
+    },
+    {
+      "image": "/images/products/sands-sofa/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Sofa Sands",
+        "en": "Bamboo detail of the Sands Sofa"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 2200,
+    "depth": 920,
+    "height": 760,
+    "seatHeight": 420,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    },
+    {
+      "label": {
+        "vi": "Đệm",
+        "en": "Cushion"
+      },
+      "value": {
+        "vi": "Mút HR mật độ cao bọc bông polyester, vỏ tháo rời",
+        "en": "High-resilience foam wrapped in fibre, removable covers"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    },
+    {
+      "key": "smoked",
+      "name": {
+        "vi": "Tre hun khói",
+        "en": "Smoked bamboo"
+      },
+      "detail": {
+        "vi": "Hun nhiệt, sơn mờ",
+        "en": "Heat-carbonised, matte lacquer"
+      },
+      "swatchColor": "#8A6438",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [
+    {
+      "key": "sand-linen",
+      "name": {
+        "vi": "Lanh màu cát",
+        "en": "Sand linen"
+      },
+      "detail": {
+        "vi": "100% lanh, 420 g/m²",
+        "en": "100% linen, 420 g/m²"
+      },
+      "swatchColor": "#D9CBB0",
+      "swatchImage": null
+    },
+    {
+      "key": "moss-boucle",
+      "name": {
+        "vi": "Bouclé xanh rêu",
+        "en": "Moss bouclé"
+      },
+      "detail": {
+        "vi": "Bouclé len pha, 560 g/m²",
+        "en": "Wool-blend bouclé, 560 g/m²"
+      },
+      "swatchColor": "#5E6B4A",
+      "swatchImage": null
+    },
+    {
+      "key": "ivory-canvas",
+      "name": {
+        "vi": "Canvas ngà",
+        "en": "Ivory canvas"
+      },
+      "detail": {
+        "vi": "Vải ngoài trời dệt solution-dyed",
+        "en": "Solution-dyed outdoor canvas"
+      },
+      "swatchColor": "#EEE6D6",
+      "swatchImage": null
+    },
+    {
+      "key": "clay",
+      "name": {
+        "vi": "Đất nung",
+        "en": "Clay"
+      },
+      "detail": {
+        "vi": "Cotton pha lanh, 380 g/m²",
+        "en": "Cotton-linen blend, 380 g/m²"
+      },
+      "swatchColor": "#B9805A",
+      "swatchImage": null
+    }
+  ],
+  "versionImages": [
+    {
+      "finish": "",
+      "fabric": "sand-linen",
+      "image": "/images/products/versions/sands-sofa-sand-linen.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "moss-boucle",
+      "image": "/images/products/versions/sands-sofa-moss-boucle.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "ivory-canvas",
+      "image": "/images/products/versions/sands-sofa-ivory-canvas.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "clay",
+      "image": "/images/products/versions/sands-sofa-clay.svg"
+    }
+  ],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/sands-sofa/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

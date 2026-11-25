@@ -1,0 +1,50 @@
+{
+  "name": "Lantern",
+  "sample": true,
+  "order": 3,
+  "tagline": {
+    "vi": "Ánh sáng qua lớp đan tre",
+    "en": "Light through woven bamboo"
+  },
+  "intro": {
+    "vi": "Lấy cảm hứng từ những chiếc đèn lồng phố cổ, Lantern là bộ sưu tập ánh sáng và những món đồ nhỏ tạo không khí cho buổi tối.",
+    "en": "Inspired by the lanterns of Vietnam’s old towns, Lantern is a collection of lighting and small pieces that set the mood for the evening."
+  },
+  "story": {
+    "vi": "Chao đèn được đan từ nan tre mỏng 1,2 mm, cho ánh sáng tán xạ ấm áp và để lại những hoa văn bóng đổ trên tường.",
+    "en": "Shades are woven from 1.2 mm bamboo strips, diffusing a warm light and casting patterned shadows across the walls."
+  },
+  "heroImage": "/images/collections/lantern/hero.svg",
+  "heroAlt": {
+    "vi": "Không gian mở đầu của bộ sưu tập Lantern",
+    "en": "Opening landscape of the Lantern collection"
+  },
+  "textures": [
+    {
+      "image": "/images/collections/lantern/texture-1.svg",
+      "caption": {
+        "vi": "Nan tre 1,2 mm",
+        "en": "1.2 mm bamboo strips"
+      }
+    },
+    {
+      "image": "/images/collections/lantern/texture-2.svg",
+      "caption": {
+        "vi": "Thân đèn tre đặc",
+        "en": "Solid bamboo stem"
+      }
+    },
+    {
+      "image": "/images/collections/lantern/texture-3.svg",
+      "caption": {
+        "vi": "Đế bọc vải",
+        "en": "Upholstered base"
+      }
+    }
+  ],
+  "settingImage": "/images/collections/lantern/setting.svg",
+  "settingAlt": {
+    "vi": "Các thiết kế Lantern trong không gian",
+    "en": "Lantern pieces in their setting"
+  }
+}

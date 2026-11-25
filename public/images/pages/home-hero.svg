@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" preserveAspectRatio="xMidYMid slice">
+  <defs><clipPath id="opening"><path d="M432 999 V459.00000000000006 Q432 135 1200 135 Q1967.9999999999998 135 1967.9999999999998 459.00000000000006 V999 Z"/></clipPath>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9CBB0"/><stop offset="1" stop-color="#C4B391"/></linearGradient>
+  <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <rect width="2400" height="1350" fill="#EDE4D3"/>
+  <g clip-path="url(#opening)"><svg x="0" y="0" width="2400" height="1350" viewBox="0 0 2400 1350">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7E3D6"/><stop offset=".55" stop-color="#F3E6CD"/><stop offset="1" stop-color="#EAD5AE"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB3AA"/><stop offset="1" stop-color="#C6CFC0"/></linearGradient></defs>
+    <rect width="2400" height="1350" fill="url(#sky)"/>
+    <circle cx="1728" cy="405" r="94.50000000000001" fill="#F8EBCF"/>
+    <rect y="675" width="2400" height="121.5" fill="url(#sea)"/>
+    <path d="M0 783 Q720 729 1320 810 T2400 769.4999999999999 V1350 H0 Z" fill="#E2CDA5"/>
+    <path d="M0 944.9999999999999 Q960 864 2400 972 V1350 H0 Z" fill="#D9C197"/></svg></g>
+  <path d="M432 999 V459.00000000000006 Q432 135 1200 135 Q1967.9999999999998 135 1967.9999999999998 459.00000000000006 V999" fill="none" stroke="#D7CAB3" stroke-width="28.8"/>
+  <rect y="999" width="2400" height="351" fill="url(#floor)"/>
+  <path d="M432 999 L120 1350 H2280 L1967.9999999999998 999 Z" fill="url(#light)"/><g transform="translate(600 315) scale(3)">
+    <ellipse cx="200" cy="298" rx="210" ry="10" fill="#000" opacity=".12"/>
+    <line x1="40" y1="300" x2="46" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="300" x2="46" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="37" y1="266" x2="49" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/><line x1="360" y1="300" x2="354" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="360" y1="300" x2="354" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="351" y1="266" x2="363" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/>
+    <rect x="34" y="120" width="332" height="72" rx="28" fill="#D9CBB0"/>
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#D9CBB0" />
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#000" opacity=".06"/>
+    <line x1="200" y1="182" x2="200" y2="226" stroke="#000" opacity=".12" stroke-width="2"/>
+    <path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M14 246 L386 246" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L386 246" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/></g><g font-family="Helvetica, Arial, sans-serif" font-size="27" letter-spacing="2" fill="#3A3328" opacity=".55"><text x="1200" y="1302.75" text-anchor="middle">PLACEHOLDER · HOME · SIGNATURE PIECE IN ARCHITECTURAL SPACE</text></g></svg>

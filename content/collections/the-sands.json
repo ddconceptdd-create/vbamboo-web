@@ -1,0 +1,50 @@
+{
+  "name": "The Sands",
+  "sample": true,
+  "order": 1,
+  "tagline": {
+    "vi": "Nội thất cho những hiên nhà ven biển",
+    "en": "Furniture for coastal terraces"
+  },
+  "intro": {
+    "vi": "The Sands bắt nguồn từ những bờ biển miền Trung: gió mặn, cát mịn và ánh sáng dịu buổi chiều. Khung tre uốn cong mềm như đường sóng, vải bọc mang sắc cát và đá.",
+    "en": "The Sands draws on the coastline of central Vietnam: salt air, fine sand and soft late-afternoon light. Bamboo frames bend like the line of a wave, and the upholstery takes its colours from sand and stone."
+  },
+  "story": {
+    "vi": "Mỗi thanh tre được chọn từ những cây trên năm năm tuổi, xử lý chống ẩm và uốn nhiệt bằng tay. Kết quả là một bộ sưu tập nhẹ, bền, sẵn sàng cho cả không gian trong nhà lẫn hiên có mái che.",
+    "en": "Each culm is selected from plants over five years old, treated against humidity and heat-bent by hand. The result is a light, durable collection that sits as easily indoors as on a covered terrace."
+  },
+  "heroImage": "/images/collections/the-sands/hero.svg",
+  "heroAlt": {
+    "vi": "Không gian mở đầu của bộ sưu tập The Sands",
+    "en": "Opening landscape of the The Sands collection"
+  },
+  "textures": [
+    {
+      "image": "/images/collections/the-sands/texture-1.svg",
+      "caption": {
+        "vi": "Đan tre thủ công",
+        "en": "Hand-woven bamboo"
+      }
+    },
+    {
+      "image": "/images/collections/the-sands/texture-2.svg",
+      "caption": {
+        "vi": "Khung uốn nhiệt",
+        "en": "Heat-bent frame"
+      }
+    },
+    {
+      "image": "/images/collections/the-sands/texture-3.svg",
+      "caption": {
+        "vi": "Lanh màu cát",
+        "en": "Sand linen"
+      }
+    }
+  ],
+  "settingImage": "/images/collections/the-sands/setting.svg",
+  "settingAlt": {
+    "vi": "Các thiết kế The Sands trong không gian",
+    "en": "The Sands pieces in their setting"
+  }
+}

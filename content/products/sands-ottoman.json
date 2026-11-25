@@ -1,0 +1,182 @@
+{
+  "name": "Sands Ottoman",
+  "nameVi": "Đôn Sands",
+  "sample": true,
+  "category": "ottomans",
+  "collection": "the-sands",
+  "order": 3,
+  "featured": false,
+  "summary": {
+    "vi": "Đế đan tre chéo nâng đỡ đệm tròn, vừa là chỗ gác chân vừa là ghế phụ.",
+    "en": "A cross-woven bamboo base beneath a soft cushion: footrest and extra seat in one."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập The Sands. Mỗi thanh tre được chọn từ những cây trên năm năm tuổi, xử lý chống ẩm và uốn nhiệt bằng tay. Kết quả là một bộ sưu tập nhẹ, bền, sẵn sàng cho cả không gian trong nhà lẫn hiên có mái che.",
+    "en": "Part of the The Sands collection. Each culm is selected from plants over five years old, treated against humidity and heat-bent by hand. The result is a light, durable collection that sits as easily indoors as on a covered terrace."
+  },
+  "heroImage": "/images/products/sands-ottoman/hero.svg",
+  "heroAlt": {
+    "vi": "Đôn Sands, dáng tổng thể",
+    "en": "Sands Ottoman, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/sands-ottoman/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Đôn Sands trong không gian kiến trúc",
+        "en": "Sands Ottoman in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/sands-ottoman/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Đôn Sands, ảnh studio",
+        "en": "Sands Ottoman, studio view"
+      }
+    },
+    {
+      "image": "/images/products/sands-ottoman/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Đôn Sands",
+        "en": "Bamboo detail of the Sands Ottoman"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 620,
+    "depth": 620,
+    "height": 420,
+    "seatHeight": null,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    },
+    {
+      "label": {
+        "vi": "Đệm",
+        "en": "Cushion"
+      },
+      "value": {
+        "vi": "Mút HR mật độ cao bọc bông polyester, vỏ tháo rời",
+        "en": "High-resilience foam wrapped in fibre, removable covers"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [
+    {
+      "key": "sand-linen",
+      "name": {
+        "vi": "Lanh màu cát",
+        "en": "Sand linen"
+      },
+      "detail": {
+        "vi": "100% lanh, 420 g/m²",
+        "en": "100% linen, 420 g/m²"
+      },
+      "swatchColor": "#D9CBB0",
+      "swatchImage": null
+    },
+    {
+      "key": "moss-boucle",
+      "name": {
+        "vi": "Bouclé xanh rêu",
+        "en": "Moss bouclé"
+      },
+      "detail": {
+        "vi": "Bouclé len pha, 560 g/m²",
+        "en": "Wool-blend bouclé, 560 g/m²"
+      },
+      "swatchColor": "#5E6B4A",
+      "swatchImage": null
+    },
+    {
+      "key": "clay",
+      "name": {
+        "vi": "Đất nung",
+        "en": "Clay"
+      },
+      "detail": {
+        "vi": "Cotton pha lanh, 380 g/m²",
+        "en": "Cotton-linen blend, 380 g/m²"
+      },
+      "swatchColor": "#B9805A",
+      "swatchImage": null
+    }
+  ],
+  "versionImages": [
+    {
+      "finish": "",
+      "fabric": "sand-linen",
+      "image": "/images/products/versions/sands-ottoman-sand-linen.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "moss-boucle",
+      "image": "/images/products/versions/sands-ottoman-moss-boucle.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "clay",
+      "image": "/images/products/versions/sands-ottoman-clay.svg"
+    }
+  ],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/sands-ottoman/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

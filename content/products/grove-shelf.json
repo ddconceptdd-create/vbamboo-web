@@ -1,0 +1,129 @@
+{
+  "name": "Grove Shelf",
+  "nameVi": "Kệ Grove",
+  "sample": true,
+  "category": "shelving",
+  "collection": "grove",
+  "order": 3,
+  "featured": false,
+  "summary": {
+    "vi": "Kệ dáng thang với bốn tầng, khung tre hơi nghiêng tạo chiều sâu.",
+    "en": "A ladder-form shelf with four tiers, its frame gently tapered for depth."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập Grove. Chúng tôi giữ nguyên đốt tre như một dấu ấn của vật liệu, kết hợp với mộng ghép truyền thống và chốt tre thay vì đinh vít ở những vị trí có thể.",
+    "en": "Part of the Grove collection. We keep each node as a signature of the material, combined with traditional joinery and bamboo pegs instead of screws wherever possible."
+  },
+  "heroImage": "/images/products/grove-shelf/hero.svg",
+  "heroAlt": {
+    "vi": "Kệ Grove, dáng tổng thể",
+    "en": "Grove Shelf, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/grove-shelf/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Kệ Grove trong không gian kiến trúc",
+        "en": "Grove Shelf in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/grove-shelf/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Kệ Grove, ảnh studio",
+        "en": "Grove Shelf, studio view"
+      }
+    },
+    {
+      "image": "/images/products/grove-shelf/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Kệ Grove",
+        "en": "Bamboo detail of the Grove Shelf"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 1000,
+    "depth": 400,
+    "height": 1900,
+    "seatHeight": null,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    },
+    {
+      "key": "smoked",
+      "name": {
+        "vi": "Tre hun khói",
+        "en": "Smoked bamboo"
+      },
+      "detail": {
+        "vi": "Hun nhiệt, sơn mờ",
+        "en": "Heat-carbonised, matte lacquer"
+      },
+      "swatchColor": "#8A6438",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/grove-shelf/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

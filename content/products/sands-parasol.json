@@ -1,0 +1,174 @@
+{
+  "name": "Sands Parasol",
+  "nameVi": "Dù Sands",
+  "sample": true,
+  "category": "umbrellas",
+  "collection": "the-sands",
+  "order": 5,
+  "featured": false,
+  "summary": {
+    "vi": "Cán tre đặc và nan dù tre uốn, che nắng cho hiên và hồ bơi.",
+    "en": "A solid bamboo pole and bent bamboo ribs, shading terraces and pool decks."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập The Sands. Mỗi thanh tre được chọn từ những cây trên năm năm tuổi, xử lý chống ẩm và uốn nhiệt bằng tay. Kết quả là một bộ sưu tập nhẹ, bền, sẵn sàng cho cả không gian trong nhà lẫn hiên có mái che.",
+    "en": "Part of the The Sands collection. Each culm is selected from plants over five years old, treated against humidity and heat-bent by hand. The result is a light, durable collection that sits as easily indoors as on a covered terrace."
+  },
+  "heroImage": "/images/products/sands-parasol/hero.svg",
+  "heroAlt": {
+    "vi": "Dù Sands, dáng tổng thể",
+    "en": "Sands Parasol, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/sands-parasol/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Dù Sands trong không gian kiến trúc",
+        "en": "Sands Parasol in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/sands-parasol/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Dù Sands, ảnh studio",
+        "en": "Sands Parasol, studio view"
+      }
+    },
+    {
+      "image": "/images/products/sands-parasol/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Dù Sands",
+        "en": "Bamboo detail of the Sands Parasol"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 2800,
+    "depth": 2800,
+    "height": 2600,
+    "seatHeight": null,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    },
+    {
+      "label": {
+        "vi": "Đệm",
+        "en": "Cushion"
+      },
+      "value": {
+        "vi": "Mút HR mật độ cao bọc bông polyester, vỏ tháo rời",
+        "en": "High-resilience foam wrapped in fibre, removable covers"
+      }
+    },
+    {
+      "label": {
+        "vi": "Tán",
+        "en": "Canopy"
+      },
+      "value": {
+        "vi": "Vải acrylic solution-dyed, chống UV",
+        "en": "UV-resistant solution-dyed acrylic"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [
+    {
+      "key": "ivory-canvas",
+      "name": {
+        "vi": "Canvas ngà",
+        "en": "Ivory canvas"
+      },
+      "detail": {
+        "vi": "Vải ngoài trời dệt solution-dyed",
+        "en": "Solution-dyed outdoor canvas"
+      },
+      "swatchColor": "#EEE6D6",
+      "swatchImage": null
+    },
+    {
+      "key": "sand-linen",
+      "name": {
+        "vi": "Lanh màu cát",
+        "en": "Sand linen"
+      },
+      "detail": {
+        "vi": "100% lanh, 420 g/m²",
+        "en": "100% linen, 420 g/m²"
+      },
+      "swatchColor": "#D9CBB0",
+      "swatchImage": null
+    }
+  ],
+  "versionImages": [
+    {
+      "finish": "",
+      "fabric": "ivory-canvas",
+      "image": "/images/products/versions/sands-parasol-ivory-canvas.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "sand-linen",
+      "image": "/images/products/versions/sands-parasol-sand-linen.svg"
+    }
+  ],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/sands-parasol/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" width="1800" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs><clipPath id="opening"><path d="M324 888 V408.00000000000006 Q324 120 900 120 Q1476 120 1476 408.00000000000006 V888 Z"/></clipPath>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9CBB0"/><stop offset="1" stop-color="#C4B391"/></linearGradient>
+  <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <rect width="1800" height="1200" fill="#EDE4D3"/>
+  <g clip-path="url(#opening)"><svg x="0" y="0" width="1800" height="1200" viewBox="0 0 1800 1200">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7E3D6"/><stop offset=".55" stop-color="#F3E6CD"/><stop offset="1" stop-color="#EAD5AE"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB3AA"/><stop offset="1" stop-color="#C6CFC0"/></linearGradient></defs>
+    <rect width="1800" height="1200" fill="url(#sky)"/>
+    <circle cx="1296" cy="360" r="84.00000000000001" fill="#F8EBCF"/>
+    <rect y="600" width="1800" height="108" fill="url(#sea)"/>
+    <path d="M0 696 Q540 648 990.0000000000001 720 T1800 683.9999999999999 V1200 H0 Z" fill="#E2CDA5"/>
+    <path d="M0 840 Q720 768 1800 864 V1200 H0 Z" fill="#D9C197"/></svg></g>
+  <path d="M324 888 V408.00000000000006 Q324 120 900 120 Q1476 120 1476 408.00000000000006 V888" fill="none" stroke="#D7CAB3" stroke-width="21.6"/>
+  <rect y="888" width="1800" height="312" fill="url(#floor)"/>
+  <path d="M324 888 L90 1200 H1710 L1476 888 Z" fill="url(#light)"/><g transform="translate(450 405) scale(2.25)">
+    <ellipse cx="200" cy="298" rx="210" ry="10" fill="#000" opacity=".12"/>
+    <line x1="40" y1="300" x2="46" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="300" x2="46" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="37" y1="266" x2="49" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/><line x1="360" y1="300" x2="354" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="360" y1="300" x2="354" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="351" y1="266" x2="363" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/>
+    <rect x="34" y="120" width="332" height="72" rx="28" fill="#D9CBB0"/>
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#D9CBB0" />
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#000" opacity=".06"/>
+    <line x1="200" y1="182" x2="200" y2="226" stroke="#000" opacity=".12" stroke-width="2"/>
+    <path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M14 246 L386 246" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L386 246" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/></g><g font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="2" fill="#3A3328" opacity=".55"><text x="900" y="1158" text-anchor="middle">PLACEHOLDER · SANDS SOFA · ARCHITECTURAL SETTING</text></g></svg>

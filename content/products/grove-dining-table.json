@@ -1,0 +1,142 @@
+{
+  "name": "Grove Dining Table",
+  "nameVi": "Bàn ăn Grove",
+  "sample": true,
+  "category": "tables",
+  "collection": "grove",
+  "order": 2,
+  "featured": true,
+  "summary": {
+    "vi": "Mặt bàn tre ghép thanh trên chân tre đôi, cho tám người quây quần.",
+    "en": "A laminated bamboo top on paired culm legs, seating eight."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập Grove. Chúng tôi giữ nguyên đốt tre như một dấu ấn của vật liệu, kết hợp với mộng ghép truyền thống và chốt tre thay vì đinh vít ở những vị trí có thể.",
+    "en": "Part of the Grove collection. We keep each node as a signature of the material, combined with traditional joinery and bamboo pegs instead of screws wherever possible."
+  },
+  "heroImage": "/images/products/grove-dining-table/hero.svg",
+  "heroAlt": {
+    "vi": "Bàn ăn Grove, dáng tổng thể",
+    "en": "Grove Dining Table, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/grove-dining-table/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Bàn ăn Grove trong không gian kiến trúc",
+        "en": "Grove Dining Table in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/grove-dining-table/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Bàn ăn Grove, ảnh studio",
+        "en": "Grove Dining Table, studio view"
+      }
+    },
+    {
+      "image": "/images/products/grove-dining-table/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Bàn ăn Grove",
+        "en": "Bamboo detail of the Grove Dining Table"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 2400,
+    "depth": 1000,
+    "height": 750,
+    "seatHeight": null,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "natural",
+      "name": {
+        "vi": "Tre tự nhiên",
+        "en": "Natural bamboo"
+      },
+      "detail": {
+        "vi": "Dầu sáp gốc nước, mờ",
+        "en": "Water-based oil wax, matte"
+      },
+      "swatchColor": "#C9A267",
+      "swatchImage": null
+    },
+    {
+      "key": "smoked",
+      "name": {
+        "vi": "Tre hun khói",
+        "en": "Smoked bamboo"
+      },
+      "detail": {
+        "vi": "Hun nhiệt, sơn mờ",
+        "en": "Heat-carbonised, matte lacquer"
+      },
+      "swatchColor": "#8A6438",
+      "swatchImage": null
+    },
+    {
+      "key": "espresso",
+      "name": {
+        "vi": "Nâu trầm",
+        "en": "Espresso"
+      },
+      "detail": {
+        "vi": "Màu nhuộm gốc nước, sơn mờ",
+        "en": "Water-based stain, matte lacquer"
+      },
+      "swatchColor": "#4A3A28",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [],
+  "versionImages": [],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/grove-dining-table/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

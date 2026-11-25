@@ -1,0 +1,16 @@
+{
+  "email": "hello@vbamboo.example",
+  "phone": "+84 00 000 0000",
+  "address": {
+    "vi": "[Địa chỉ văn phòng — cần bổ sung]",
+    "en": "[Head office address — to be supplied]"
+  },
+  "instagram": null,
+  "facebook": null,
+  "linkedin": null,
+  "footerNote": {
+    "vi": "Thiết kế và chế tác tại Việt Nam.",
+    "en": "Designed and made in Vietnam."
+  },
+  "showPrices": false
+}

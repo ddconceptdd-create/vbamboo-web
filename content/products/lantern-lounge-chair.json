@@ -1,0 +1,195 @@
+{
+  "name": "Lantern Lounge Chair",
+  "nameVi": "Ghế thư giãn Lantern",
+  "sample": true,
+  "category": "lounge-chairs",
+  "collection": "lantern",
+  "order": 2,
+  "featured": false,
+  "summary": {
+    "vi": "Phiên bản ấm áp cho phòng khách, với đệm dày và màu đất nung.",
+    "en": "A warmer living-room version with a deep cushion in clay tones."
+  },
+  "story": {
+    "vi": "Thuộc bộ sưu tập Lantern. Chao đèn được đan từ nan tre mỏng 1,2 mm, cho ánh sáng tán xạ ấm áp và để lại những hoa văn bóng đổ trên tường.",
+    "en": "Part of the Lantern collection. Shades are woven from 1.2 mm bamboo strips, diffusing a warm light and casting patterned shadows across the walls."
+  },
+  "heroImage": "/images/products/lantern-lounge-chair/hero.svg",
+  "heroAlt": {
+    "vi": "Ghế thư giãn Lantern, dáng tổng thể",
+    "en": "Lantern Lounge Chair, full silhouette"
+  },
+  "gallery": [
+    {
+      "image": "/images/products/lantern-lounge-chair/architectural.svg",
+      "kind": "architectural",
+      "alt": {
+        "vi": "Ghế thư giãn Lantern trong không gian kiến trúc",
+        "en": "Lantern Lounge Chair in an architectural setting"
+      }
+    },
+    {
+      "image": "/images/products/lantern-lounge-chair/studio.svg",
+      "kind": "studio",
+      "alt": {
+        "vi": "Ghế thư giãn Lantern, ảnh studio",
+        "en": "Lantern Lounge Chair, studio view"
+      }
+    },
+    {
+      "image": "/images/products/lantern-lounge-chair/detail.svg",
+      "kind": "detail",
+      "alt": {
+        "vi": "Chi tiết tre của Ghế thư giãn Lantern",
+        "en": "Bamboo detail of the Lantern Lounge Chair"
+      }
+    }
+  ],
+  "dimensions": {
+    "width": 800,
+    "depth": 880,
+    "height": 800,
+    "seatHeight": 380,
+    "approved": false
+  },
+  "materials": [
+    {
+      "label": {
+        "vi": "Khung",
+        "en": "Frame"
+      },
+      "value": {
+        "vi": "Tre luồng Thanh Hoá, trên 5 năm tuổi, xử lý chống mối mọt",
+        "en": "Thanh Hoa luong bamboo, 5+ years old, treated against insects"
+      }
+    },
+    {
+      "label": {
+        "vi": "Liên kết",
+        "en": "Joinery"
+      },
+      "value": {
+        "vi": "Mộng ghép và chốt tre, keo gốc nước",
+        "en": "Mortise joints and bamboo pegs, water-based adhesive"
+      }
+    },
+    {
+      "label": {
+        "vi": "Hoàn thiện",
+        "en": "Finish"
+      },
+      "value": {
+        "vi": "Dầu sáp gốc nước, VOC thấp",
+        "en": "Low-VOC water-based oil wax"
+      }
+    },
+    {
+      "label": {
+        "vi": "Đệm",
+        "en": "Cushion"
+      },
+      "value": {
+        "vi": "Mút HR mật độ cao bọc bông polyester, vỏ tháo rời",
+        "en": "High-resilience foam wrapped in fibre, removable covers"
+      }
+    }
+  ],
+  "frameFinishes": [
+    {
+      "key": "smoked",
+      "name": {
+        "vi": "Tre hun khói",
+        "en": "Smoked bamboo"
+      },
+      "detail": {
+        "vi": "Hun nhiệt, sơn mờ",
+        "en": "Heat-carbonised, matte lacquer"
+      },
+      "swatchColor": "#8A6438",
+      "swatchImage": null
+    },
+    {
+      "key": "espresso",
+      "name": {
+        "vi": "Nâu trầm",
+        "en": "Espresso"
+      },
+      "detail": {
+        "vi": "Màu nhuộm gốc nước, sơn mờ",
+        "en": "Water-based stain, matte lacquer"
+      },
+      "swatchColor": "#4A3A28",
+      "swatchImage": null
+    }
+  ],
+  "upholstery": [
+    {
+      "key": "clay",
+      "name": {
+        "vi": "Đất nung",
+        "en": "Clay"
+      },
+      "detail": {
+        "vi": "Cotton pha lanh, 380 g/m²",
+        "en": "Cotton-linen blend, 380 g/m²"
+      },
+      "swatchColor": "#B9805A",
+      "swatchImage": null
+    },
+    {
+      "key": "moss-boucle",
+      "name": {
+        "vi": "Bouclé xanh rêu",
+        "en": "Moss bouclé"
+      },
+      "detail": {
+        "vi": "Bouclé len pha, 560 g/m²",
+        "en": "Wool-blend bouclé, 560 g/m²"
+      },
+      "swatchColor": "#5E6B4A",
+      "swatchImage": null
+    },
+    {
+      "key": "sand-linen",
+      "name": {
+        "vi": "Lanh màu cát",
+        "en": "Sand linen"
+      },
+      "detail": {
+        "vi": "100% lanh, 420 g/m²",
+        "en": "100% linen, 420 g/m²"
+      },
+      "swatchColor": "#D9CBB0",
+      "swatchImage": null
+    }
+  ],
+  "versionImages": [
+    {
+      "finish": "",
+      "fabric": "clay",
+      "image": "/images/products/versions/lantern-lounge-chair-clay.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "moss-boucle",
+      "image": "/images/products/versions/lantern-lounge-chair-moss-boucle.svg"
+    },
+    {
+      "finish": "",
+      "fabric": "sand-linen",
+      "image": "/images/products/versions/lantern-lounge-chair-sand-linen.svg"
+    }
+  ],
+  "drawings": {
+    "front": null,
+    "side": null,
+    "plan": null
+  },
+  "downloads": [],
+  "collectionImage": "/images/products/lantern-lounge-chair/collection.svg",
+  "prices": {
+    "vnd": null,
+    "usd": null,
+    "approved": false
+  }
+}

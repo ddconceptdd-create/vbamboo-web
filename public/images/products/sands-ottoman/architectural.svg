@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" width="1800" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs><clipPath id="opening"><path d="M324 888 V408.00000000000006 Q324 120 900 120 Q1476 120 1476 408.00000000000006 V888 Z"/></clipPath>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9CBB0"/><stop offset="1" stop-color="#C4B391"/></linearGradient>
+  <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <rect width="1800" height="1200" fill="#EDE4D3"/>
+  <g clip-path="url(#opening)"><svg x="0" y="0" width="1800" height="1200" viewBox="0 0 1800 1200">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7E3D6"/><stop offset=".55" stop-color="#F3E6CD"/><stop offset="1" stop-color="#EAD5AE"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB3AA"/><stop offset="1" stop-color="#C6CFC0"/></linearGradient></defs>
+    <rect width="1800" height="1200" fill="url(#sky)"/>
+    <circle cx="1296" cy="360" r="84.00000000000001" fill="#F8EBCF"/>
+    <rect y="600" width="1800" height="108" fill="url(#sea)"/>
+    <path d="M0 696 Q540 648 990.0000000000001 720 T1800 683.9999999999999 V1200 H0 Z" fill="#E2CDA5"/>
+    <path d="M0 840 Q720 768 1800 864 V1200 H0 Z" fill="#D9C197"/></svg></g>
+  <path d="M324 888 V408.00000000000006 Q324 120 900 120 Q1476 120 1476 408.00000000000006 V888" fill="none" stroke="#D7CAB3" stroke-width="21.6"/>
+  <rect y="888" width="1800" height="312" fill="url(#floor)"/>
+  <path d="M324 888 L90 1200 H1710 L1476 888 Z" fill="url(#light)"/><g transform="translate(450 405) scale(2.25)">
+    <ellipse cx="200" cy="298" rx="140" ry="10" fill="#000" opacity=".12"/>
+    <defs><pattern id="wv-ot" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="16" height="16" fill="#C9A267"/><rect width="16" height="6" y="5" fill="#B48C52" opacity=".55"/><rect width="6" height="16" x="5" fill="#E2C38B" opacity=".45"/></pattern></defs>
+    <path d="M78 196 L92 292 L308 292 L322 196 Z" fill="url(#wv-ot)"/>
+    <rect x="66" y="156" width="268" height="48" rx="22" fill="#D9CBB0"/>
+    <path d="M80 292 L320 292" fill="none" stroke="#C9A267" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 292 L320 292" fill="none" stroke="#E4C690" stroke-width="1.9600000000000002" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/></g><g font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="2" fill="#3A3328" opacity=".55"><text x="900" y="1158" text-anchor="middle">PLACEHOLDER · SANDS OTTOMAN · ARCHITECTURAL SETTING</text></g></svg>

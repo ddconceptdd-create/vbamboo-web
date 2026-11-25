@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1200" width="2000" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs><clipPath id="opening"><path d="M360 888 V408.00000000000006 Q360 120 1000 120 Q1640 120 1640 408.00000000000006 V888 Z"/></clipPath>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9CBB0"/><stop offset="1" stop-color="#C4B391"/></linearGradient>
+  <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <rect width="2000" height="1200" fill="#EDE4D3"/>
+  <g clip-path="url(#opening)"><svg x="0" y="0" width="2000" height="1200" viewBox="0 0 2000 1200">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7E3D6"/><stop offset=".55" stop-color="#F3E6CD"/><stop offset="1" stop-color="#EAD5AE"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB3AA"/><stop offset="1" stop-color="#C6CFC0"/></linearGradient></defs>
+    <rect width="2000" height="1200" fill="url(#sky)"/>
+    <circle cx="1440" cy="360" r="84.00000000000001" fill="#F8EBCF"/>
+    <rect y="600" width="2000" height="108" fill="url(#sea)"/>
+    <path d="M0 696 Q600 648 1100 720 T2000 683.9999999999999 V1200 H0 Z" fill="#E2CDA5"/>
+    <path d="M0 840 Q800 768 2000 864 V1200 H0 Z" fill="#D9C197"/></svg></g>
+  <path d="M360 888 V408.00000000000006 Q360 120 1000 120 Q1640 120 1640 408.00000000000006 V888" fill="none" stroke="#D7CAB3" stroke-width="24"/>
+  <rect y="888" width="2000" height="312" fill="url(#floor)"/>
+  <path d="M360 888 L100 1200 H1900 L1640 888 Z" fill="url(#light)"/><g transform="translate(200 748) scale(1.2266666666666668)">
+    <ellipse cx="200" cy="298" rx="190" ry="10" fill="#000" opacity=".12"/>
+    <path d="M40 296 Q60 190 120 150 Q170 120 120 40" fill="none" stroke="#C9A267" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 296 Q60 190 120 150 Q170 120 120 40" fill="none" stroke="#E4C690" stroke-width="3.08" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M360 296 Q330 230 250 214 L120 196" fill="none" stroke="#C9A267" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M360 296 Q330 230 250 214 L120 196" fill="none" stroke="#E4C690" stroke-width="3.08" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M70 296 L330 296" fill="none" stroke="#C9A267" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 296 L330 296" fill="none" stroke="#E4C690" stroke-width="2.5200000000000005" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M128 52 Q164 120 150 176 Q220 196 330 210 L320 234 Q210 224 130 206 Q104 140 106 60 Z" fill="#D9CBB0"/>
+    <path d="M128 52 Q164 120 150 176" fill="none" stroke="#000" opacity=".1" stroke-width="3"/>
+    <path d="M100 214 Q200 236 300 232" fill="none" stroke="#C9A267" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M100 214 Q200 236 300 232" fill="none" stroke="#E4C690" stroke-width="2.24" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/></g><g transform="translate(733.3333333333334 748) scale(1.2266666666666668)">
+    <ellipse cx="200" cy="298" rx="180" ry="10" fill="#000" opacity=".12"/>
+    <defs><pattern id="wv-ct" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="16" height="16" fill="#C9A267"/><rect width="16" height="6" y="5" fill="#B48C52" opacity=".55"/><rect width="6" height="16" x="5" fill="#E2C38B" opacity=".45"/></pattern></defs>
+    <path d="M110 222 Q200 300 290 222 L276 292 L124 292 Z" fill="url(#wv-ct)"/>
+    <ellipse cx="200" cy="214" rx="180" ry="24" fill="#C9A267"/>
+    <ellipse cx="200" cy="210" rx="180" ry="22" fill="#D8B57A"/>
+    <ellipse cx="200" cy="210" rx="150" ry="16" fill="none" stroke="#8E6B3A" opacity=".25"/></g><g transform="translate(1266.6666666666667 748) scale(1.2266666666666668)">
+    <ellipse cx="200" cy="298" rx="210" ry="10" fill="#000" opacity=".12"/>
+    <line x1="40" y1="300" x2="46" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="300" x2="46" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="37" y1="266" x2="49" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/><line x1="360" y1="300" x2="354" y2="232" stroke="#C9A267" stroke-width="10" stroke-linecap="round"/><line x1="360" y1="300" x2="354" y2="232" stroke="#E4C690" stroke-width="2.8000000000000003" stroke-linecap="round" opacity=".6" transform="translate(-2.2,0)"/><line x1="351" y1="266" x2="363" y2="266" stroke="#8E6B3A" stroke-width="2" opacity=".55"/>
+    <rect x="34" y="120" width="332" height="72" rx="28" fill="#D9CBB0"/>
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#D9CBB0" />
+    <rect x="30" y="176" width="340" height="56" rx="20" fill="#000" opacity=".06"/>
+    <line x1="200" y1="182" x2="200" y2="226" stroke="#000" opacity=".12" stroke-width="2"/>
+    <path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L14 160 Q14 118 54 118 L60 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M386 246 L386 160 Q386 118 346 118 L340 118" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/>
+    <path d="M14 246 L386 246" fill="none" stroke="#C9A267" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 246 L386 246" fill="none" stroke="#E4C690" stroke-width="3.3600000000000003" stroke-linecap="round" opacity=".55" transform="translate(-2,-1)"/></g><g font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="2" fill="#3A3328" opacity=".55"><text x="1000" y="1158" text-anchor="middle">PLACEHOLDER · SANDS SOFA · WITH THE COLLECTION</text></g></svg>
