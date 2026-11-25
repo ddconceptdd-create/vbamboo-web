@@ -1,0 +1,2 @@
+# Mỗi dòng là tên 1 thư mục cửa hàng / đại lý, theo thứ tự hiển thị.
+01-vbamboo-ho-chi-minh

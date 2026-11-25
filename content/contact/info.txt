@@ -1,0 +1,12 @@
+# LIÊN HỆ & CHÂN TRANG. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Email: hộp thư nhận yêu cầu (hiện ở chân trang). Để trống = không hiện.
+# ShowPrices: yes = hiện giá (VND cho tiếng Việt, USD cho tiếng Anh) với sản phẩm có PriceApproved: yes.
+Company: VBamboo
+Address: 63 Đường 51, Phường Bình Thuận, Quận 7, TP. Hồ Chí Minh, Việt Nam | 63 Street 51, Binh Thuan Ward, District 7, Ho Chi Minh City, Vietnam
+Tel: +84 905 289 898
+Email: 
+Facebook: 
+Instagram: 
+LinkedIn: 
+Footer: Thiết kế và chế tác tại Việt Nam. | Designed and made in Vietnam.
+ShowPrices: no

@@ -1,0 +1,26 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+Name: The Light
+Tagline: Ánh sáng trong ống tre | Light held in a bamboo cylinder
+Draft: no
+Photo: hero.jpg
+Sketch: sketch.webp
+Setting: setting.jpg
+Texture: texture-1.jpg | Đầu đèn tre hình trụ | The cylindrical bamboo head
+Texture: texture-2.jpg | Đế kim loại đen mờ | Matte black metal base
+Texture: texture-3.jpg | Khung kim loại gấp khúc | The folded metal frame
+---
+[VI]
+Hai mẫu đèn bàn kết hợp đầu đèn tre hình trụ với khung kim loại đen mờ. Vân tre ấm làm mềm những đường nét đồ họa, tạo điểm nhấn cho bàn làm việc, bàn đầu giường hay kệ sách.
+
+## Trích dẫn
+Một mắt tre nhô nhẹ dưới lòng bàn tay. Chỉ một chi tiết nhỏ cũng đủ để ta nhận ra vật liệu quen thuộc ấy. Đó là cảm giác VBamboo muốn giữ lại khi tạo dáng cho một chiếc ghế hay một chụp đèn.
+
+[EN]
+Two table lamps pairing a cylindrical bamboo head with a matte black metal frame. Warm bamboo grain softens their graphic lines, accenting a desk, bedside or bookshelf.
+
+## Quote
+A bamboo node rises gently under the palm. A small detail is enough to recognise that familiar material. That is the feeling VBamboo wants to keep when shaping a chair or a lampshade.

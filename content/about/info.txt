@@ -1,0 +1,70 @@
+# GIỚI THIỆU. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu (rừng tre, ngang). QuotePhoto: ảnh nền phía sau câu trích dẫn.
+# Sau dấu ---: đoạn đầu là lời mở đầu. Mỗi chương bắt đầu bằng:  ## Tiêu đề nhỏ | Tiêu đề
+#   dòng tiếp theo  Ảnh: ten-file.jpg  (ảnh dọc 4:5), rồi các đoạn văn.
+# ## Trích dẫn (Quote) và ## Giá trị cốt lõi (Core values, mỗi dòng: - Tên: nội dung) là mục đặc biệt.
+Title: Cây tre Việt – chất xám người Việt | Vietnamese bamboo, Vietnamese ingenuity
+Photo: hero.jpg
+QuotePhoto: quote.jpg
+---
+[VI]
+Chúng tôi mong muốn trở thành thương hiệu nội thất tiên phong trong việc đưa cây tre Việt Nam ra thế giới – bằng những thiết kế hiện đại, tiện dụng và bền vững, mang đậm bản sắc văn hóa. Mỗi sản phẩm là sự kết nối giữa con người, thiên nhiên và truyền thống – nơi vẻ đẹp mộc mạc và độc bản của tre được tôn vinh bằng tư duy thiết kế đương đại.
+
+## Về chúng tôi | Tre, bằng một ngôn ngữ mới
+Ảnh: chapter-1.jpg
+Trong bối cảnh con người ngày càng tìm về những giá trị bền vững, mộc mạc và chân thực, chúng tôi tin rằng tre – một vật liệu giản dị gắn liền với văn hóa Việt Nam – xứng đáng được tái sinh bằng một ngôn ngữ thiết kế mới mẻ và hiện đại. Với tình yêu dành cho tre Việt và khát vọng sáng tạo không ngừng, thương hiệu của chúng tôi ra đời để thổi hồn vào từng sản phẩm nội thất – nơi vẻ đẹp tự nhiên, sự độc bản của tre hòa quyện cùng sự tinh tế, tiện dụng trong thiết kế.
+
+Không chỉ đơn thuần là sản phẩm, mỗi thiết kế là một tuyên ngôn về bản sắc Việt, một lời khẳng định về khả năng sáng tạo của người Việt, và một bước đi trên hành trình đưa nội thất tre Việt ra thế giới – với niềm tự hào: Cây tre Việt – chất xám người Việt
+
+## Câu chuyện thương hiệu | Từ nguyên liệu thô đến thiết kế Việt
+Ảnh: chapter-2.jpg
+Tre – một biểu tượng của làng quê Việt Nam – từng hiện diện trong mọi ngóc ngách đời sống: từ vật dụng gia đình đến mái nhà, hàng rào, chiếc võng trưa hè... Nhưng rồi, theo thời gian, tre dần biến mất khỏi đời sống hiện đại. Ở một đất nước với trữ lượng tre dồi dào, với những đôi bàn tay khéo léo, tỉ mỉ, thật đáng tiếc khi cây tre vẫn chỉ dừng lại ở vai trò nguyên liệu thô, Việt Nam chỉ dừng lại ở mức gia công cho các thương hiệu nước ngoài. Việt Nam có tre – có kỹ thuật – có tâm huyết, nhưng lại chưa thực sự tạo nên sản phẩm của người Việt, bằng tre Việt, mang tinh thần thiết kế Việt. Tre vẫn thường bị gắn với những khuôn mẫu truyền thống, bị cho rằng không phù hợp với thiết kế hiện đại. Nhưng chúng tôi tin điều ngược lại.
+
+Chúng tôi thành lập thương hiệu này để phá vỡ những giới hạn cũ, để chứng minh rằng tre hoàn toàn có thể bước vào không gian sống đương đại – không chỉ như một chất liệu xanh, mà còn như một biểu tượng văn hóa có chiều sâu, một phần của triết lý thẩm mỹ hiện đại. Bằng tư duy thiết kế mới, với sự tôn trọng tuyệt đối tính tự nhiên và độc bản của tre, chúng tôi tạo ra những sản phẩm nội thất tinh tế, tiện dụng, có hồn đủ gần gũi để hiện diện trong đời sống hàng ngày, và đủ khác biệt để khẳng định vị thế trên thị trường quốc tế. Đây không chỉ là câu chuyện của một vật liệu, mà là hành trình khẳng định giá trị của tre Việt và trí tuệ thiết kế Việt đến với thế giới.
+
+## Sứ mệnh | Đưa tre Việt ra thế giới
+Ảnh: chapter-3.jpg
+Chúng tôi tạo ra những thiết kế nội thất độc đáo, tinh tế và mang tính thẩm mỹ cao – nơi tre Việt không chỉ giữ được vẻ đẹp mộc mạc, mà còn được tái hiện bằng ngôn ngữ thiết kế hiện đại, tiện dụng và đầy cảm hứng. Thương hiệu không chỉ tôn vinh vật liệu tre truyền thống, mà còn góp phần thay đổi vị thế của Việt Nam trên bản đồ thiết kế toàn cầu – để thế giới biết đến Việt Nam không chỉ là quốc gia gia công, mà là nơi hội tụ của vật liệu bản địa quý giá và trí tuệ sáng tạo sâu sắc. Cây tre Việt – chất xám người Việt – mang bản sắc và khát vọng Việt vươn xa.
+
+## Phát triển bền vững | Vẻ đẹp song hành cùng tính bền vững
+Ảnh: chapter-4.jpg
+Lựa chọn tre làm vật liệu chủ đạo, VBAMBOO không chỉ mang đến một giải pháp nội thất mới lạ mà còn cam kết mạnh mẽ với phát triển bền vững. Tre tăng trưởng nhanh, dễ dàng tái tạo và thân thiện với môi trường, trở thành lựa chọn lý tưởng cho lối sống xanh. Chúng tôi xem mỗi sản phẩm từ tre là một lời tôn vinh gửi đến thiên nhiên, một lời nhắc nhở về trách nhiệm bảo vệ hành tinh. Nội thất tre không chỉ bền đẹp theo thời gian mà còn góp phần giảm thiểu tác động tiêu cực đến môi trường. Với VBAMBOO, vẻ đẹp song hành cùng tính bền vững để mọi không gian sống trở thành nơi an yên và cân bằng.
+
+## Trích dẫn
+Trong nghề mộc thủ công, có những kinh nghiệm chỉ được trao truyền qua năm tháng làm việc bên nhau. VBamboo trân trọng những người thợ đã dành cả đời để hiểu tre, rồi kiên nhẫn truyền lại điều mình biết cho người đến sau.
+
+## Giá trị cốt lõi
+- Thiết kế sáng tạo: Không ngừng đổi mới trong tư duy thẩm mỹ và công năng, phá bỏ định kiến "tre chỉ dành cho truyền thống", mang đến những sản phẩm vừa hiện đại, vừa độc bản.
+- Tự hào người Việt: Khẳng định năng lực sáng tạo, tay nghề và tư duy thiết kế của người Việt trên thị trường quốc tế.
+- Bản sắc Việt: Tôn vinh vẻ đẹp và tinh thần của tre – biểu tượng văn hóa Việt – trong từng thiết kế, giữ gìn sự mộc mạc, gần gũi nhưng đầy khí chất.
+- Tinh tế và tiện dụng: Kết hợp hài hòa giữa tính thẩm mỹ và tính ứng dụng cao, để mỗi sản phẩm vừa là một tác phẩm nghệ thuật, vừa phù hợp với nhịp sống hiện đại.
+- Phát triển bền vững: Cam kết sử dụng vật liệu xanh, thân thiện với môi trường, với quy trình sản xuất có trách nhiệm và hướng đến tương lai bền vững.
+
+[EN]
+We aim to be the pioneering furniture brand that brings Vietnamese bamboo to the world, through modern, practical and sustainable designs with a strong cultural identity. Each piece connects people, nature and tradition, celebrating the simple, unique beauty of bamboo through contemporary design thinking.
+
+## About us | Bamboo, in a new language
+At a time when people are returning to values that are lasting, simple and genuine, we believe bamboo – a humble material bound up with Vietnamese culture – deserves to be reborn in a fresh, modern design language. With a love for Vietnamese bamboo and a constant drive to create, our brand was founded to breathe life into every piece of furniture, where the natural beauty and individuality of bamboo meet refinement and everyday ease.
+
+More than a product, each design is a statement of Vietnamese identity, an affirmation of Vietnamese creativity, and a step on the journey of bringing Vietnamese bamboo furniture to the world – with pride: Vietnamese bamboo, Vietnamese ingenuity.
+
+## Our story | From raw material to Vietnamese design
+Bamboo – a symbol of the Vietnamese countryside – was once present in every corner of life: from household objects to roofs, fences and the hammock of a summer afternoon. Over time, it slowly disappeared from modern life. In a country with abundant bamboo and skilled, meticulous hands, it is a pity that bamboo has remained a raw material, and that Vietnam has remained a manufacturer for foreign brands. Vietnam has the bamboo, the skills and the dedication, yet has not truly created products made by Vietnamese people, from Vietnamese bamboo, with a Vietnamese design spirit. Bamboo is still tied to traditional stereotypes and thought unsuited to modern design. We believe the opposite.
+
+We founded this brand to break those old limits, and to show that bamboo can enter contemporary living spaces – not only as a green material, but as a cultural symbol with depth, part of a modern aesthetic. With new design thinking and complete respect for bamboo’s natural, one-of-a-kind character, we create refined, practical furniture with soul: close enough to belong in everyday life, and distinctive enough to hold its own in international markets. This is not only the story of a material, but a journey to bring the value of Vietnamese bamboo and Vietnamese design to the world.
+
+## Mission | Bringing Vietnamese bamboo to the world
+We create distinctive, refined furniture of high aesthetic value, where Vietnamese bamboo keeps its rustic beauty while being reinterpreted in a modern, practical and inspiring design language. The brand celebrates traditional bamboo and helps change Vietnam’s place on the global design map, so the world knows Vietnam not only as a place of manufacture, but as a meeting point of precious native materials and deep creative intelligence. Vietnamese bamboo, Vietnamese ingenuity: carrying Vietnamese identity and ambition further.
+
+## Sustainability | Beauty alongside sustainability
+By choosing bamboo as our main material, VBAMBOO offers not only a new kind of furniture but a strong commitment to sustainability. Bamboo grows quickly, regenerates easily and is kind to the environment, making it an ideal choice for green living. We see every bamboo piece as a tribute to nature and a reminder of our responsibility to protect the planet. Bamboo furniture stays beautiful over time while reducing harm to the environment. At VBAMBOO, beauty goes hand in hand with sustainability, so every living space can become a place of calm and balance.
+
+## Quote
+In handcrafted woodwork, some knowledge is only passed on through years of working side by side. VBamboo honours the craftsmen who have spent their lives understanding bamboo, and who patiently hand down what they know to those who come after.
+
+## Core values
+- Creative design: Constantly innovating in aesthetics and function, breaking the idea that “bamboo is only for tradition”, to create pieces that are both modern and one of a kind.
+- Vietnamese pride: Affirming the creativity, craftsmanship and design thinking of Vietnamese people in international markets.
+- Vietnamese identity: Celebrating the beauty and spirit of bamboo, a symbol of Vietnamese culture, in every design: simple and familiar, yet full of character.
+- Refined and practical: Balancing beauty and everyday use, so each piece is both a work of art and suited to the rhythm of modern life.
+- Sustainable development: Committed to green, environmentally friendly materials and responsible production, looking towards a sustainable future.

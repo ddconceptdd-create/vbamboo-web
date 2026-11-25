@@ -1,0 +1,26 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+Name: The Sands
+Tagline: Thư giãn bên hồ bơi và bờ biển | For lounging by the pool and the sea
+Draft: no
+Photo: hero.jpg
+Sketch: sketch.webp
+Setting: setting.jpg
+Texture: texture-1.jpg | Nút buộc trên đỉnh khung tre | The knot at the top of the bamboo frame
+Texture: texture-2.jpg | Khớp tre và vải màu cát | Bamboo joint and sand-coloured fabric
+Texture: texture-3.jpg | Đai da nâu trên khung tre mật ong | Brown leather strap on honey bamboo
+---
+[VI]
+Võng, ghế thư giãn và dù che nắng với khung tre mật ong, vải màu cát và gối da cognac. The Sands mang nhịp nghỉ chậm của những buổi chiều ven biển vào hiên nhà, hồ bơi và khu nghỉ dưỡng.
+
+## Trích dẫn
+Có người sẽ biết đến tre Việt trước cả khi đặt chân đến Việt Nam. Từ một món đồ yêu thích trong căn nhà ở phương xa, họ có thể muốn biết thêm về xứ sở và những con người đã làm nên nó.
+
+[EN]
+Hammocks, lounge chairs and a parasol with honey bamboo frames, sand-coloured fabric and cognac leather cushions. The Sands brings the slow pace of a seaside afternoon to terraces, pools and resorts.
+
+## Quote
+Some people will know Vietnamese bamboo before they ever set foot in Vietnam. From a favourite piece in a home far away, they may want to learn more about the country and the people who made it.

@@ -1,0 +1,19 @@
+# CỬA HÀNG / ĐẠI LÝ. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Kind: showroom (showroom VBamboo) hoặc dealer (đại lý chính thức).
+# Hours: xuống dòng bằng dấu ; (vd: Thứ Hai – Thứ Sáu 9:00 – 17:30; Thứ Bảy 9:00 – 12:00 | Mon – Fri ...; Sat ...)
+# Map: link Google Maps để chỉ đường. Appointment: yes = tham quan theo lịch hẹn (hiện form đặt lịch).
+# Booking: link đặt lịch bên ngoài (không bắt buộc). Photo: ảnh cửa hàng (ngang 3:2).
+
+Name: VBamboo Hồ Chí Minh
+Kind: showroom
+Draft: yes
+City: TP. Hồ Chí Minh | Ho Chi Minh City
+Country: Việt Nam | Vietnam
+Address: 63 Đường 51, Phường Bình Thuận, Quận 7 | 63 Street 51, Binh Thuan Ward, District 7
+Hours: 
+Tel: +84 905 289 898
+Email: 
+Map: https://www.google.com/maps/search/?api=1&query=63+Street+51+Binh+Thuan+District+7+Ho+Chi+Minh+City
+Appointment: yes
+Booking: 
+Photo:

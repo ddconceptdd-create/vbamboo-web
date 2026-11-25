@@ -1,0 +1,26 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+Name: Slender Lines
+Tagline: Những đường nét thanh mảnh cho phòng ăn | Slender lines for the dining room
+Draft: no
+Photo: hero.jpg
+Sketch: sketch.webp
+Setting: setting.jpg
+Texture: texture-1.jpg | Nan song song chuyển cong từ lưng xuống mặt ngồi | Parallel strips curving from back to seat
+Texture: texture-2.jpg | Mặt bàn trên chân kim loại mảnh | A table top on slender metal legs
+Texture: texture-3.jpg | Dáng nghiêng của ghế Tabouret | The Tabouret chair in profile
+---
+[VI]
+Hệ nan song song chuyển cong trên khung chân kim loại mảnh. Slender Lines là bộ bàn ghế ăn gọn, thoáng và nhẹ về thị giác, để bữa ăn trở thành trung tâm của căn phòng.
+
+## Trích dẫn
+Khi chọn một thiết kế cho bộ sưu tập, chúng tôi nghĩ đến người sẽ sống cùng món đồ ấy nhiều năm. Sau ấn tượng đầu tiên, điều gì sẽ khiến họ vẫn muốn dành cho nó một chỗ trong nhà?
+
+[EN]
+Parallel strips curving over slender metal legs. Slender Lines is a dining set that is compact, airy and visually light, so the meal itself becomes the centre of the room.
+
+## Quote
+When we choose a design for a collection, we think of the person who will live with it for many years. After the first impression, what will make them still want to give it a place in their home?

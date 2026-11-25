@@ -1,0 +1,26 @@
+# BỘ SƯU TẬP. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Photo: ảnh mở đầu rộng (ngang). Sketch: nét vẽ sáng trên nền trong suốt, hiện trên tấm nền xanh dệt.
+# Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
+# Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
+
+Name: The Nobility
+Tagline: Tre, da và đồng trong vẻ lịch lãm trầm tĩnh | Bamboo, leather and brass, quietly refined
+Draft: no
+Photo: hero.jpg
+Sketch: sketch.webp
+Setting: setting.jpg
+Texture: texture-1.jpg | Da cognac và khóa đồng | Cognac leather and brass buckles
+Texture: texture-2.jpg | Da nâu trên khung tre sẫm | Brown leather on a dark bamboo frame
+Texture: texture-3.jpg | Đường may trên da đen | Stitching on black leather
+---
+[VI]
+The Nobility tập hợp những chiếc ghế tựa mang tinh thần cổ điển: chân tre giao chéo, da nâu cognac và da đen, chi tiết đồng thau ánh vàng trầm. Một bộ sưu tập dành cho phòng đọc, sảnh tiếp khách và những góc nghỉ có chiều sâu.
+
+## Trích dẫn
+Trong nghề mộc thủ công, có những kinh nghiệm chỉ được trao truyền qua năm tháng làm việc bên nhau. VBamboo trân trọng những người thợ đã dành cả đời để hiểu tre, rồi kiên nhẫn truyền lại điều mình biết cho người đến sau.
+
+[EN]
+The Nobility gathers armchairs with a classic spirit: crossed bamboo legs, cognac and black leather, and brass details in muted gold. A collection for libraries, lounges and reception rooms with depth.
+
+## Quote
+In handcrafted woodwork, some knowledge is only passed on through years of working side by side. VBamboo honours the craftsmen who have spent their lives understanding bamboo, and who patiently hand down what they know to those who come after.
