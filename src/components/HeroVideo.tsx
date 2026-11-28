@@ -6,8 +6,11 @@ export type HeroVideoSource = { kind: 'youtube'; id: string } | { kind: 'file'; 
 
 type Props = {
   video: HeroVideoSource;
-  labels: { pause: string; play: string; video: string };
+  labels: { pause: string; play: string; video: string; soundOn: string; soundOff: string };
 };
+
+const VOLUME = 70; // target volume (0–100) after the fade-in
+const FADE_MS = 2800;
 
 /**
  * Muted background film for the home page, layered over the poster photograph
@@ -15,45 +18,90 @@ type Props = {
  *
  * - Starts only when motion is welcome: never with "reduce motion" or Save-Data;
  *   the visitor can still press play.
- * - A visible pause button (WCAG 2.2.2) and automatic pause when scrolled away.
+ * - Round play/pause and sound buttons (WCAG 2.2.2, 1.4.2); pauses when scrolled away.
+ * - Sound: browsers refuse to autoplay audio, so the film starts muted and the
+ *   sound fades in (≈3 s) on the visitor's first tap, click or key press while the
+ *   film is on screen, or when they press the sound button.
  * - YouTube runs from youtube-nocookie.com and is loaded after the page itself.
  */
 export default function HeroVideo({ video, labels }: Props) {
   const [mounted, setMounted] = useState(false); // player inserted
   const [visible, setVisible] = useState(false); // first frame is playing → fade in
   const [paused, setPaused] = useState(true);
+  const [muted, setMuted] = useState(true);
   const userPaused = useRef(false);
+  const userMuted = useRef(false);
+  const onScreen = useRef(true);
+  const fade = useRef(0);
   const frame = useRef<HTMLIFrameElement>(null);
   const file = useRef<HTMLVideoElement>(null);
   const wrap = useRef<HTMLDivElement>(null);
 
   const command = useCallback(
-    (func: 'playVideo' | 'pauseVideo') => {
+    (func: 'playVideo' | 'pauseVideo' | 'mute' | 'unMute' | 'setVolume', arg?: number) => {
       if (video.kind === 'youtube') {
-        frame.current?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args: [] }), '*');
-      } else if (file.current) {
-        if (func === 'playVideo') file.current.play().catch(() => undefined);
-        else file.current.pause();
+        frame.current?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args: arg == null ? [] : [arg] }), '*');
+        return;
       }
+      const v = file.current;
+      if (!v) return;
+      if (func === 'playVideo') v.play().catch(() => undefined);
+      if (func === 'pauseVideo') v.pause();
+      if (func === 'mute') v.muted = true;
+      if (func === 'unMute') v.muted = false;
+      if (func === 'setVolume' && arg != null) v.volume = arg / 100;
     },
     [video.kind],
   );
 
-  // Decide whether to autoplay, after the page has loaded.
+  /** Unmute and raise the volume gradually, so the sound never starts abruptly. */
+  const soundUp = useCallback(() => {
+    window.clearInterval(fade.current);
+    command('setVolume', 0);
+    command('unMute');
+    setMuted(false);
+    const t0 = performance.now();
+    fade.current = window.setInterval(() => {
+      const k = Math.min(1, (performance.now() - t0) / FADE_MS);
+      command('setVolume', Math.round(VOLUME * k * k));
+      if (k >= 1) window.clearInterval(fade.current);
+    }, 100);
+  }, [command]);
+
+  const soundOff = useCallback(() => {
+    window.clearInterval(fade.current);
+    command('mute');
+    setMuted(true);
+  }, [command]);
+
+  // First tap / click / key press anywhere while the film is visible turns the sound on.
+  useEffect(() => {
+    if (!mounted) return;
+    const first = () => {
+      if (!userMuted.current && onScreen.current && !userPaused.current) soundUp();
+      cleanup();
+    };
+    const cleanup = () => {
+      window.removeEventListener('pointerdown', first, true);
+      window.removeEventListener('keydown', first, true);
+    };
+    window.addEventListener('pointerdown', first, true);
+    window.addEventListener('keydown', first, true);
+    return cleanup;
+  }, [mounted, soundUp]);
+  useEffect(() => () => window.clearInterval(fade.current), []);
+
+  // Decide whether to autoplay.
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
     if (reduce || saveData) return;
-    const start = () => {
+    // Start straight away (next frame): the poster is already on screen and the film fades in over it.
+    const id = requestAnimationFrame(() => {
       setMounted(true);
       setPaused(false);
-    };
-    if (document.readyState === 'complete') {
-      const id = window.setTimeout(start, 300);
-      return () => window.clearTimeout(id);
-    }
-    window.addEventListener('load', start, { once: true });
-    return () => window.removeEventListener('load', start);
+    });
+    return () => cancelAnimationFrame(id);
   }, []);
 
   // YouTube reports its state through postMessage once we say we are listening.
@@ -83,6 +131,7 @@ export default function HeroVideo({ video, labels }: Props) {
     const el = wrap.current;
     if (!el || !mounted) return;
     const io = new IntersectionObserver(([entry]) => {
+      onScreen.current = entry.isIntersecting;
       if (userPaused.current) return;
       command(entry.isIntersecting ? 'playVideo' : 'pauseVideo');
     });
@@ -155,18 +204,41 @@ export default function HeroVideo({ video, labels }: Props) {
           />
         )}
       </div>
-      <button type="button" className="hero-video__toggle" onClick={toggle} aria-label={paused ? labels.play : labels.pause}>
-        {paused ? (
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-            <path d="M3 1.5v11l9-5.5z" fill="currentColor" />
+      <div className="hero-controls">
+        <button type="button" onClick={toggle} aria-label={paused ? labels.play : labels.pause} title={paused ? labels.play : labels.pause}>
+          {paused ? (
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M3.5 1.5v11l9-5.5z" fill="currentColor" />
+            </svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor" />
+            </svg>
+          )}
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            if (muted) {
+              userMuted.current = false;
+              if (!mounted) toggle();
+              soundUp();
+            } else {
+              userMuted.current = true;
+              soundOff();
+            }
+          }}
+          onPointerDown={(e) => e.stopPropagation()}
+          aria-label={muted ? labels.soundOn : labels.soundOff}
+          title={muted ? labels.soundOn : labels.soundOff}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3" aria-hidden="true">
+            <path d="M2 6h2.5L8 3v10l-3.5-3H2z" fill="currentColor" stroke="none" />
+            {muted ? <path d="M11 6l4 4M15 6l-4 4" strokeLinecap="round" /> : <path d="M10.5 5.5a3.5 3.5 0 0 1 0 5M12.5 3.5a6.3 6.3 0 0 1 0 9" strokeLinecap="round" />}
           </svg>
-        ) : (
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-            <path d="M3 1.5h2.6v11H3zM8.4 1.5H11v11H8.4z" fill="currentColor" />
-          </svg>
-        )}
-        <span className="hero-video__label">{paused ? labels.play : labels.pause}</span>
-      </button>
+        </button>
+      </div>
     </>
   );
 }

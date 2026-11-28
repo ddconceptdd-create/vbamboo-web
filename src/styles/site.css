@@ -35,11 +35,7 @@
 main {
   padding-top: var(--header-h);
 }
-main:has(> .page-enter > .hero:first-child),
-main:has(> .page-enter > .hero),
-main:has(> .page-enter > .c-hero) {
-  padding-top: 0;
-}
+/* (header is solid on every page since 28 Nov: no page slides under it) */
 
 .site-header__inner {
   height: 100%;
@@ -3032,4 +3028,189 @@ blockquote.textures__story::before {
 /* Anchored sections clear both the site header and the product bar. */
 .product section[id] {
   scroll-margin-top: calc(var(--header-h) + 72px);
+}
+
+
+/* ==========================================================================
+   28 Nov landing-screen revision (DD)
+   Solid ivory header, 60 px on desktop: logo at the left (≈4.5% in), the five
+   sections + VI/EN + search grouped at the right, small charcoal sans.
+   ========================================================================== */
+:root {
+  --header-h: 56px;
+}
+@media (min-width: 960px) {
+  :root {
+    --header-h: 60px;
+  }
+}
+.site-header,
+.site-header[data-scrolled],
+.site-header[data-menu] {
+  background: var(--ivory);
+  color: var(--charcoal);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid var(--line);
+}
+.site-header[data-menu] {
+  color: var(--ivory);
+  background: transparent;
+  border-bottom-color: transparent;
+}
+.site-header__inner {
+  max-width: none;
+  padding-inline: max(16px, 4.5vw);
+  gap: clamp(16px, 2vw, 32px);
+}
+.site-header .site-header__logo,
+.site-header[data-scrolled]:not([data-menu]) .site-header__logo {
+  height: 46px;
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 959px) {
+  .site-header .site-header__logo,
+  .site-header[data-scrolled]:not([data-menu]) .site-header__logo {
+    height: 42px;
+  }
+}
+.site-nav {
+  margin-left: auto;
+}
+.site-nav a {
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  color: var(--charcoal);
+}
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.site-header .site-header__search-m {
+  display: inline-flex;
+}
+.site-header .lang-switch {
+  font-size: 11.5px;
+}
+@media (max-width: 1099px) {
+  .site-header__tools {
+    margin-left: auto;
+  }
+}
+
+/* -- Landing film: title centred, two round controls, arrow to collections -- */
+.hero--home {
+  min-height: calc(100svh - var(--header-h));
+  align-items: center;
+  justify-content: center;
+}
+.hero--home .hero__shade {
+  /* lighter than before: the content now sits in the middle */
+  background: radial-gradient(ellipse 60% 40% at 50% 48%, rgb(20 20 18 / 0.18), rgb(20 20 18 / 0) 70%);
+}
+.hero__title-2026 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding-inline: var(--gutter);
+  text-align: center;
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem); /* 28 px phone → 40 px desktop */
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  color: var(--ivory);
+  text-shadow: 0 1px 20px rgb(0 0 0 / 0.22);
+  animation: title-fade 700ms var(--ease) 200ms both;
+}
+@keyframes title-fade {
+  from {
+    opacity: 0;
+  }
+}
+.hero__down {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: -22px;
+  color: var(--ivory);
+  border-radius: 50%;
+  transition: transform 300ms var(--ease-out);
+}
+.hero__down:hover {
+  transform: translateY(3px);
+}
+.hero-controls {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+.hero-controls button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgb(246 241 231 / 0.65);
+  border-radius: 50%;
+  background: rgb(20 20 18 / 0.22);
+  color: var(--ivory);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color 250ms var(--ease);
+}
+.hero-controls button:hover {
+  background: rgb(20 20 18 / 0.45);
+}
+/* 44 px touch target around the 40 px circle */
+.hero-controls button::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+}
+.hero-controls button {
+  position: relative;
+}
+
+/* The line that used to sit on the film opens the section after it. */
+.home-lede {
+  max-width: 24ch;
+  margin: 0 auto clamp(56px, 8vw, 112px);
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+/* Collection opening frames now start below the solid header. */
+.c-hero__frame {
+  height: calc(100svh - var(--header-h));
+}
+.c-hero__title[data-position^='top'] {
+  top: clamp(24px, 6vh, 72px);
+}
+@media (max-width: 699px) {
+  .c-hero .c-hero__title[data-position] {
+    top: 20px;
+  }
+  .hero__title-2026 {
+    font-size: clamp(1.625rem, 7.4vw, 1.875rem); /* 26–30 px */
+  }
+}
+.hero__title-2026 {
+  font-variant-numeric: lining-nums;
 }

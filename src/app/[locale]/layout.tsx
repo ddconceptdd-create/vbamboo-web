@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import '@fontsource/be-vietnam-pro/300.css';
 import '@fontsource/be-vietnam-pro/400.css';
 import '@fontsource/be-vietnam-pro/500.css';
+import '@fontsource/cormorant-garamond/300.css';
 import '@/styles/globals.css';
 import '@/styles/site.css';
 import { LOCALES, getDict, isLocale, type Locale } from '@/i18n';

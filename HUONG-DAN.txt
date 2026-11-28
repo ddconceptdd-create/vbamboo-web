@@ -124,6 +124,7 @@ SHOWROOM / ĐẠI LÝ
 TRANG CHỦ (content/home/info.txt)
   Video: link YouTube (phát không tiếng, lặp lại, có nút tạm dừng) hoặc file .mp4/.webm trong thư mục home.
          Photo là khung hình đầu tiên, và là thứ khách thấy khi máy bật "giảm chuyển động" hoặc tiết kiệm dữ liệu.
+  HeroTitle: dòng chữ serif ở giữa video (vd 2026 COLLECTION | 2026 COLLECTION).
   Collection: bộ sưu tập dự phòng cho ảnh mở đầu.  Photo: ảnh mở đầu (ngang).
   PhotoMobile: ảnh dọc cho điện thoại (không bắt buộc).  Workshop: file | chú thích | caption (3 ảnh xưởng).
   Phần dưới ---: ## Giới thiệu và ## Xưởng (EN: ## Introduction, ## Workshop).

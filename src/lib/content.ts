@@ -398,6 +398,7 @@ export const getHome = cache(async () => {
     heroImageMobile: fileUrl(doc, field(doc, 'PhotoMobile')),
     heroAlt: biField(doc, 'PhotoAlt'),
     video: videoOf(doc, field(doc, 'Video')),
+    heroTitle: biField(doc, 'HeroTitle'),
     introTitle: biField(doc, 'IntroTitle'),
     introText: text(['giới thiệu', 'introduction', 'intro']),
     curatedTitle: biField(doc, 'CuratedTitle'),

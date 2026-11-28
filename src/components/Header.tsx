@@ -10,9 +10,11 @@ import SearchDialog from './SearchDialog';
 
 type Props = { locale: Locale; dict: Dict['nav']; searchDict: Dict['search']; index: SearchItem[] };
 
-/** Pages that open with a full-bleed dark image, where the header starts transparent. */
-const overlaysHero = (path: string, locale: string) =>
-  path === `/${locale}` || path === `/${locale}/about` || /^\/(vi|en)\/collections\/[^/]+$/.test(path);
+/**
+ * Solid ivory header on every page (DD, 28 Nov): logo left, the five sections,
+ * language and search on the right. The logo is the way home, so there is no
+ * separate Home item.
+ */
 
 export default function Header({ locale, dict, searchDict, index }: Props) {
   const pathname = usePathname() || `/${locale}`;
@@ -55,48 +57,38 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const transparent = overlaysHero(pathname, locale) && !scrolled && !menuOpen;
-  const onLight = !transparent && !menuOpen;
+  const onLight = !menuOpen;
   const items = [
-    { href: `/${locale}`, label: dict.home, exact: true },
     { href: `/${locale}/about`, label: dict.about },
     { href: `/${locale}/products`, label: dict.products },
     { href: `/${locale}/collections`, label: dict.collections },
     { href: `/${locale}/stores`, label: dict.stores },
     { href: `/${locale}/contact`, label: dict.contact },
   ];
-  const isActive = (href: string, exact?: boolean) => (exact ? pathname === href : pathname.startsWith(href));
+  const isActive = (href: string) => pathname.startsWith(href);
 
   return (
     <>
       <header
         className="site-header"
-        data-transparent={transparent || undefined}
         data-scrolled={scrolled || undefined}
         data-menu={menuOpen || undefined}
       >
         <div className="site-header__inner container">
-          <Link href={`/${locale}`} className="site-header__brand" aria-label="VBamboo">
+          <Link href={`/${locale}`} className="site-header__brand" aria-label={`VBamboo · ${dict.home}`}>
             {/* Supplied artwork: bamboo-yellow over images and the moss menu, grey on ivory. */}
             <span className={`logo site-header__logo${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
-            <span className={`logo logo--emblem site-header__emblem${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
           </Link>
 
           <nav className="site-nav" aria-label="Primary">
             <ul>
               {items.map((it) => (
                 <li key={it.href}>
-                  <Link href={it.href} aria-current={isActive(it.href, it.exact) ? 'page' : undefined}>
+                  <Link href={it.href} aria-current={isActive(it.href) ? 'page' : undefined}>
                     {it.label}
                   </Link>
                 </li>
               ))}
-              <li>
-                <button type="button" onClick={() => setSearchOpen(true)} aria-haspopup="dialog">
-                  <SearchIcon />
-                  <span>{dict.search}</span>
-                </button>
-              </li>
             </ul>
           </nav>
 
@@ -129,7 +121,7 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
           <ul>
             {items.map((it, i) => (
               <li key={it.href} style={{ '--i': i } as React.CSSProperties}>
-                <Link href={it.href} aria-current={isActive(it.href, it.exact) ? 'page' : undefined}>
+                <Link href={it.href} aria-current={isActive(it.href) ? 'page' : undefined}>
                   {it.label}
                 </Link>
               </li>

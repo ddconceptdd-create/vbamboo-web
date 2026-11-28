@@ -21,23 +21,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       <section className="hero hero--home" aria-label="VBamboo">
         <div className="hero__media">
           <HeroImage src={home?.heroImage ?? heroCollection?.heroImage} mobileSrc={home?.heroImageMobile} alt={t(home?.heroAlt, locale)} />
-          {home?.video && <HeroVideo video={home.video} labels={{ pause: d.home.pauseVideo, play: d.home.playVideo, video: d.home.videoLabel }} />}
+          {home?.video && (
+            <HeroVideo
+              video={home.video}
+              labels={{ pause: d.home.pauseVideo, play: d.home.playVideo, video: d.home.videoLabel, soundOn: d.home.soundOn, soundOff: d.home.soundOff }}
+            />
+          )}
         </div>
         <div className="hero__shade" aria-hidden="true" />
-        <div className="hero__content container">
-          <h1 className="hero__line">{d.home.heroLine}</h1>
-          <a href="#collections" className="link-line hero__cta">
-            {d.home.exploreCollections} <span className="arrow" aria-hidden="true">↓</span>
-          </a>
-        </div>
-        <a href="#collections" className="hero__scroll caps" aria-hidden="true" tabIndex={-1}>
-          {d.home.scroll}
+        <h1 className="hero__title-2026">{t(home?.heroTitle, locale) || '2026 COLLECTION'}</h1>
+        <a href="#collections" className="hero__down" aria-label={d.home.toCollections}>
+          <svg width="18" height="22" viewBox="0 0 18 22" fill="none" stroke="currentColor" strokeWidth="1.3" aria-hidden="true">
+            <path d="M9 1v19M2 13l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </a>
       </section>
 
       {/* 2 — Collections, straight after the film */}
       <section className="section collections-teaser" id="collections">
         <div className="container">
+          <p className="home-lede" data-reveal>{d.home.heroLine}</p>
           <header className="section-head">
             <div>
               <span className="eyebrow" data-reveal>{d.home.collectionsEyebrow}</span>
