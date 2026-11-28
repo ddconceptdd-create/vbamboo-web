@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Media from '@/components/Media';
-import CollectionSlider from '@/components/CollectionSlider';
+import CollectionShowcase from '@/components/CollectionShowcase';
 import HeroImage from '@/components/HeroImage';
 import HeroVideo from '@/components/HeroVideo';
 import ProductCard from '@/components/ProductCard';
@@ -44,18 +44,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           <p className="home-lede" data-reveal>{d.home.heroLine}</p>
         </div>
       </section>
-      <CollectionSlider
+      <CollectionShowcase
         eyebrow={d.home.collectionsEyebrow}
         title={d.home.collectionsTitle}
-        labels={{ discover: d.home.discover, pause: d.home.slidesPause, play: d.home.slidesPlay, hint: d.home.slidesHint }}
+        labels={{ discover: d.home.discover, pause: d.home.slidesPause, play: d.home.slidesPlay, prev: d.home.slidesPrev, next: d.home.slidesNext, show: d.home.slidesShow }}
         slides={collections.map((c) => ({
           slug: c.slug,
           href: `/${locale}/collections/${c.slug}`,
           name: c.name,
           tagline: t(c.tagline, locale),
           count: d.common.pieces(count(c.slug)),
-          photo: c.heroImage,
-          layers: c.layers.length ? c.layers : c.sketch ? [{ image: c.sketch, depth: 'front' as const }] : [],
+          pieces: products.filter((p) => p.collection === c.slug).map((p) => p.name).slice(0, 5),
+          image: c.opening ?? c.heroImage,
+          focus: c.opening ? c.openingFocus : '50% 50%',
         }))}
       />
 

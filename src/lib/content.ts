@@ -107,8 +107,9 @@ export type Collection = {
   nameTone: 'light' | 'dark';
   /** Pieces visible in the opening image: product address + position in % of the photo. */
   hotspots: { slug: string; x: number; y: number }[];
-  /** Sketches for the home slider: one "back" layer behind the name, up to two "front" layers. */
-  layers: { image: string; depth: 'back' | 'front' }[];
+  /** Home-page collections showcase: the catalogue's opening photograph and where its subject sits. */
+  opening: string | null;
+  openingFocus: string;
 };
 
 export type NamePosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
@@ -303,6 +304,12 @@ export const getProduct = cache(async (slug: string) => (await getProducts()).fi
 /* --------------------------------------------------------------------------
    Collections
    -------------------------------------------------------------------------- */
+/** "40 70" or "40% 70%" → "40% 70%" (CSS object-position); anything else → centre. */
+function focusOf(v: string) {
+  const n = v.match(/\d+(?:[.,]\d+)?/g)?.slice(0, 2).map((x) => Math.min(100, parseFloat(x.replace(',', '.'))));
+  return n && n.length === 2 ? `${n[0]}% ${n[1]}%` : '50% 50%';
+}
+
 export const getCollections = cache(async (): Promise<Collection[]> => {
   const list = listFolders('collections')
     .map((folder, i): Collection | null => {
@@ -333,10 +340,8 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
           .map(cells)
           .map(([slug = '', x = '', y = '']) => ({ slug: slug.toLowerCase().replace(/^\d+[-_ .]*/, ''), x: parseFloat(x.replace(",", ".")), y: parseFloat(y.replace(",", ".")) }))
           .filter((h) => h.slug && h.x >= 0 && h.x <= 100 && h.y >= 0 && h.y <= 100),
-        layers: fieldAll(doc, 'Layer')
-          .map(cells)
-          .map(([f = '', d = '']) => ({ image: fileUrl(doc, f), depth: /^(back|sau)/i.test(d.trim()) ? ('back' as const) : ('front' as const) }))
-          .filter((l): l is { image: string; depth: 'back' | 'front' } => Boolean(l.image)),
+        opening: fileUrl(doc, field(doc, 'Opening')),
+        openingFocus: focusOf(field(doc, 'OpeningFocus')),
       };
     })
     .filter((c): c is Collection => Boolean(c))

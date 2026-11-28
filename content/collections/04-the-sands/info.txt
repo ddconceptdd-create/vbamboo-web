@@ -18,10 +18,9 @@ NamePosition: top-left
 NameTone: light
 Hotspot: oasis-parasol | 50 | 22
 Hotspot: verner-hammock | 65 | 70
-# Layer: lớp phác thảo cho hiệu ứng trang chủ. back = lớp sau (nằm sau tên), front = lớp trước.
-Layer: layer-back.webp | back
-Layer: layer-1.webp | front
-Layer: layer-2.webp | front
+# Opening: ảnh mở đầu trong catalogue, dùng cho phần bộ sưu tập ở trang chủ. OpeningFocus: vị trí chủ thể (x | y, %).
+Opening: opening.jpg
+OpeningFocus: 62 | 55
 ---
 [VI]
 Võng, ghế thư giãn và dù che nắng với khung tre mật ong, vải màu cát và gối da cognac. The Sands mang nhịp nghỉ chậm của những buổi chiều ven biển vào hiên nhà, hồ bơi và khu nghỉ dưỡng.

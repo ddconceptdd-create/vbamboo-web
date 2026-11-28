@@ -20,10 +20,9 @@ Texture: texture-3.jpg | Chú thích | Caption
 NamePosition: bottom-left
 NameTone: light
 # Hotspot: ten-san-pham | 50 | 60
-# Layer: bản phác thảo nền trong suốt (PNG/WebP) cho hiệu ứng bộ sưu tập ở trang chủ. back = lớp sau (to, mờ, nằm sau tên); front = lớp trước (tối đa 2).
-# Layer: layer-back.webp | back
-# Layer: layer-1.webp | front
-# Layer: layer-2.webp | front
+# Opening: ảnh mở đầu trong catalogue (vuông hoặc ngang), dùng cho phần bộ sưu tập ở trang chủ. OpeningFocus: x% y% vị trí chủ thể trong ảnh.
+# Opening: opening.jpg
+# OpeningFocus: 50 60
 ---
 [VI]
 Đoạn giới thiệu bộ sưu tập.
