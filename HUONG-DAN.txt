@@ -1,6 +1,10 @@
 HƯỚNG DẪN CẬP NHẬT WEBSITE VBAMBOO
 ==================================
 
+  CÁCH DỄ NHẤT: sửa online ở trang quản trị  https://ten-mien/admin  (đăng nhập bằng GitHub).
+  Hướng dẫn cho team: docs/HUONG-DAN-CMS.md. Trang quản trị ghi vào đúng các file info.txt
+  mô tả dưới đây, nên vẫn có thể sửa tay như trước.
+
 CẤU TRÚC
   content/                     <- TOÀN BỘ NỘI DUNG WEBSITE (chỉ cần sửa thư mục này)
     products/     index.txt + mỗi sản phẩm 1 thư mục (info.txt, ảnh, bản vẽ, mẫu vật liệu)  + _TEMPLATE
@@ -21,9 +25,13 @@ QUY TẮC CHUNG (giống website DDConcept v11)
     Các đoạn văn cách nhau 1 dòng trống. Dòng "## Tiêu đề" mở một mục. Dòng "- " là 1 ý trong danh sách.
     Thiếu bản tiếng Anh thì trang tiếng Anh tự dùng bản tiếng Việt (và ngược lại).
   - yes / no: có thể ghi yes, no (hoặc có, không).
-  - Thứ tự hiển thị = thứ tự các dòng trong index.txt của từng mục.
-  - Ẩn 1 mục: xóa dòng tên của nó trong index.txt (có thể xóa luôn thư mục).
-  - Draft: yes = BẢN NHÁP: không hiện trên website chính thức, chỉ hiện ở link xem trước (có nhãn "Bản nháp").
+  - Thứ tự hiển thị = thứ tự các dòng trong index.txt của từng mục; thư mục chưa có trong index.txt
+    (vd tạo ở /admin) hiện sau cùng. Dòng "Order: 25" trong info.txt đặt vị trí riêng
+    (mục thứ N trong index.txt có vị trí N x 10, số nhỏ hiện trước).
+  - Ẩn 1 mục: ghi "Status: draft" (hoặc xóa thư mục). Xóa dòng trong index.txt KHÔNG còn ẩn mục nữa.
+  - Status: draft = BẢN NHÁP, approved = ĐÃ DUYỆT (chờ đăng), published = ĐĂNG.
+    Chỉ "published" hiện trên website chính thức; draft / approved chỉ hiện ở link xem trước (nhãn "Bản nháp").
+    File cũ ghi "Draft: yes / no" vẫn dùng được (Draft: yes = draft, Draft: no = published).
   - Tên file ảnh: chữ không dấu, không khoảng trắng (vd hero.jpg, room-01.jpg).
     Ảnh nên rộng 1600–2400px, mỗi ảnh dưới ~800KB (JPG chất lượng 75–80). Website tự nén và thu nhỏ cho điện thoại.
 
