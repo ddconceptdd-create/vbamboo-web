@@ -16,7 +16,7 @@ type Props = {
  *
  * Nothing 3D is downloaded until the visitor asks: the poster photo is shown
  * with a "View the 3D model" button, then the viewer script (~250 KB gzip) and
- * the model load. Draco- and meshopt-compressed GLB files are decoded in the
+ * the model load. Draco-compressed GLB files are decoded in the
  * browser. Phones get AR ("view in your room") where supported.
  */
 export default function ModelViewer({ src, ios, poster, alt, labels }: Props) {
@@ -24,9 +24,11 @@ export default function ModelViewer({ src, ios, poster, alt, labels }: Props) {
 
   const start = async () => {
     setState('loading');
-    const mod = await import('@google/model-viewer');
-    const MV = (mod as unknown as { ModelViewerElement?: { meshoptDecoderLocation: string } }).ModelViewerElement;
-    if (MV) MV.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.22.0/meshopt_decoder.js';
+    // Draco decoder served from this site (public/draco, copied from three.js) instead of
+    // Google's CDN. model-viewer reads this global when it loads, so set it first.
+    const w = window as unknown as { ModelViewerElement?: Record<string, string> };
+    w.ModelViewerElement = { ...(w.ModelViewerElement ?? {}), dracoDecoderLocation: '/draco/' };
+    await import('@google/model-viewer');
     setState('ready');
   };
 

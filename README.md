@@ -42,7 +42,7 @@ All content lives in **`content/`**, organised like the DDConcept v11 site: one 
 - **Collection opening frame**: the photo opens out as you scroll (`ScrollMotion.tsx`, `data-expand`), the name sits where `NamePosition`/`NameTone` say, and `Hotspot: product | x | y` places clickable markers on the pieces (`CollectionHero.tsx`).
 - **Products page**: studio shot by default, room photo on hover; touch screens get a Studio / Room switch per card and a swipe, plus a page-wide switch.
 - **Product page** (Norm/Tribù): opening room shot → sticky product bar (form, materials, versions, size & drawings, 3D, enquire) → studio silhouette with design features → wide views interleaved with close-ups → material tiles. Every image opens the zoom viewer (`ZoomLightbox.tsx`, tap to zoom 2.5×, drag to pan).
-- **3D**: `Model: file.glb` (+ optional `ModelPoster`, `ModelIOS` .usdz) shows a `<model-viewer>` that loads only when the visitor asks; Draco and meshopt compression are supported. Preview builds show the empty slot.
+- **3D**: `Model: file.glb` (+ optional `ModelPoster`, `ModelIOS` .usdz) shows a `<model-viewer>` that loads only when the visitor asks; Draco compression is supported (decoder self-hosted in public/draco). Preview builds show the empty slot.
 
 - **Language switch keeps place**: `/vi/products/sands-sofa?finish=smoked&fabric=clay` ↔ `/en/products/sands-sofa?finish=smoked&fabric=clay`.
 - **Product versions live in the URL** (`?finish=&fabric=`), so a version can be shared, and "Enquire to purchase" carries it into the contact form.

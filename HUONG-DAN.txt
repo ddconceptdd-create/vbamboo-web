@@ -89,7 +89,7 @@ THÊM SẢN PHẨM MỚI
     Khi khách chọn phiên bản, nút "Liên hệ mua hàng" mang theo tên sản phẩm + phiên bản vào form Liên hệ.
 
   Mô hình 3D xoay 360° – không bắt buộc:
-    Model: ten-san-pham.glb          file glTF nhị phân (.glb), nén Draco hoặc meshopt, nên dưới 5 MB
+    Model: ten-san-pham.glb          file glTF nhị phân (.glb), nén Draco, nên dưới 5 MB
     ModelPoster: silhouette.webp     ảnh hiện trước khi khách bấm "Xem mô hình 3D" (mặc định: ảnh chính)
     ModelIOS: ten-san-pham.usdz      (không bắt buộc) để xem AR trên iPhone
     Khi chưa có Model, bản xem trước hiện khung 3D trống để duyệt bố cục; website chính thức ẩn mục này.
