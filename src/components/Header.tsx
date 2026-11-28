@@ -57,10 +57,10 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const onLight = !menuOpen;
-  // Home opens on the full-screen film: the header waits until the visitor scrolls.
+  // Home opens on the full-screen film: logo and menu sit on the film (transparent),
+  // and the ivory bar fills in once the visitor scrolls.
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const hidden = isHome && !scrolled && !menuOpen;
+  const overFilm = isHome && !scrolled && !menuOpen;
   const items = [
     { href: `/${locale}/about`, label: dict.about },
     { href: `/${locale}/products`, label: dict.products },
@@ -75,7 +75,7 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
       <header
         className="site-header"
         data-scrolled={scrolled || undefined}
-        data-hidden={hidden || undefined}
+        data-over={overFilm || undefined}
         data-menu={menuOpen || undefined}
       >
         <div className="site-header__inner container">
@@ -92,8 +92,8 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
               }
             }}
           >
-            {/* Supplied artwork: bamboo-yellow over images and the moss menu, grey on ivory. */}
-            <span className={`logo site-header__logo${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
+            {/* The supplied artwork in its original bamboo yellow, on every page (DD, 28 Nov). */}
+            <span className="logo site-header__logo" aria-hidden="true" />
           </Link>
 
           <nav className="site-nav" aria-label="Primary">

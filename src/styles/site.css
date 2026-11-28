@@ -3215,18 +3215,32 @@ blockquote.textures__story::before {
   font-variant-numeric: lining-nums;
 }
 
-/* Home: the film fills the whole screen; the ivory header slides in once the
-   visitor scrolls (or reaches it with the keyboard), and is always there on other pages. */
+/* Home: the film fills the whole screen with the logo and menu on top of it;
+   the ivory bar fills in once the visitor scrolls. Other pages: ivory bar. */
 .site-header {
   transition:
-    transform 450ms var(--ease-out),
-    opacity 350ms var(--ease),
-    background-color 500ms var(--ease);
+    background-color 450ms var(--ease),
+    border-color 450ms var(--ease),
+    color 450ms var(--ease);
 }
-.site-header[data-hidden]:not(:has(:focus-visible)) {
-  transform: translateY(-100%);
-  opacity: 0;
+.site-header[data-over] {
+  background: transparent;
+  border-bottom-color: transparent;
+  color: var(--ivory);
+}
+.site-header[data-over]::before {
+  /* a faint top shade so the ivory menu stays readable on bright footage */
+  content: '';
+  position: absolute;
+  inset: 0 0 -40px;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(20 20 18 / 0.35), rgb(20 20 18 / 0));
   pointer-events: none;
+}
+.site-header[data-over] .site-nav a,
+.site-header[data-over] .lang-switch,
+.site-header[data-over] .icon-btn {
+  color: var(--ivory);
 }
 main:has(> .page-enter > .hero--home) {
   padding-top: 0;
