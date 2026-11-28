@@ -17,6 +17,10 @@ Texture: texture-3.jpg | Đường may trên da đen | Stitching on black leathe
 NamePosition: top-right
 NameTone: dark
 Hotspot: gentleman-chair | 39 | 79
+# Layer: lớp phác thảo cho hiệu ứng trang chủ. back = lớp sau (nằm sau tên), front = lớp trước.
+Layer: layer-back.webp | back
+Layer: layer-1.webp | front
+Layer: layer-2.webp | front
 ---
 [VI]
 The Nobility tập hợp những chiếc ghế tựa mang tinh thần cổ điển: chân tre giao chéo, da nâu cognac và da đen, chi tiết đồng thau ánh vàng trầm. Một bộ sưu tập dành cho phòng đọc, sảnh tiếp khách và những góc nghỉ có chiều sâu.

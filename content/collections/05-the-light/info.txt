@@ -17,6 +17,9 @@ Texture: texture-3.jpg | Khung kim loại gấp khúc | The folded metal frame
 NamePosition: top-left
 NameTone: light
 Hotspot: kink-lamp | 50 | 52
+# Layer: lớp phác thảo cho hiệu ứng trang chủ. back = lớp sau (nằm sau tên), front = lớp trước.
+Layer: layer-back.webp | back
+Layer: layer-1.webp | front
 ---
 [VI]
 Hai mẫu đèn bàn kết hợp đầu đèn tre hình trụ với khung kim loại đen mờ. Vân tre ấm làm mềm những đường nét đồ họa, tạo điểm nhấn cho bàn làm việc, bàn đầu giường hay kệ sách.

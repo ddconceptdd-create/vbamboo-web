@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Media from '@/components/Media';
+import CollectionSlider from '@/components/CollectionSlider';
 import HeroImage from '@/components/HeroImage';
 import HeroVideo from '@/components/HeroVideo';
 import ProductCard from '@/components/ProductCard';
@@ -37,37 +38,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         </a>
       </section>
 
-      {/* 2 — Collections, straight after the film */}
-      <section className="section collections-teaser" id="collections">
+      {/* 2 — Collections, straight after the film: the line, then the looping slider of sketches */}
+      <section className="home-intro" id="collections">
         <div className="container">
           <p className="home-lede" data-reveal>{d.home.heroLine}</p>
-          <header className="section-head">
-            <div>
-              <span className="eyebrow" data-reveal>{d.home.collectionsEyebrow}</span>
-              <h2 className="section-head__title" data-reveal>{d.home.collectionsTitle}</h2>
-            </div>
-          </header>
-          <ul className="collection-list">
-            {collections.map((c, i) => (
-              <li key={c.slug} className="collection-row" data-flip={i % 2 ? '' : undefined}>
-                <Link href={`/${locale}/collections/${c.slug}`} className="collection-row__link">
-                  <div className="expand" data-expand>
-                    <Media src={c.heroImage} alt={t(c.heroAlt, locale)} ratio="16 / 9" sizes="(min-width: 960px) 60vw, 100vw" />
-                  </div>
-                  <div className="collection-row__text" data-reveal>
-                    <span className="eyebrow">{d.common.pieces(count(c.slug))}</span>
-                    <h3 className="collection-row__name caps">{c.name}</h3>
-                    <p>{t(c.tagline, locale)}</p>
-                    <span className="link-line">
-                      {d.common.exploreCollection} <span className="arrow" aria-hidden="true">→</span>
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
+      <CollectionSlider
+        eyebrow={d.home.collectionsEyebrow}
+        title={d.home.collectionsTitle}
+        labels={{ discover: d.home.discover, pause: d.home.slidesPause, play: d.home.slidesPlay, hint: d.home.slidesHint }}
+        slides={collections.map((c) => ({
+          slug: c.slug,
+          href: `/${locale}/collections/${c.slug}`,
+          name: c.name,
+          tagline: t(c.tagline, locale),
+          count: d.common.pieces(count(c.slug)),
+          photo: c.heroImage,
+          layers: c.layers.length ? c.layers : c.sketch ? [{ image: c.sketch, depth: 'front' as const }] : [],
+        }))}
+      />
 
       {/* 3 — Brand introduction: gold emblem on woven green */}
       <section className="intro woven">

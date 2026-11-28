@@ -17,6 +17,10 @@ Texture: texture-3.jpg | Nhịp thanh tre và đai nâu | Bamboo slats and a bro
 NamePosition: bottom-left
 NameTone: light
 Hotspot: wave-sofa | 33 | 63
+# Layer: lớp phác thảo cho hiệu ứng trang chủ. back = lớp sau (nằm sau tên), front = lớp trước.
+Layer: layer-back.webp | back
+Layer: layer-1.webp | front
+Layer: layer-2.webp | front
 ---
 [VI]
 Bốn mẫu sofa đơn của VBamboo cùng chia sẻ một ý tưởng: khung tre uốn cong làm nên đường viền, còn đệm, da và mây làm nên cảm giác ngồi. Từ BOSENTO chần ô đen đến WAVE nan tre và mây đan, mỗi thiết kế là một cách để tre bước vào phòng khách đương đại.

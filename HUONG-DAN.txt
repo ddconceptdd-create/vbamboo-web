@@ -111,6 +111,9 @@ BỘ SƯU TẬP
     Hotspot       ten-san-pham | x | y   chấm bấm được đặt lên sản phẩm trong ảnh mở đầu,
                   x, y = phần trăm tính từ góc trên bên trái của ảnh (vd: gentleman-chair | 39 | 79).
                   Sản phẩm có Hotspot cũng hiện trong thanh "Trong khung hình" ở cuối ảnh.
+    Layer         ten-file | back hoặc front   các bản phác thảo nền trong suốt cho phần bộ sưu tập
+                  chuyển động ở trang chủ: 1 lớp back (nằm sau tên, to và mờ) và tối đa 2 lớp front.
+                  Không có Layer thì trang chủ dùng ảnh Sketch.
   Phần dưới ---: đoạn giới thiệu; ## Trích dẫn (EN: ## Quote) là câu trích dẫn (không bắt buộc).
   Sản phẩm thuộc bộ sưu tập nào do dòng Collection: trong info.txt của sản phẩm quyết định.
 

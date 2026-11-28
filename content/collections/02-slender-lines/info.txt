@@ -18,6 +18,10 @@ NamePosition: top-left
 NameTone: light
 Hotspot: tabouret-table | 52 | 50
 Hotspot: tabouret-chair | 28 | 62
+# Layer: lớp phác thảo cho hiệu ứng trang chủ. back = lớp sau (nằm sau tên), front = lớp trước.
+Layer: layer-back.webp | back
+Layer: layer-1.webp | front
+Layer: layer-2.webp | front
 ---
 [VI]
 Hệ nan song song chuyển cong trên khung chân kim loại mảnh. Slender Lines là bộ bàn ghế ăn gọn, thoáng và nhẹ về thị giác, để bữa ăn trở thành trung tâm của căn phòng.
