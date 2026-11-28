@@ -33,6 +33,20 @@ import {
 export const IS_PRODUCTION = process.env.VERCEL_ENV === 'production' || process.env.SHOW_SAMPLES === '0';
 const visible = <T extends { sample?: boolean }>(e: T) => !(IS_PRODUCTION && e.sample);
 
+/**
+ * Unpublished? "Status: draft | approved | published" (written by /admin);
+ * older files use "Draft: yes | no". Only "published" reaches the live site.
+ */
+const isDraft = (doc: Doc) => {
+  const status = field(doc, 'Status').trim().toLowerCase();
+  return status ? status !== 'published' : yes(field(doc, 'Draft'));
+};
+
+/** "Order: 25" in info.txt, or the position in index.txt (× 10). */
+const orderOf = (doc: Doc, position: number) => num(field(doc, 'Order')) ?? position;
+const byOrder = <T extends { order: number }>(list: T[]) =>
+  list.map((e, i) => ({ e, i })).sort((a, b) => a.e.order - b.e.order || a.i - b.i).map(({ e }) => e);
+
 const EMPTY: Bi = { vi: '', en: '' };
 const bi = (vi: string, en: string): Bi => ({ vi, en });
 
@@ -164,10 +178,20 @@ function readProduct(folder: string, order: number): Product | null {
     return { finish, fabric, image: fileUrl(doc, file) };
   });
 
-  // Gallery: listed files in order, or "all" = every photo in the folder, architectural → studio → detail.
+  // Gallery: photos by role (Hero/Room/Studio/Detail, written by /admin), or the
+  // files listed in Images, or "all" = every photo in the folder, architectural → studio → detail.
+  const roles: { file: string; kind: GalleryKind }[] = [
+    ...fieldAll(doc, 'Hero').map((file) => ({ file, kind: 'architectural' as const })),
+    ...fieldAll(doc, 'Room').map((file) => ({ file, kind: 'architectural' as const })),
+    ...fieldAll(doc, 'Studio').map((file) => ({ file, kind: 'studio' as const })),
+    ...fieldAll(doc, 'Detail').map((file) => ({ file, kind: 'detail' as const })),
+  ];
+  const roleKind = new Map(roles.map((r) => [r.file, r.kind]));
   const imagesField = field(doc, 'Images');
   let files: string[];
-  if (!imagesField || /^all$/i.test(imagesField)) {
+  if (roles.length) {
+    files = roles.map((r) => r.file);
+  } else if (!imagesField || /^all$/i.test(imagesField)) {
     const used = new Set([photoFile, ...drawingsRaw.map((d) => d[0]), ...swatchesRaw.map((s) => s[0])].map((f) => f?.toLowerCase()));
     files = imagesIn(doc)
       .filter((f) => !used.has(f.toLowerCase()) && !RESERVED.test(f))
@@ -181,7 +205,10 @@ function readProduct(folder: string, order: number): Product | null {
     detail: bi(`Chi tiết ${name}`, `${name}, detail`),
   };
   const gallery = files
-    .map((f) => ({ image: fileUrl(doc, f), kind: kindOf(f), alt: altFor[kindOf(f)] }))
+    .map((f) => {
+      const kind = roleKind.get(f) ?? kindOf(f);
+      return { image: fileUrl(doc, f), kind, alt: altFor[kind] };
+    })
     .filter((g) => g.image);
 
   const [width = null, depth = null, height = null] = (field(doc, 'Size').match(/\d+/g) ?? []).map(Number);
@@ -198,10 +225,10 @@ function readProduct(folder: string, order: number): Product | null {
     slug: slugOf(doc),
     name,
     nameVi: nameBi.vi !== nameBi.en ? nameBi.vi : '',
-    sample: yes(field(doc, 'Draft')),
+    sample: isDraft(doc),
     category,
     collection: field(doc, 'Collection').toLowerCase().replace(/^\d+[-_ .]*/, '') || null,
-    order,
+    order: orderOf(doc, order),
     featured: yes(field(doc, 'Featured')),
     typeLabel: biField(doc, 'Type'),
     summary: bi(intro(doc.vi)[0] ?? '', intro(doc.en)[0] ?? ''),
@@ -234,9 +261,11 @@ function readProduct(folder: string, order: number): Product | null {
 }
 
 export const getProducts = cache(async (): Promise<Product[]> => {
-  const all = listFolders('products')
-    .map((f, i) => readProduct(f, (i + 1) * 10))
-    .filter((p): p is Product => Boolean(p));
+  const all = byOrder(
+    listFolders('products')
+      .map((f, i) => readProduct(f, (i + 1) * 10))
+      .filter((p): p is Product => Boolean(p)),
+  );
   const seen = new Set<string>();
   return all.filter(visible).filter((p) => {
     if (seen.has(p.slug)) {
@@ -254,7 +283,7 @@ export const getProduct = cache(async (slug: string) => (await getProducts()).fi
    Collections
    -------------------------------------------------------------------------- */
 export const getCollections = cache(async (): Promise<Collection[]> => {
-  return listFolders('collections')
+  const list = listFolders('collections')
     .map((folder, i): Collection | null => {
       const doc = readDoc(`collections/${folder}`);
       if (!doc) return null;
@@ -263,8 +292,8 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
       return {
         slug: slugOf(doc),
         name,
-        sample: yes(field(doc, 'Draft')),
-        order: i,
+        sample: isDraft(doc),
+        order: orderOf(doc, (i + 1) * 10),
         tagline: biField(doc, 'Tagline'),
         intro: both(doc, (b) => b.paragraphs.join('\n\n')),
         story: both(doc, (b) => sectionText(sectionOf(b, quote))),
@@ -281,6 +310,7 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
     })
     .filter((c): c is Collection => Boolean(c))
     .filter(visible);
+  return byOrder(list);
 });
 
 export const getCollection = cache(async (slug: string) => (await getCollections()).find((c) => c.slug === slug) ?? null);
@@ -289,7 +319,7 @@ export const getCollection = cache(async (slug: string) => (await getCollections
    Stores
    -------------------------------------------------------------------------- */
 export const getStores = cache(async (): Promise<Store[]> => {
-  return listFolders('stores')
+  const list = listFolders('stores')
     .map((folder, i): Store | null => {
       const doc = readDoc(`stores/${folder}`);
       if (!doc) return null;
@@ -297,9 +327,9 @@ export const getStores = cache(async (): Promise<Store[]> => {
       return {
         slug: slugOf(doc),
         name: field(doc, 'Name') || folder,
-        sample: yes(field(doc, 'Draft')),
+        sample: isDraft(doc),
         kind: /^dealer|đại lý/i.test(field(doc, 'Kind')) ? 'dealer' : 'showroom',
-        order: i,
+        order: orderOf(doc, (i + 1) * 10),
         city: biField(doc, 'City'),
         country: biField(doc, 'Country'),
         address: lines(biField(doc, 'Address')),
@@ -314,6 +344,7 @@ export const getStores = cache(async (): Promise<Store[]> => {
     })
     .filter((s): s is Store => Boolean(s))
     .filter(visible);
+  return byOrder(list);
 });
 
 /* --------------------------------------------------------------------------
