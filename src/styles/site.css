@@ -3324,7 +3324,7 @@ main:has(> .page-enter > .hero--home) {
   background:
     linear-gradient(90deg, rgb(18 17 15 / 0.62) 0%, rgb(18 17 15 / 0.28) 42%, rgb(18 17 15 / 0) 70%),
     linear-gradient(0deg, rgb(18 17 15 / 0.55) 0%, rgb(18 17 15 / 0) 38%);
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .cx__item[data-slot='card'] .cx__shade,
 .cx__item[data-slot='park'] .cx__shade {

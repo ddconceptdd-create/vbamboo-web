@@ -22,8 +22,20 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
+  // Over full-bleed imagery (any element marked data-header-over) the bar stays transparent.
+  const [overImage, setOverImage] = useState(false);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      const h = 64;
+      setOverImage(
+        [...document.querySelectorAll('[data-header-over]')].some((el) => {
+          const r = el.getBoundingClientRect();
+          return r.top <= 1 && r.bottom > h;
+        }),
+      );
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -60,7 +72,7 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
   // Home opens on the full-screen film: logo and menu sit on the film (transparent),
   // and the ivory bar fills in once the visitor scrolls.
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const overFilm = isHome && !scrolled && !menuOpen;
+  const overFilm = ((isHome && !scrolled) || overImage) && !menuOpen;
   const items = [
     { href: `/${locale}/about`, label: dict.about },
     { href: `/${locale}/products`, label: dict.products },

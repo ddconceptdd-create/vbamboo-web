@@ -27,10 +27,10 @@ type Props = {
 };
 
 /* Motion parameters (seconds) and easing, as specified. */
-const EXPAND = 1.2;
-const SHIFT = 0.9;
-const TEXT = 0.7;
-const STAGGER = 0.1;
+const EXPAND = 0.75;
+const SHIFT = 0.55;
+const TEXT = 0.45;
+const STAGGER = 0.06;
 const AUTOPLAY = 7;
 const CARDS = 3;
 
@@ -171,12 +171,12 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
     const out = texts.current[job.from];
     const inn = texts.current[job.to];
     if (out) {
-      tl.to(out.querySelectorAll('[data-line]'), { yPercent: -110, duration: 0.45 * m, ease, stagger: 0.04 * m }, 0);
-      tl.set(out, { autoAlpha: 0 }, 0.5 * m);
+      tl.to(out.querySelectorAll('[data-line]'), { yPercent: -110, duration: 0.3 * m, ease, stagger: 0.03 * m }, 0);
+      tl.set(out, { autoAlpha: 0 }, 0.33 * m);
     }
     if (inn) {
       tl.set(inn, { autoAlpha: 1 }, 0);
-      tl.fromTo(inn.querySelectorAll('[data-line]'), { yPercent: 110 }, { yPercent: 0, duration: TEXT * m, ease, stagger: STAGGER * m }, 0.45 * m);
+      tl.fromTo(inn.querySelectorAll('[data-line]'), { yPercent: 110 }, { yPercent: 0, duration: TEXT * m, ease, stagger: STAGGER * m }, 0.28 * m);
     }
     // Keep the whole timeline at least as long as the expansion.
     tl.set({}, {}, EXPAND * m);
@@ -338,7 +338,7 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
     s.p = Math.max(0, raw);
     gsap.to(s.tl, {
       progress: s.p,
-      duration: 0.35,
+      duration: 0.18,
       ease: 'power2.out',
       overwrite: true,
     });
@@ -353,6 +353,7 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
     <section
       ref={root}
       className="cx"
+      data-header-over
       aria-roledescription="carousel"
       aria-label={title}
       onKeyDown={(e) => {
