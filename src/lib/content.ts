@@ -84,6 +84,8 @@ export type Product = {
   downloads: { label: Bi; kind: 'sheet' | '2d' | '3d'; file: string | null }[];
   collectionImage: string | null;
   prices: { vnd: number | null; usd: number | null; approved: boolean };
+  /** glTF/GLB model for the 360° viewer ("Model: chair.glb"), optional USDZ for iPhone AR. */
+  model: { src: string; poster: string | null; ios: string | null } | null;
 };
 
 export type Collection = {
@@ -100,7 +102,15 @@ export type Collection = {
   textures: { image: string | null; caption: Bi }[];
   settingImage: string | null;
   settingAlt: Bi;
+  /** Where the name sits in the opening image's negative space, and its tone. */
+  namePosition: NamePosition;
+  nameTone: 'light' | 'dark';
+  /** Pieces visible in the opening image: product address + position in % of the photo. */
+  hotspots: { slug: string; x: number; y: number }[];
 };
+
+export type NamePosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+const POSITIONS: NamePosition[] = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
 
 export type Store = {
   slug: string;
@@ -257,6 +267,15 @@ function readProduct(folder: string, order: number): Product | null {
     }),
     collectionImage: fileUrl(doc, field(doc, 'CollectionPhoto')),
     prices: { vnd: num(field(doc, 'PriceVND')), usd: num(field(doc, 'PriceUSD')), approved: yes(field(doc, 'PriceApproved')) },
+    model: (() => {
+      const src = fileUrl(doc, field(doc, 'Model'));
+      if (!src) return null;
+      if (!/\.(glb|gltf)$/i.test(src)) {
+        warn(`content/${doc.dir}: Model must be a .glb or .gltf file`);
+        return null;
+      }
+      return { src, poster: fileUrl(doc, field(doc, 'ModelPoster')) ?? heroImage, ios: fileUrl(doc, field(doc, 'ModelIOS')) };
+    })(),
   };
 }
 
@@ -306,6 +325,12 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
         }),
         settingImage: fileUrl(doc, field(doc, 'Setting')),
         settingAlt: bi(`Các thiết kế ${name} trong không gian`, `${name} pieces in their setting`),
+        namePosition: POSITIONS.find((p) => p === field(doc, 'NamePosition').trim().toLowerCase()) ?? 'bottom-left',
+        nameTone: /^(dark|tối|toi)/i.test(field(doc, 'NameTone')) ? 'dark' : 'light',
+        hotspots: fieldAll(doc, 'Hotspot')
+          .map(cells)
+          .map(([slug = '', x = '', y = '']) => ({ slug: slug.toLowerCase().replace(/^\d+[-_ .]*/, ''), x: parseFloat(x.replace(",", ".")), y: parseFloat(y.replace(",", ".")) }))
+          .filter((h) => h.slug && h.x >= 0 && h.x <= 100 && h.y >= 0 && h.y <= 100),
       };
     })
     .filter((c): c is Collection => Boolean(c))
@@ -350,6 +375,19 @@ export const getStores = cache(async (): Promise<Store[]> => {
 /* --------------------------------------------------------------------------
    Pages
    -------------------------------------------------------------------------- */
+/** "Video: https://youtu.be/ID" (or a YouTube watch/embed link), or a file in the folder (hero.mp4). */
+function videoOf(doc: Doc, value: string): { kind: 'youtube'; id: string } | { kind: 'file'; src: string } | null {
+  const v = value.trim();
+  if (!v) return null;
+  const yt = v.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/i);
+  if (yt) return { kind: 'youtube', id: yt[1] };
+  if (/^[\w-]{11}$/.test(v) && !/\./.test(v)) return { kind: 'youtube', id: v };
+  const src = fileUrl(doc, v);
+  if (src && /\.(mp4|webm)$/i.test(src)) return { kind: 'file', src };
+  warn(`content/${doc.dir}: Video "${v}" is not a YouTube link or an .mp4/.webm file in the folder`);
+  return null;
+}
+
 export const getHome = cache(async () => {
   const doc = readDoc('home');
   if (!doc) return null;
@@ -359,6 +397,7 @@ export const getHome = cache(async () => {
     heroImage: fileUrl(doc, field(doc, 'Photo')),
     heroImageMobile: fileUrl(doc, field(doc, 'PhotoMobile')),
     heroAlt: biField(doc, 'PhotoAlt'),
+    video: videoOf(doc, field(doc, 'Video')),
     introTitle: biField(doc, 'IntroTitle'),
     introText: text(['giới thiệu', 'introduction', 'intro']),
     curatedTitle: biField(doc, 'CuratedTitle'),

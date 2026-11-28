@@ -124,7 +124,7 @@
         },
         img('collection_photo', 'Ảnh trên trang bộ sưu tập'),
         str('slug_url', 'Địa chỉ trang (Slug)', { hint: 'Để trống = lấy từ tên thư mục. Đổi sẽ làm hỏng link cũ.' }),
-        txt('_advanced', 'Dòng nâng cao', { hint: 'Finish, Fabric, VersionPhoto… mỗi dòng "Khoá: giá trị", giữ nguyên như info.txt.' }),
+        txt('_advanced', 'Dòng nâng cao', { hint: 'Finish, Fabric, VersionPhoto, Model (file .glb 3D)… mỗi dòng "Khoá: giá trị", giữ nguyên như info.txt.' }),
       ]),
     ];
   }
@@ -362,7 +362,7 @@
       local_backend: local,
       site_url: location.origin,
       display_url: location.origin,
-      logo_url: '/brand/vbamboo-logo-green.svg',
+      logo_url: '/brand/vbamboo-lockup-grey.webp',
       media_folder: 'content/_uploads',
       public_folder: '',
       collections: [

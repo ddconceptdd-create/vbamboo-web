@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Media from '@/components/Media';
+import CollectionHero from '@/components/CollectionHero';
 import { LOCALES, categoryLabel, getDict, t, type Locale } from '@/i18n';
 import { getCollection, getCollections, getProducts, IS_PRODUCTION, productName } from '@/lib/content';
 
@@ -30,20 +31,32 @@ export default async function CollectionPage({ params }: { params: Promise<{ loc
 
   return (
     <div className="collection page-enter">
-      <section className="hero hero--collection" aria-label={c.name}>
-        <div className="hero__media">
-          <Media src={c.heroImage} alt={t(c.heroAlt, locale)} sizes="100vw" priority className="hero__img" />
-        </div>
-        <div className="hero__shade" aria-hidden="true" />
-      </section>
+      <CollectionHero
+        locale={locale}
+        name={c.name}
+        tagline={t(c.tagline, locale)}
+        eyebrow={d.collections.title}
+        image={c.heroImage}
+        alt={t(c.heroAlt, locale)}
+        position={c.namePosition}
+        tone={c.nameTone}
+        pieces={c.hotspots
+          .map((h) => {
+            const p = products.find((x) => x.slug === h.slug);
+            return p
+              ? { slug: p.slug, name: productName(p, locale), type: t(p.typeLabel, locale) || categoryLabel(p.category, locale, true), x: h.x, y: h.y, thumb: p.heroStyle === 'cutout' ? p.heroImage : null }
+              : null;
+          })
+          .filter((x) => x !== null)}
+        labels={{ inFrame: d.collections.inFrame, view: d.common.viewProduct }}
+        badge={!IS_PRODUCTION && c.sample ? <span className="badge-sample">{d.common.sample}</span> : null}
+      />
 
-      <section className="collection-title woven">
+      <section className="collection-title woven" id="story">
         <div className="container collection-title__grid">
           <div>
-            <p className="eyebrow" data-reveal>{d.collections.title}</p>
-            <h1 className="collection-title__name caps" data-reveal>{c.name}</h1>
-            <p className="collection-title__tagline" data-reveal>{t(c.tagline, locale)}</p>
-            {!IS_PRODUCTION && c.sample && <span className="badge-sample" style={{ color: 'var(--gold)' }}>{d.common.sample}</span>}
+            <p className="eyebrow" data-reveal>{c.name}</p>
+            <p className="collection-title__lede" data-reveal>{t(c.tagline, locale)}</p>
           </div>
           <div className="collection-title__side">
             {c.sketch && (
@@ -77,8 +90,8 @@ export default async function CollectionPage({ params }: { params: Promise<{ loc
       )}
 
       {c.settingImage && (
-        <section className="setting">
-          <Media src={c.settingImage} alt={t(c.settingAlt, locale)} ratio="21 / 9" sizes="100vw" reveal />
+        <section className="setting expand" data-expand>
+          <Media src={c.settingImage} alt={t(c.settingAlt, locale)} ratio="21 / 9" sizes="100vw" />
         </section>
       )}
 

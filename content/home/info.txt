@@ -4,6 +4,8 @@
 # Sản phẩm tiêu biểu: đánh dấu Featured: yes trong info.txt của sản phẩm.
 # Workshop: file | chú thích | caption (ảnh xưởng & con người, nên có 3 ảnh).
 # Sau dấu ---: [VI] ## Giới thiệu, ## Xưởng; [EN] ## Introduction, ## Workshop.
+# Video: link YouTube (phát không tiếng, có nút tạm dừng) hoặc file .mp4/.webm đặt trong thư mục này. Photo là ảnh hiện trước khi video chạy và khi tắt chuyển động.
+Video: https://www.youtube.com/watch?v=pv92ty5ydW8
 Collection: the-nobility
 Photo: hero.jpg
 PhotoMobile: hero-mobile.jpg

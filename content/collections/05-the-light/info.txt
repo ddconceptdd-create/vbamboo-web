@@ -3,6 +3,8 @@
 # Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
 # Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
 
+# NamePosition: vị trí tên bộ sưu tập trên ảnh mở đầu (top-left, top-right, bottom-left, bottom-right, center). NameTone: light (chữ sáng) hoặc dark (chữ tối).
+# Hotspot: địa chỉ sản phẩm | x% | y%  (vị trí sản phẩm trong ảnh mở đầu, đo từ góc trên bên trái).
 Name: The Light
 Tagline: Ánh sáng trong ống tre | Light held in a bamboo cylinder
 Draft: no
@@ -12,6 +14,9 @@ Setting: setting.jpg
 Texture: texture-1.jpg | Đầu đèn tre hình trụ | The cylindrical bamboo head
 Texture: texture-2.jpg | Đế kim loại đen mờ | Matte black metal base
 Texture: texture-3.jpg | Khung kim loại gấp khúc | The folded metal frame
+NamePosition: top-left
+NameTone: light
+Hotspot: kink-lamp | 50 | 52
 ---
 [VI]
 Hai mẫu đèn bàn kết hợp đầu đèn tre hình trụ với khung kim loại đen mờ. Vân tre ấm làm mềm những đường nét đồ họa, tạo điểm nhấn cho bàn làm việc, bàn đầu giường hay kệ sách.

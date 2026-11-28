@@ -56,6 +56,7 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
   }, []);
 
   const transparent = overlaysHero(pathname, locale) && !scrolled && !menuOpen;
+  const onLight = !transparent && !menuOpen;
   const items = [
     { href: `/${locale}`, label: dict.home, exact: true },
     { href: `/${locale}/about`, label: dict.about },
@@ -76,8 +77,9 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
       >
         <div className="site-header__inner container">
           <Link href={`/${locale}`} className="site-header__brand" aria-label="VBamboo">
-            <span className="logo site-header__logo" aria-hidden="true" />
-            <span className="logo logo--emblem site-header__emblem" aria-hidden="true" />
+            {/* Supplied artwork: bamboo-yellow over images and the moss menu, grey on ivory. */}
+            <span className={`logo site-header__logo${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
+            <span className={`logo logo--emblem site-header__emblem${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
           </Link>
 
           <nav className="site-nav" aria-label="Primary">

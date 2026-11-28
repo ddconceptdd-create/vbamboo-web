@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Media from '@/components/Media';
 import HeroImage from '@/components/HeroImage';
+import HeroVideo from '@/components/HeroVideo';
 import ProductCard from '@/components/ProductCard';
 import { getDict, t, type Locale } from '@/i18n';
 import { getCollections, getHome, getProducts, toCard } from '@/lib/content';
@@ -16,28 +17,56 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
 
   return (
     <div className="page-enter">
-      {/* 1 — Signature piece in an architectural space */}
-      <section className="hero" aria-label={heroCollection?.name}>
+      {/* 1 — Film: muted, with a pause button; the poster photo is the first frame and the reduced-motion view */}
+      <section className="hero hero--home" aria-label="VBamboo">
         <div className="hero__media">
           <HeroImage src={home?.heroImage ?? heroCollection?.heroImage} mobileSrc={home?.heroImageMobile} alt={t(home?.heroAlt, locale)} />
+          {home?.video && <HeroVideo video={home.video} labels={{ pause: d.home.pauseVideo, play: d.home.playVideo, video: d.home.videoLabel }} />}
         </div>
         <div className="hero__shade" aria-hidden="true" />
         <div className="hero__content container">
-          <p className="hero__eyebrow caps">{d.collections.title}</p>
-          <h1 className="hero__title caps">{heroCollection?.name}</h1>
-          {heroCollection && <p className="hero__tagline">{t(heroCollection.tagline, locale)}</p>}
-          {heroCollection && (
-            <Link href={`/${locale}/collections/${heroCollection.slug}`} className="link-line hero__cta">
-              {d.common.exploreCollection} <span className="arrow" aria-hidden="true">→</span>
-            </Link>
-          )}
+          <h1 className="hero__line">{d.home.heroLine}</h1>
+          <a href="#collections" className="link-line hero__cta">
+            {d.home.exploreCollections} <span className="arrow" aria-hidden="true">↓</span>
+          </a>
         </div>
-        <span className="hero__scroll caps" aria-hidden="true">
+        <a href="#collections" className="hero__scroll caps" aria-hidden="true" tabIndex={-1}>
           {d.home.scroll}
-        </span>
+        </a>
       </section>
 
-      {/* 2 — Brand introduction: gold emblem on woven green */}
+      {/* 2 — Collections, straight after the film */}
+      <section className="section collections-teaser" id="collections">
+        <div className="container">
+          <header className="section-head">
+            <div>
+              <span className="eyebrow" data-reveal>{d.home.collectionsEyebrow}</span>
+              <h2 className="section-head__title" data-reveal>{d.home.collectionsTitle}</h2>
+            </div>
+          </header>
+          <ul className="collection-list">
+            {collections.map((c, i) => (
+              <li key={c.slug} className="collection-row" data-flip={i % 2 ? '' : undefined}>
+                <Link href={`/${locale}/collections/${c.slug}`} className="collection-row__link">
+                  <div className="expand" data-expand>
+                    <Media src={c.heroImage} alt={t(c.heroAlt, locale)} ratio="16 / 9" sizes="(min-width: 960px) 60vw, 100vw" />
+                  </div>
+                  <div className="collection-row__text" data-reveal>
+                    <span className="eyebrow">{d.common.pieces(count(c.slug))}</span>
+                    <h3 className="collection-row__name caps">{c.name}</h3>
+                    <p>{t(c.tagline, locale)}</p>
+                    <span className="link-line">
+                      {d.common.exploreCollection} <span className="arrow" aria-hidden="true">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 3 — Brand introduction: gold emblem on woven green */}
       <section className="intro woven">
         <div className="container intro__grid">
           <span className="logo intro__logo" data-reveal="fade" aria-hidden="true" />
@@ -55,7 +84,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         </div>
       </section>
 
-      {/* 3 — Curated selection */}
+      {/* 4 — Curated selection */}
       <section className="section curated">
         <div className="container">
           <header className="section-head">
@@ -75,7 +104,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         </div>
       </section>
 
-      {/* 4 — The workshop and the people */}
+      {/* 5 — The workshop and the people */}
       <section className="section workshop">
         <div className="container workshop__grid">
           <div className="workshop__text">
@@ -93,35 +122,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               </figure>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 5 — Collections */}
-      <section className="section collections-teaser">
-        <div className="container">
-          <header className="section-head">
-            <div>
-              <span className="eyebrow" data-reveal>{d.home.collectionsEyebrow}</span>
-              <h2 className="section-head__title" data-reveal>{d.home.collectionsTitle}</h2>
-            </div>
-          </header>
-          <ul className="collection-list">
-            {collections.map((c, i) => (
-              <li key={c.slug} className="collection-row" data-flip={i % 2 ? '' : undefined}>
-                <Link href={`/${locale}/collections/${c.slug}`} className="collection-row__link">
-                  <Media src={c.heroImage} alt={t(c.heroAlt, locale)} ratio="16 / 9" sizes="(min-width: 960px) 60vw, 100vw" reveal />
-                  <div className="collection-row__text" data-reveal>
-                    <span className="eyebrow">{d.common.pieces(count(c.slug))}</span>
-                    <h3 className="collection-row__name caps">{c.name}</h3>
-                    <p>{t(c.tagline, locale)}</p>
-                    <span className="link-line">
-                      {d.common.exploreCollection} <span className="arrow" aria-hidden="true">→</span>
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

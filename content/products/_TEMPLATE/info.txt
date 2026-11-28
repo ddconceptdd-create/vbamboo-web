@@ -32,6 +32,10 @@ Swatch:
 PriceVND: 
 PriceUSD: 
 PriceApproved: no
+# Model: file .glb (mô hình 3D nén Draco/meshopt, nên dưới 5 MB) để xoay 360°. ModelPoster: ảnh hiện trước khi tải mô hình. ModelIOS: file .usdz cho AR trên iPhone (không bắt buộc).
+Model: 
+ModelPoster: 
+ModelIOS: 
 ---
 [VI]
 Đoạn mô tả ngắn: điều làm thiết kế này khác biệt.

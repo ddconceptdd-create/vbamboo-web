@@ -88,6 +88,15 @@ THÊM SẢN PHẨM MỚI
     VersionPhoto: natural + sand-linen | version-natural-sand.jpg     (ảnh của đúng phiên bản; dùng * cho "bất kỳ")
     Khi khách chọn phiên bản, nút "Liên hệ mua hàng" mang theo tên sản phẩm + phiên bản vào form Liên hệ.
 
+  Mô hình 3D xoay 360° – không bắt buộc:
+    Model: ten-san-pham.glb          file glTF nhị phân (.glb), nén Draco hoặc meshopt, nên dưới 5 MB
+    ModelPoster: silhouette.webp     ảnh hiện trước khi khách bấm "Xem mô hình 3D" (mặc định: ảnh chính)
+    ModelIOS: ten-san-pham.usdz      (không bắt buộc) để xem AR trên iPhone
+    Khi chưa có Model, bản xem trước hiện khung 3D trống để duyệt bố cục; website chính thức ẩn mục này.
+
+  Ảnh trên trang sản phẩm: room-* (toàn cảnh, ảnh đầu tiên là ảnh mở trang), studio-* (phom dáng),
+  detail-* (cận cảnh, xen kẽ với ảnh toàn cảnh), swatch-* (ô vật liệu). Mọi ảnh bấm vào đều phóng to được.
+
 BỘ SƯU TẬP
   Chép collections/_TEMPLATE thành collections/06-ten-bo-suu-tap, thêm tên thư mục vào collections/index.txt.
     Name      tên bộ sưu tập (hiện chữ in hoa giãn cách)
@@ -96,6 +105,12 @@ BỘ SƯU TẬP
     Sketch    nét vẽ màu sáng trên nền trong suốt (PNG/WebP), hiện trên tấm nền xanh dệt
     Texture   file | chú thích | caption   (3 ảnh cận chất liệu)
     Setting   ảnh các sản phẩm trong không gian (ngang)
+    NamePosition  vị trí tên trên ảnh mở đầu, chọn chỗ trống của ảnh:
+                  top-left, top-right, bottom-left, bottom-right hoặc center (trên điện thoại tên luôn ở trên)
+    NameTone      light (chữ sáng, cho ảnh tối) hoặc dark (chữ tối, cho tường sáng)
+    Hotspot       ten-san-pham | x | y   chấm bấm được đặt lên sản phẩm trong ảnh mở đầu,
+                  x, y = phần trăm tính từ góc trên bên trái của ảnh (vd: gentleman-chair | 39 | 79).
+                  Sản phẩm có Hotspot cũng hiện trong thanh "Trong khung hình" ở cuối ảnh.
   Phần dưới ---: đoạn giới thiệu; ## Trích dẫn (EN: ## Quote) là câu trích dẫn (không bắt buộc).
   Sản phẩm thuộc bộ sưu tập nào do dòng Collection: trong info.txt của sản phẩm quyết định.
 
@@ -107,7 +122,9 @@ SHOWROOM / ĐẠI LÝ
   Chưa có cửa hàng nào hiện trên website chính thức thì trang Cửa hàng mời khách liên hệ để hẹn lịch.
 
 TRANG CHỦ (content/home/info.txt)
-  Collection: bộ sưu tập giới thiệu trên ảnh mở đầu.  Photo: ảnh mở đầu (ngang).
+  Video: link YouTube (phát không tiếng, lặp lại, có nút tạm dừng) hoặc file .mp4/.webm trong thư mục home.
+         Photo là khung hình đầu tiên, và là thứ khách thấy khi máy bật "giảm chuyển động" hoặc tiết kiệm dữ liệu.
+  Collection: bộ sưu tập dự phòng cho ảnh mở đầu.  Photo: ảnh mở đầu (ngang).
   PhotoMobile: ảnh dọc cho điện thoại (không bắt buộc).  Workshop: file | chú thích | caption (3 ảnh xưởng).
   Phần dưới ---: ## Giới thiệu và ## Xưởng (EN: ## Introduction, ## Workshop).
 

@@ -10,6 +10,7 @@ import { getCategoriesInUse, getSearchIndex, getSite, IS_PRODUCTION } from '@/li
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RevealObserver from '@/components/RevealObserver';
+import ScrollMotion from '@/components/ScrollMotion';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => LOCALES.map((locale) => ({ locale }));
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
         <main id="main">{children}</main>
         <Footer locale={locale} site={site} categories={[...categories]} />
         <RevealObserver />
+        <ScrollMotion />
       </body>
     </html>
   );

@@ -29,6 +29,14 @@ Swatch: swatch-leather-cognac.jpg | Da nâu cognac | Cognac leather
 Swatch: swatch-bamboo.jpg | Tre | Bamboo
 Swatch: swatch-brass-fitting.jpg | Phụ kiện đồng thau | Brass fitting
 Swatch: swatch-leather-strap.jpg | Đai da khâu tay | Hand-stitched leather strap
+# Phiên bản mặt ngồi/tựa lưng theo catalogue 2026 trang 41 (3 ô màu: ô liu, nâu cognac, đen). VBamboo cần xác nhận tên vật liệu (da hay vải).
+Fabric: cognac | Nâu cognac | Cognac | #6e3e29
+Fabric: olive | Xanh ô liu | Olive green | #525037
+Fabric: black | Đen | Black | #1f2324
+# Ảnh riêng cho bản ô liu và đen chưa có: tạm dùng ảnh ba phiên bản từ catalogue (version-all.jpg, độ phân giải thấp).
+VersionPhoto: * + cognac | studio-01.jpg
+VersionPhoto: * + olive | version-all.jpg
+VersionPhoto: * + black | version-all.jpg
 PriceVND: 
 PriceUSD: 
 PriceApproved: no

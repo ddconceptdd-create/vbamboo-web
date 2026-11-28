@@ -19,6 +19,8 @@ export default function ProductCatalog({
   const dict = getDict(locale).products;
   const [category, setCategory] = useState<string | null>(null);
   const [collection, setCollection] = useState<string | null>(null);
+  const [view, setView] = useState<'studio' | 'room'>('studio');
+  const labels = { studio: dict.viewStudio, room: dict.viewRoom, toggle: dict.toggleView };
 
   useEffect(() => {
     const read = () => {
@@ -76,12 +78,22 @@ export default function ProductCatalog({
         </div>
       </div>
 
-      <p className="catalog__count" aria-live="polite">{dict.count(list.length)}</p>
+      <div className="catalog__bar">
+        <p className="catalog__count" aria-live="polite">{dict.count(list.length)}</p>
+        <div className="view-switch" role="group" aria-label={dict.view}>
+          <button type="button" aria-pressed={view === 'studio'} onClick={() => setView('studio')}>
+            {dict.viewStudio}
+          </button>
+          <button type="button" aria-pressed={view === 'room'} onClick={() => setView('room')}>
+            {dict.viewRoom}
+          </button>
+        </div>
+      </div>
 
       {list.length ? (
-        <div className="product-grid catalog__grid" key={`${category}-${collection}`}>
+        <div className="product-grid catalog__grid" data-view={view} key={`${category}-${collection}`}>
           {list.map((p, i) => (
-            <ProductCard key={p.slug} p={p} locale={locale} delay={(i % 3) * 90} />
+            <ProductCard key={p.slug} p={p} locale={locale} delay={(i % 3) * 90} labels={labels} />
           ))}
         </div>
       ) : (
