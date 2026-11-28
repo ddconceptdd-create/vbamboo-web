@@ -81,6 +81,10 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
   const onScreen = useRef(false);
   const progress = useRef<gsap.core.Tween | null>(null);
   const goRef = useRef<(to: number) => void>(() => undefined);
+  const scrub = useRef<{ tl: gsap.core.Timeline; x0: number; span: number; p: number; from: number; to: number } | null>(null);
+  const scrubCommit = useRef(false);
+  const idle = useRef(0);
+  const carry = useRef<number | null>(null); // where a continuing sweep's next slot starts
 
   const active = order[0];
 
@@ -132,6 +136,15 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
 
   /* The transition itself, once React has moved every element to its new slot. */
   useLayoutEffect(() => {
+    if (scrubCommit.current) {
+      // A scrubbed transition just finished: drop the inline geometry (the CSS slots now match it).
+      scrubCommit.current = false;
+      gsap.set(items.current.filter(Boolean), { clearProps: 'zIndex,width,height,top,left,borderRadius,opacity' });
+      items.current.forEach((el) => el && gsap.set(el.querySelector('.cx__card'), { clearProps: 'opacity' }));
+      busy.current = false;
+      restartProgress();
+      return;
+    }
     const job = pending.current;
     if (!job) return;
     pending.current = null;
@@ -200,22 +213,137 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
   const next = () => go(order[1]);
   const prev = () => go(order[n - 1]);
 
-  /* A deliberate horizontal sweep of the cursor across the cards turns the page. */
-  const sweep = useRef<{ x: number; t: number } | null>(null);
+  /*
+   * Cursor scrub: moving the mouse sideways across the three cards drives the
+   * next transition directly. Every pixel to the left moves the cards a pixel to
+   * the left (one slot = one card width + gap) and opens the first card by the
+   * same share. Past halfway, letting go (leaving the cards or pausing) lets it
+   * finish; before that it slides back. Keep going and the following collection
+   * starts at once, so a long sweep runs through the loop continuously.
+   */
+
+  const rectIn = (el: Element) => {
+    const s = root.current!.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    return { left: r.left - s.left, top: r.top - s.top, width: r.width, height: r.height };
+  };
+
+  const startScrub = (x: number) => {
+    if (busy.current || !root.current) return null;
+    const [a, c1, c2, c3, ...rest] = order;
+    const park = rest[0];
+    const grow = items.current[c1];
+    const e2 = items.current[c2];
+    const e3 = items.current[c3];
+    const ep = park == null ? null : items.current[park];
+    if (!grow || !e2 || !e3) return null;
+    busy.current = true;
+    progress.current?.pause();
+    const W = root.current.clientWidth;
+    const H = root.current.clientHeight;
+    const r1 = rectIn(grow);
+    const r2 = rectIn(e2);
+    const r3 = rectIn(e3);
+    const tl = gsap.timeline({ paused: true, defaults: { ease: 'none' } });
+    gsap.set(grow, { zIndex: 2 });
+    tl.fromTo(grow, { ...r1, borderRadius: 10 }, { left: 0, top: 0, width: W, height: H, borderRadius: 0, duration: 1 }, 0);
+    tl.to(grow.querySelector('.cx__card'), { opacity: 0, duration: 0.3 }, 0);
+    tl.fromTo(e2, { ...r2 }, { ...r1, duration: 1 }, 0);
+    tl.fromTo(e3, { ...r3 }, { ...r2, duration: 1 }, 0);
+    if (ep) tl.fromTo(ep, { ...rectIn(ep), opacity: 0 }, { ...r3, opacity: 1, duration: 1 }, 0);
+    const out = texts.current[a];
+    const inn = texts.current[c1];
+    if (out) {
+      tl.to(out.querySelectorAll('[data-line]'), { yPercent: -110, duration: 0.3, stagger: 0.02 }, 0);
+      tl.set(out, { autoAlpha: 0 }, 0.36);
+    }
+    if (inn) {
+      tl.set(inn, { autoAlpha: 1 }, 0.3);
+      tl.fromTo(inn.querySelectorAll('[data-line]'), { yPercent: 110 }, { yPercent: 0, duration: 0.45, stagger: 0.05 }, 0.35);
+    }
+    tl.set({}, {}, 1);
+    const span = Math.max(80, r2.left - r1.left); // one slot, in pixels
+    scrub.current = { tl, x0: carry.current ?? x, span, p: 0, from: a, to: c1 };
+    carry.current = null;
+    return scrub.current;
+  };
+
+  /** Hand the scrubbed state over to React: the new order, CSS slots, no jump. */
+  const commitScrub = () => {
+    const s = scrub.current;
+    if (!s) return;
+    scrub.current = null;
+    s.tl.kill();
+    scrubCommit.current = true;
+    setOrder((o) => [...o.slice(1), o[0]]);
+  };
+
+  const cancelScrub = () => {
+    const s = scrub.current;
+    if (!s) return;
+    scrub.current = null;
+    s.tl.progress(0).kill();
+    gsap.set(items.current.filter(Boolean), { clearProps: 'zIndex,width,height,top,left,borderRadius,opacity' });
+    items.current.forEach((el) => el && gsap.set(el.querySelector('.cx__card'), { clearProps: 'opacity' }));
+    const out = texts.current[s.from];
+    const inn = texts.current[s.to];
+    if (out) gsap.set(out.querySelectorAll('[data-line]'), { yPercent: 0 });
+    if (out) gsap.set(out, { autoAlpha: 1 });
+    if (inn) gsap.set(inn, { autoAlpha: 0 });
+    busy.current = false;
+    restartProgress();
+  };
+
+  /** Settle: finish past halfway, otherwise slide back (spec easing). */
+  const release = () => {
+    window.clearTimeout(idle.current);
+    carry.current = null;
+    const s = scrub.current;
+    if (!s) return;
+    const done = s.p >= 0.5;
+    const left = done ? 1 - s.tl.progress() : s.tl.progress();
+    gsap.to(s.tl, {
+      progress: done ? 1 : 0,
+      duration: Math.max(0.25, (done ? EXPAND : SHIFT) * left),
+      ease,
+      overwrite: true,
+      onComplete: () => (done ? commitScrub() : cancelScrub()),
+    });
+  };
+
   const onCardsMove = (e: React.PointerEvent) => {
-    if (e.pointerType !== 'mouse') return;
-    const s = sweep.current;
-    const now = performance.now();
-    if (!s || now - s.t > 450) {
-      sweep.current = { x: e.clientX, t: now };
+    if (e.pointerType !== 'mouse' || reduce.current) return;
+    // Only over the strip of three cards (with a little margin).
+    const cards = order.slice(1, 1 + CARDS).map((i) => items.current[i]);
+    const first = cards[0];
+    const last = cards[cards.length - 1];
+    if (!first || !last || !root.current) return;
+    const a = first.getBoundingClientRect();
+    const b = last.getBoundingClientRect();
+    const s0 = scrub.current;
+    const inside = e.clientX >= a.left - 40 && e.clientX <= b.right + 40 && e.clientY >= a.top - 30 && e.clientY <= a.bottom + 30;
+    if (!inside && !s0) return;
+    if (!inside) return release();
+    const s = s0 ?? startScrub(e.clientX);
+    if (!s) return;
+    const raw = (s.x0 - e.clientX) / s.span;
+    if (raw >= 1) {
+      // A full slot travelled: lock this one in and carry the rest of the sweep into the next.
+      const x0 = s.x0 - s.span;
+      s.tl.progress(1);
+      commitScrub();
+      carry.current = x0;
       return;
     }
-    const dx = e.clientX - s.x;
-    if (Math.abs(dx) > 140) {
-      sweep.current = null;
-      if (dx < 0) next();
-      else prev();
-    }
+    s.p = Math.max(0, raw);
+    gsap.to(s.tl, {
+      progress: s.p,
+      duration: 0.35,
+      ease: 'power2.out',
+      overwrite: true,
+    });
+    window.clearTimeout(idle.current);
+    idle.current = window.setTimeout(release, 260);
   };
 
   /* Swipe (touch): sideways only, so vertical swipes still scroll the page. */
@@ -249,7 +377,7 @@ export default function CollectionShowcase({ slides, eyebrow, title, labels }: P
       <h2 className="visually-hidden">{title}</h2>
 
       {/* Photographs: one element per collection, moved between slots (full / card / parked). */}
-      <div className="cx__media" onPointerMove={onCardsMove}>
+      <div className="cx__media" onPointerMove={onCardsMove} onPointerLeave={release}>
         {slides.map((s, i) => {
           const slot = slotOf(i);
           const p = order.indexOf(i);
