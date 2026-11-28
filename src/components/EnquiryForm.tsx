@@ -133,7 +133,7 @@ function EnquiryFormInner({
   if (state === 'sent') {
     return (
       <div className="form-done" role="status" ref={formRef as unknown as React.RefObject<HTMLDivElement>}>
-        <span className="logo logo--emblem form-done__mark" aria-hidden="true" />
+        <span className="logo logo--emblem logo--grey form-done__mark" aria-hidden="true" />
         <h2 className="section-head__title">{dict.sent}</h2>
         {type === 'purchase' && <p className="prose">{dict.sentNext}</p>}
       </div>

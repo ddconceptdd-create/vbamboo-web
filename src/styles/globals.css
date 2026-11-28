@@ -6,8 +6,9 @@
   --moss: #2d3826;
   --moss-deep: #222b1d;
   --moss-soft: #3a4731;
-  --gold: #dcb573;
-  --gold-soft: #e8cfa0;
+  --gold: #f9ca7f; /* bamboo yellow, sampled from the supplied logo file (#F9CA7F) */
+  --gold-soft: #fbdcab;
+  --bamboo: var(--gold);
 
   /* surfaces */
   --ivory: #f6f1e7;
@@ -16,15 +17,16 @@
   --paper: #fbf8f2;
 
   /* text */
-  --ink: #2d3826; /* dark green body text on ivory (10.9:1) */
-  --ink-muted: #5c6652; /* secondary text on ivory (5.4:1) */
+  --ink: #23231f; /* charcoal-black text on ivory (14:1) */
+  --ink-muted: #5b5a53; /* secondary charcoal on ivory (6.2:1) */
+  --charcoal: #23231f;
   --bronze: #7a5c2c; /* accent text on ivory (5.5:1) */
   --on-moss: #f6f1e7;
   --on-moss-muted: #b9c0ae; /* 6.6:1 on moss */
 
-  --line: rgb(45 56 38 / 0.16);
-  --line-strong: rgb(45 56 38 / 0.32);
-  --line-on-moss: rgb(220 181 115 / 0.28);
+  --line: rgb(35 35 31 / 0.14);
+  --line-strong: rgb(35 35 31 / 0.3);
+  --line-on-moss: rgb(249 202 127 / 0.26);
 
   --focus: #b07d2b;
   --danger: #9b2c1f;
@@ -239,19 +241,24 @@ button {
 }
 
 /* ==========================================================================
-   Logo — rendered as a mask so it can take any brand colour
+   Logo — the supplied artwork (assets/brand, transparent WebP), never redrawn.
+   Bamboo-yellow version on moss/dark images, grey version on ivory.
+   The emblem-only variant is a straight crop of the same file.
    ========================================================================== */
 .logo {
   display: block;
-  background-color: currentColor;
-  -webkit-mask: url('/brand/vbamboo-logo-gold.svg') center / contain no-repeat;
-  mask: url('/brand/vbamboo-logo-gold.svg') center / contain no-repeat;
-  aspect-ratio: 1644 / 1624;
+  background: url('/brand/vbamboo-lockup-gold.webp') center / contain no-repeat;
+  aspect-ratio: 640 / 628;
+}
+.logo--grey {
+  background-image: url('/brand/vbamboo-lockup-grey.webp');
 }
 .logo--emblem {
-  -webkit-mask-image: url('/brand/vbamboo-emblem-gold.svg');
-  mask-image: url('/brand/vbamboo-emblem-gold.svg');
-  aspect-ratio: 1180 / 1306;
+  background-image: url('/brand/vbamboo-emblem-gold.webp');
+  aspect-ratio: 256 / 284;
+}
+.logo--emblem.logo--grey {
+  background-image: url('/brand/vbamboo-emblem-grey.webp');
 }
 
 /* ==========================================================================

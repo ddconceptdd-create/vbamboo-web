@@ -12,7 +12,7 @@
 # Finish / Fabric (không bắt buộc, phiên bản màu khung / vải bọc): mã | Tên | Name | #mã-màu hoặc file ảnh mẫu
 # VersionPhoto (không bắt buộc): mã-khung + mã-vải | file ảnh   (dùng * cho "bất kỳ")
 # Download (không bắt buộc): file | sheet / 2d / 3d | Nhãn | Label
-# Chép thư mục này thành "27-ten-san-pham", bỏ ảnh vào, điền thông tin, rồi thêm tên thư mục vào content/products/index.txt
+# Chép thư mục này thành "31-ten-san-pham", bỏ ảnh vào, điền thông tin, rồi thêm tên thư mục vào content/products/index.txt
 
 Name: 
 Collection: 
@@ -32,6 +32,10 @@ Swatch:
 PriceVND: 
 PriceUSD: 
 PriceApproved: no
+# Model: file .glb (mô hình 3D nén Draco, nên dưới 5 MB) để xoay 360°. ModelPoster: ảnh hiện trước khi tải mô hình. ModelIOS: file .usdz cho AR trên iPhone (không bắt buộc).
+Model: 
+ModelPoster: 
+ModelIOS: 
 ---
 [VI]
 Đoạn mô tả ngắn: điều làm thiết kế này khác biệt.

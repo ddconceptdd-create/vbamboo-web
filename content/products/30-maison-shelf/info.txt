@@ -1,0 +1,37 @@
+# SẢN PHẨM. Dòng bắt đầu bằng # là ghi chú, website bỏ qua. Hướng dẫn đầy đủ: HUONG-DAN.txt
+# Trường có 2 ngôn ngữ viết: Tiếng Việt | English  (chỉ 1 giá trị = dùng cho cả 2).
+# Collection: tên thư mục bộ sưu tập, bỏ số đầu (vd 01-sofa -> sofa).
+# Category: sofas, chairs, lounge-chairs, ottomans, tables, coffee-tables, lamps, shelving, umbrellas
+# Size: Rộng x Sâu x Cao (mm). Chỉ hiện trên web khi SizeApproved: yes.
+# Draft: yes = bản nháp, KHÔNG hiện trên website chính thức (chỉ hiện ở bản xem trước).
+# Photo: ảnh giới thiệu. PhotoStyle: cutout (ảnh tách nền / studio nền trắng) hoặc photo (ảnh không gian).
+# CardPhoto: ảnh không gian hiện khi rê chuột lên thẻ sản phẩm.
+# Images: all = lấy hết ảnh hero*, room*, studio*, detail* trong thư mục; hoặc liệt kê tên file theo thứ tự.
+# Drawing: file | Tên hình chiếu | View name | green/ivory (nền xanh cho nét trắng, nền ngà cho nét đen).
+# Swatch: file | Tên vật liệu | Material name
+# Nguồn: Canva 261126-VBAMBOO-CATOLOGUE 2026 (DAHcAcQh9Fo), trang 25, 45-48.
+# CẦN XÁC NHẬN: trang tổng quan ghi 1200 x 450 x 1700, nhưng các trang 45-47 đang mang tiêu đề, mô tả, bản vẽ và kích thước của EXPLORER CHAIR,
+# và ảnh cho thấy kệ rộng gần bằng hoặc hơn chiều cao -> đang ẩn kích thước. Catalogue chưa có mô tả riêng.
+
+Name: Maison Shelf
+Collection: slender-lines
+Category: shelving
+Type: Kệ | Shelf
+Featured: no
+Draft: no
+Size: 1200 x 450 x 1700
+SeatHeight: 
+SizeApproved: no
+Photo: silhouette.webp
+PhotoStyle: cutout
+CardPhoto: hero.jpg
+Images: all
+PriceVND: 
+PriceUSD: 
+PriceApproved: no
+---
+[VI]
+
+
+[EN]
+

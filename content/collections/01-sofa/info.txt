@@ -3,6 +3,8 @@
 # Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
 # Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
 
+# NamePosition: vị trí tên bộ sưu tập trên ảnh mở đầu (top-left, top-right, bottom-left, bottom-right, center). NameTone: light (chữ sáng) hoặc dark (chữ tối).
+# Hotspot: địa chỉ sản phẩm | x% | y%  (vị trí sản phẩm trong ảnh mở đầu, đo từ góc trên bên trái).
 Name: Sofa
 Tagline: Khung tre uốn vòng, đệm mềm ôm dáng ngồi | Arched bamboo frames, softly embracing cushions
 Draft: no
@@ -12,6 +14,12 @@ Setting: setting.jpg
 Texture: texture-1.jpg | Đai da và khóa kim loại | Leather strap and metal buckle
 Texture: texture-2.jpg | Mây đan chữ X trên nan tre | Rattan crossed over bamboo strips
 Texture: texture-3.jpg | Nhịp thanh tre và đai nâu | Bamboo slats and a brown strap
+NamePosition: bottom-left
+NameTone: light
+Hotspot: wave-sofa | 33 | 63
+# Opening: ảnh mở đầu trong catalogue, dùng cho phần bộ sưu tập ở trang chủ. OpeningFocus: vị trí chủ thể (x | y, %).
+Opening: opening.jpg
+OpeningFocus: 45 | 72
 ---
 [VI]
 Bốn mẫu sofa đơn của VBamboo cùng chia sẻ một ý tưởng: khung tre uốn cong làm nên đường viền, còn đệm, da và mây làm nên cảm giác ngồi. Từ BOSENTO chần ô đen đến WAVE nan tre và mây đan, mỗi thiết kế là một cách để tre bước vào phòng khách đương đại.

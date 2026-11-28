@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // One-off build scripts (brand tracing, catalogue import)
     "scripts/**",
+    // Third-party decoders copied from three.js
+    "public/draco/**",
   ]),
 ]);
 

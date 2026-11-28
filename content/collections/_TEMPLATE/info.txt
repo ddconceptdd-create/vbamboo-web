@@ -15,6 +15,14 @@ Setting: setting.jpg
 Texture: texture-1.jpg | Chú thích | Caption
 Texture: texture-2.jpg | Chú thích | Caption
 Texture: texture-3.jpg | Chú thích | Caption
+# NamePosition: vị trí tên bộ sưu tập trên ảnh mở đầu (top-left, top-right, bottom-left, bottom-right, center). NameTone: light (chữ sáng) hoặc dark (chữ tối).
+# Hotspot: địa chỉ sản phẩm | x% | y%  (vị trí sản phẩm trong ảnh mở đầu, đo từ góc trên bên trái).
+NamePosition: bottom-left
+NameTone: light
+# Hotspot: ten-san-pham | 50 | 60
+# Opening: ảnh mở đầu trong catalogue (vuông hoặc ngang), dùng cho phần bộ sưu tập ở trang chủ. OpeningFocus: x% y% vị trí chủ thể trong ảnh.
+# Opening: opening.jpg
+# OpeningFocus: 50 60
 ---
 [VI]
 Đoạn giới thiệu bộ sưu tập.

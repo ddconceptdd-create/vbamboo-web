@@ -33,6 +33,20 @@ import {
 export const IS_PRODUCTION = process.env.VERCEL_ENV === 'production' || process.env.SHOW_SAMPLES === '0';
 const visible = <T extends { sample?: boolean }>(e: T) => !(IS_PRODUCTION && e.sample);
 
+/**
+ * Unpublished? "Status: draft | approved | published" (written by /admin);
+ * older files use "Draft: yes | no". Only "published" reaches the live site.
+ */
+const isDraft = (doc: Doc) => {
+  const status = field(doc, 'Status').trim().toLowerCase();
+  return status ? status !== 'published' : yes(field(doc, 'Draft'));
+};
+
+/** "Order: 25" in info.txt, or the position in index.txt (× 10). */
+const orderOf = (doc: Doc, position: number) => num(field(doc, 'Order')) ?? position;
+const byOrder = <T extends { order: number }>(list: T[]) =>
+  list.map((e, i) => ({ e, i })).sort((a, b) => a.e.order - b.e.order || a.i - b.i).map(({ e }) => e);
+
 const EMPTY: Bi = { vi: '', en: '' };
 const bi = (vi: string, en: string): Bi => ({ vi, en });
 
@@ -70,6 +84,8 @@ export type Product = {
   downloads: { label: Bi; kind: 'sheet' | '2d' | '3d'; file: string | null }[];
   collectionImage: string | null;
   prices: { vnd: number | null; usd: number | null; approved: boolean };
+  /** glTF/GLB model for the 360° viewer ("Model: chair.glb"), optional USDZ for iPhone AR. */
+  model: { src: string; poster: string | null; ios: string | null } | null;
 };
 
 export type Collection = {
@@ -86,7 +102,18 @@ export type Collection = {
   textures: { image: string | null; caption: Bi }[];
   settingImage: string | null;
   settingAlt: Bi;
+  /** Where the name sits in the opening image's negative space, and its tone. */
+  namePosition: NamePosition;
+  nameTone: 'light' | 'dark';
+  /** Pieces visible in the opening image: product address + position in % of the photo. */
+  hotspots: { slug: string; x: number; y: number }[];
+  /** Home-page collections showcase: the catalogue's opening photograph and where its subject sits. */
+  opening: string | null;
+  openingFocus: string;
 };
+
+export type NamePosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+const POSITIONS: NamePosition[] = ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center'];
 
 export type Store = {
   slug: string;
@@ -164,10 +191,20 @@ function readProduct(folder: string, order: number): Product | null {
     return { finish, fabric, image: fileUrl(doc, file) };
   });
 
-  // Gallery: listed files in order, or "all" = every photo in the folder, architectural → studio → detail.
+  // Gallery: photos by role (Hero/Room/Studio/Detail, written by /admin), or the
+  // files listed in Images, or "all" = every photo in the folder, architectural → studio → detail.
+  const roles: { file: string; kind: GalleryKind }[] = [
+    ...fieldAll(doc, 'Hero').map((file) => ({ file, kind: 'architectural' as const })),
+    ...fieldAll(doc, 'Room').map((file) => ({ file, kind: 'architectural' as const })),
+    ...fieldAll(doc, 'Studio').map((file) => ({ file, kind: 'studio' as const })),
+    ...fieldAll(doc, 'Detail').map((file) => ({ file, kind: 'detail' as const })),
+  ];
+  const roleKind = new Map(roles.map((r) => [r.file, r.kind]));
   const imagesField = field(doc, 'Images');
   let files: string[];
-  if (!imagesField || /^all$/i.test(imagesField)) {
+  if (roles.length) {
+    files = roles.map((r) => r.file);
+  } else if (!imagesField || /^all$/i.test(imagesField)) {
     const used = new Set([photoFile, ...drawingsRaw.map((d) => d[0]), ...swatchesRaw.map((s) => s[0])].map((f) => f?.toLowerCase()));
     files = imagesIn(doc)
       .filter((f) => !used.has(f.toLowerCase()) && !RESERVED.test(f))
@@ -181,7 +218,10 @@ function readProduct(folder: string, order: number): Product | null {
     detail: bi(`Chi tiết ${name}`, `${name}, detail`),
   };
   const gallery = files
-    .map((f) => ({ image: fileUrl(doc, f), kind: kindOf(f), alt: altFor[kindOf(f)] }))
+    .map((f) => {
+      const kind = roleKind.get(f) ?? kindOf(f);
+      return { image: fileUrl(doc, f), kind, alt: altFor[kind] };
+    })
     .filter((g) => g.image);
 
   const [width = null, depth = null, height = null] = (field(doc, 'Size').match(/\d+/g) ?? []).map(Number);
@@ -198,10 +238,10 @@ function readProduct(folder: string, order: number): Product | null {
     slug: slugOf(doc),
     name,
     nameVi: nameBi.vi !== nameBi.en ? nameBi.vi : '',
-    sample: yes(field(doc, 'Draft')),
+    sample: isDraft(doc),
     category,
     collection: field(doc, 'Collection').toLowerCase().replace(/^\d+[-_ .]*/, '') || null,
-    order,
+    order: orderOf(doc, order),
     featured: yes(field(doc, 'Featured')),
     typeLabel: biField(doc, 'Type'),
     summary: bi(intro(doc.vi)[0] ?? '', intro(doc.en)[0] ?? ''),
@@ -230,13 +270,24 @@ function readProduct(folder: string, order: number): Product | null {
     }),
     collectionImage: fileUrl(doc, field(doc, 'CollectionPhoto')),
     prices: { vnd: num(field(doc, 'PriceVND')), usd: num(field(doc, 'PriceUSD')), approved: yes(field(doc, 'PriceApproved')) },
+    model: (() => {
+      const src = fileUrl(doc, field(doc, 'Model'));
+      if (!src) return null;
+      if (!/\.(glb|gltf)$/i.test(src)) {
+        warn(`content/${doc.dir}: Model must be a .glb or .gltf file`);
+        return null;
+      }
+      return { src, poster: fileUrl(doc, field(doc, 'ModelPoster')) ?? heroImage, ios: fileUrl(doc, field(doc, 'ModelIOS')) };
+    })(),
   };
 }
 
 export const getProducts = cache(async (): Promise<Product[]> => {
-  const all = listFolders('products')
-    .map((f, i) => readProduct(f, (i + 1) * 10))
-    .filter((p): p is Product => Boolean(p));
+  const all = byOrder(
+    listFolders('products')
+      .map((f, i) => readProduct(f, (i + 1) * 10))
+      .filter((p): p is Product => Boolean(p)),
+  );
   const seen = new Set<string>();
   return all.filter(visible).filter((p) => {
     if (seen.has(p.slug)) {
@@ -253,8 +304,14 @@ export const getProduct = cache(async (slug: string) => (await getProducts()).fi
 /* --------------------------------------------------------------------------
    Collections
    -------------------------------------------------------------------------- */
+/** "40 70" or "40% 70%" → "40% 70%" (CSS object-position); anything else → centre. */
+function focusOf(v: string) {
+  const n = v.match(/\d+(?:[.,]\d+)?/g)?.slice(0, 2).map((x) => Math.min(100, parseFloat(x.replace(',', '.'))));
+  return n && n.length === 2 ? `${n[0]}% ${n[1]}%` : '50% 50%';
+}
+
 export const getCollections = cache(async (): Promise<Collection[]> => {
-  return listFolders('collections')
+  const list = listFolders('collections')
     .map((folder, i): Collection | null => {
       const doc = readDoc(`collections/${folder}`);
       if (!doc) return null;
@@ -263,8 +320,8 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
       return {
         slug: slugOf(doc),
         name,
-        sample: yes(field(doc, 'Draft')),
-        order: i,
+        sample: isDraft(doc),
+        order: orderOf(doc, (i + 1) * 10),
         tagline: biField(doc, 'Tagline'),
         intro: both(doc, (b) => b.paragraphs.join('\n\n')),
         story: both(doc, (b) => sectionText(sectionOf(b, quote))),
@@ -277,10 +334,19 @@ export const getCollections = cache(async (): Promise<Collection[]> => {
         }),
         settingImage: fileUrl(doc, field(doc, 'Setting')),
         settingAlt: bi(`Các thiết kế ${name} trong không gian`, `${name} pieces in their setting`),
+        namePosition: POSITIONS.find((p) => p === field(doc, 'NamePosition').trim().toLowerCase()) ?? 'bottom-left',
+        nameTone: /^(dark|tối|toi)/i.test(field(doc, 'NameTone')) ? 'dark' : 'light',
+        hotspots: fieldAll(doc, 'Hotspot')
+          .map(cells)
+          .map(([slug = '', x = '', y = '']) => ({ slug: slug.toLowerCase().replace(/^\d+[-_ .]*/, ''), x: parseFloat(x.replace(",", ".")), y: parseFloat(y.replace(",", ".")) }))
+          .filter((h) => h.slug && h.x >= 0 && h.x <= 100 && h.y >= 0 && h.y <= 100),
+        opening: fileUrl(doc, field(doc, 'Opening')),
+        openingFocus: focusOf(field(doc, 'OpeningFocus')),
       };
     })
     .filter((c): c is Collection => Boolean(c))
     .filter(visible);
+  return byOrder(list);
 });
 
 export const getCollection = cache(async (slug: string) => (await getCollections()).find((c) => c.slug === slug) ?? null);
@@ -289,7 +355,7 @@ export const getCollection = cache(async (slug: string) => (await getCollections
    Stores
    -------------------------------------------------------------------------- */
 export const getStores = cache(async (): Promise<Store[]> => {
-  return listFolders('stores')
+  const list = listFolders('stores')
     .map((folder, i): Store | null => {
       const doc = readDoc(`stores/${folder}`);
       if (!doc) return null;
@@ -297,9 +363,9 @@ export const getStores = cache(async (): Promise<Store[]> => {
       return {
         slug: slugOf(doc),
         name: field(doc, 'Name') || folder,
-        sample: yes(field(doc, 'Draft')),
+        sample: isDraft(doc),
         kind: /^dealer|đại lý/i.test(field(doc, 'Kind')) ? 'dealer' : 'showroom',
-        order: i,
+        order: orderOf(doc, (i + 1) * 10),
         city: biField(doc, 'City'),
         country: biField(doc, 'Country'),
         address: lines(biField(doc, 'Address')),
@@ -314,11 +380,25 @@ export const getStores = cache(async (): Promise<Store[]> => {
     })
     .filter((s): s is Store => Boolean(s))
     .filter(visible);
+  return byOrder(list);
 });
 
 /* --------------------------------------------------------------------------
    Pages
    -------------------------------------------------------------------------- */
+/** "Video: https://youtu.be/ID" (or a YouTube watch/embed link), or a file in the folder (hero.mp4). */
+function videoOf(doc: Doc, value: string): { kind: 'youtube'; id: string } | { kind: 'file'; src: string } | null {
+  const v = value.trim();
+  if (!v) return null;
+  const yt = v.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/i);
+  if (yt) return { kind: 'youtube', id: yt[1] };
+  if (/^[\w-]{11}$/.test(v) && !/\./.test(v)) return { kind: 'youtube', id: v };
+  const src = fileUrl(doc, v);
+  if (src && /\.(mp4|webm)$/i.test(src)) return { kind: 'file', src };
+  warn(`content/${doc.dir}: Video "${v}" is not a YouTube link or an .mp4/.webm file in the folder`);
+  return null;
+}
+
 export const getHome = cache(async () => {
   const doc = readDoc('home');
   if (!doc) return null;
@@ -328,6 +408,8 @@ export const getHome = cache(async () => {
     heroImage: fileUrl(doc, field(doc, 'Photo')),
     heroImageMobile: fileUrl(doc, field(doc, 'PhotoMobile')),
     heroAlt: biField(doc, 'PhotoAlt'),
+    video: videoOf(doc, field(doc, 'Video')),
+    heroTitle: biField(doc, 'HeroTitle'),
     introTitle: biField(doc, 'IntroTitle'),
     introText: text(['giới thiệu', 'introduction', 'intro']),
     curatedTitle: biField(doc, 'CuratedTitle'),

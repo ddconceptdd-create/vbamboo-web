@@ -32,11 +32,18 @@ All content lives in **`content/`**, organised like the DDConcept v11 site: one 
 | --- | --- |
 | Pages | `src/app/[locale]/…` — home, about, products, products/[slug], collections, collections/[slug], stores, contact |
 | Interface text (both languages) | `src/i18n/index.ts` |
-| Brand assets (traced from the cover) | `public/brand/` — logo SVGs, woven texture |
+| Brand assets | `public/brand/` — the supplied logo files (bamboo-yellow and grey, transparent WebP; the emblem-only files are straight crops), woven texture |
 | Design tokens & styles | `src/styles/globals.css`, `src/styles/site.css` |
 | Enquiry endpoint | `src/app/api/enquiry/route.ts` |
 
 ### Key behaviours
+
+- **Home film**: `Video:` in `content/home/info.txt` (YouTube link or an .mp4/.webm in the folder) plays muted over the poster photo, with a pause button. It never autoplays under "reduce motion" or Save-Data, and pauses when scrolled away (`HeroVideo.tsx`).
+- **Collection opening frame**: the photo opens out as you scroll (`ScrollMotion.tsx`, `data-expand`), the name sits where `NamePosition`/`NameTone` say, and `Hotspot: product | x | y` places clickable markers on the pieces (`CollectionHero.tsx`).
+- **Home collections showcase** (`CollectionShowcase.tsx`, GSAP Timeline + Flip): the active collection's catalogue opening photo (`Opening`, `OpeningFocus`) fills the screen, three vertical preview cards sit on the right; every 7 s (or on click, arrow keys, a horizontal sweep or swipe) the next card expands into the full hero while the others shift left, titles rise through a vertical mask, with progress bar, counter and pause. Reduced motion: no autoplay, instant changes.
+- **Products page**: studio shot by default, room photo on hover; touch screens get a Studio / Room switch per card and a swipe, plus a page-wide switch.
+- **Product page** (Norm/Tribù): opening room shot → sticky product bar (form, materials, versions, size & drawings, 3D, enquire) → studio silhouette with design features → wide views interleaved with close-ups → material tiles. Every image opens the zoom viewer (`ZoomLightbox.tsx`, tap to zoom 2.5×, drag to pan).
+- **3D**: `Model: file.glb` (+ optional `ModelPoster`, `ModelIOS` .usdz) shows a `<model-viewer>` that loads only when the visitor asks; Draco compression is supported (decoder self-hosted in public/draco). Preview builds show the empty slot.
 
 - **Language switch keeps place**: `/vi/products/sands-sofa?finish=smoked&fabric=clay` ↔ `/en/products/sands-sofa?finish=smoked&fabric=clay`.
 - **Product versions live in the URL** (`?finish=&fabric=`), so a version can be shared, and "Enquire to purchase" carries it into the contact form.

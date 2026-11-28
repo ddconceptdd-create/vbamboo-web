@@ -36,7 +36,7 @@ export default function Media({ src, alt, sizes, ratio, priority, className = ''
         />
       ) : (
         <div className="media__missing" role="img" aria-label={alt}>
-          <span className="logo logo--emblem" aria-hidden="true" />
+          <span className="logo logo--emblem logo--grey" aria-hidden="true" />
         </div>
       )}
     </div>

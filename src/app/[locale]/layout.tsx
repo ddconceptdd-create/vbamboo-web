@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import '@fontsource/be-vietnam-pro/300.css';
 import '@fontsource/be-vietnam-pro/400.css';
 import '@fontsource/be-vietnam-pro/500.css';
+import '@fontsource/cormorant-garamond/300.css';
 import '@/styles/globals.css';
 import '@/styles/site.css';
 import { LOCALES, getDict, isLocale, type Locale } from '@/i18n';
@@ -10,6 +11,8 @@ import { getCategoriesInUse, getSearchIndex, getSite, IS_PRODUCTION } from '@/li
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RevealObserver from '@/components/RevealObserver';
+import ScrollMotion from '@/components/ScrollMotion';
+import Splash from '@/components/Splash';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => LOCALES.map((locale) => ({ locale }));
@@ -53,10 +56,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        {/* Marks the page as JS-enabled before paint so entrance effects never flash. */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* Marks the page as JS-enabled before paint, and shows the opening logo screen once per visit. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "var d=document.documentElement;d.classList.add('js');try{if(!sessionStorage.getItem('vb-splash'))d.setAttribute('data-splash','')}catch(e){d.setAttribute('data-splash','')}",
+          }}
+        />
       </head>
       <body>
+        <Splash />
         <a className="skip-link" href="#main">
           {dict.nav.skip}
         </a>
@@ -64,6 +73,7 @@ export default async function LocaleLayout({
         <main id="main">{children}</main>
         <Footer locale={locale} site={site} categories={[...categories]} />
         <RevealObserver />
+        <ScrollMotion />
       </body>
     </html>
   );

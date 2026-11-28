@@ -3,6 +3,8 @@
 # Setting: ảnh các sản phẩm trong không gian (ngang). Texture: file | chú thích | caption (nên có 3 ảnh cận chất liệu).
 # Sau dấu ---: [VI] đoạn giới thiệu, ## Trích dẫn; [EN] introduction, ## Quote.
 
+# NamePosition: vị trí tên bộ sưu tập trên ảnh mở đầu (top-left, top-right, bottom-left, bottom-right, center). NameTone: light (chữ sáng) hoặc dark (chữ tối).
+# Hotspot: địa chỉ sản phẩm | x% | y%  (vị trí sản phẩm trong ảnh mở đầu, đo từ góc trên bên trái).
 Name: The Nobility
 Tagline: Tre, da và đồng trong vẻ lịch lãm trầm tĩnh | Bamboo, leather and brass, quietly refined
 Draft: no
@@ -12,6 +14,12 @@ Setting: setting.jpg
 Texture: texture-1.jpg | Da cognac và khóa đồng | Cognac leather and brass buckles
 Texture: texture-2.jpg | Da nâu trên khung tre sẫm | Brown leather on a dark bamboo frame
 Texture: texture-3.jpg | Đường may trên da đen | Stitching on black leather
+NamePosition: top-right
+NameTone: dark
+Hotspot: gentleman-chair | 39 | 79
+# Opening: ảnh mở đầu trong catalogue, dùng cho phần bộ sưu tập ở trang chủ. OpeningFocus: vị trí chủ thể (x | y, %).
+Opening: opening.jpg
+OpeningFocus: 42 | 70
 ---
 [VI]
 The Nobility tập hợp những chiếc ghế tựa mang tinh thần cổ điển: chân tre giao chéo, da nâu cognac và da đen, chi tiết đồng thau ánh vàng trầm. Một bộ sưu tập dành cho phòng đọc, sảnh tiếp khách và những góc nghỉ có chiều sâu.

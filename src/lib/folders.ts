@@ -105,16 +105,21 @@ export function readDoc(dir: string): Doc | null {
   return { dir, folder: path.basename(dir), fields, vi: parseBlock(parts.vi), en: parseBlock(parts.en) };
 }
 
-/** Folder names in display order (index.txt), or all folders when there is no index. */
+/**
+ * Folder names in display order: the folders listed in index.txt first, then
+ * any other folder with an info.txt (for example one added in /admin), by name.
+ * An "Order:" field in info.txt can move an item; see content.ts.
+ */
 export function listFolders(section: string): string[] {
   const base = path.join(CONTENT_DIR, section);
   if (!fs.existsSync(base)) return [];
   const existing = fs
     .readdirSync(base, { withFileTypes: true })
     .filter((d) => d.isDirectory() && !d.name.startsWith('_') && !d.name.startsWith('.'))
-    .map((d) => d.name);
+    .map((d) => d.name)
+    .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
   const index = path.join(base, 'index.txt');
-  if (!fs.existsSync(index)) return existing.sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
+  if (!fs.existsSync(index)) return existing;
   const names = fs
     .readFileSync(index, 'utf8')
     .replace(/^﻿/, '')
@@ -132,7 +137,9 @@ export function listFolders(section: string): string[] {
       }
       return true;
     });
-  return [...new Set(names)];
+  const listed = new Set(names);
+  const unlisted = existing.filter((f) => !listed.has(f) && fs.existsSync(path.join(base, f, 'info.txt')));
+  return [...listed, ...unlisted];
 }
 
 /** "01-bosento-sofa" → "bosento-sofa" (or the Slug: field). */
