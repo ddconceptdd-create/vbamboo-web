@@ -3561,3 +3561,48 @@ main:has(> .page-enter > .hero--home) {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   Opening screen (Splash.tsx): woven green + gold logo, once per visit
+   ========================================================================== */
+.splash {
+  display: none;
+}
+html[data-splash] .splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background-color: var(--moss);
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+html[data-splash] .splash[data-leaving] {
+  opacity: 0;
+  pointer-events: none;
+}
+.splash__logo {
+  display: block;
+  height: clamp(96px, 15vh, 156px);
+  aspect-ratio: 640 / 628;
+  background: url('/brand/vbamboo-lockup-gold.webp') center / contain no-repeat;
+  animation: splash-logo 900ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
+}
+@keyframes splash-logo {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+/* The landing title waits for the opening screen to clear. */
+html[data-splash] .hero__title-2026 {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .splash__logo {
+    animation: none;
+  }
+  html[data-splash] .splash {
+    transition: none;
+  }
+}
