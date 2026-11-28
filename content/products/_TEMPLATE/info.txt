@@ -12,7 +12,7 @@
 # Finish / Fabric (không bắt buộc, phiên bản màu khung / vải bọc): mã | Tên | Name | #mã-màu hoặc file ảnh mẫu
 # VersionPhoto (không bắt buộc): mã-khung + mã-vải | file ảnh   (dùng * cho "bất kỳ")
 # Download (không bắt buộc): file | sheet / 2d / 3d | Nhãn | Label
-# Chép thư mục này thành "27-ten-san-pham", bỏ ảnh vào, điền thông tin, rồi thêm tên thư mục vào content/products/index.txt
+# Chép thư mục này thành "31-ten-san-pham", bỏ ảnh vào, điền thông tin, rồi thêm tên thư mục vào content/products/index.txt
 
 Name: 
 Collection: 

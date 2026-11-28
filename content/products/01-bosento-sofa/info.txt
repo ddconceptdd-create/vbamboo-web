@@ -24,6 +24,7 @@ PhotoStyle: cutout
 CardPhoto: hero.jpg
 Images: all
 Drawing: drawing-01.webp | Mặt đứng chính | Front elevation | ivory
+Drawing: drawing-02.webp | Mặt bằng (kích thước) | Plan view (dimensions) | ivory
 Swatch: swatch-leather-brown.jpg | Đai da nâu | Brown leather strap
 PriceVND: 
 PriceUSD: 
