@@ -3214,3 +3214,23 @@ blockquote.textures__story::before {
 .hero__title-2026 {
   font-variant-numeric: lining-nums;
 }
+
+/* Home: the film fills the whole screen; the ivory header slides in once the
+   visitor scrolls (or reaches it with the keyboard), and is always there on other pages. */
+.site-header {
+  transition:
+    transform 450ms var(--ease-out),
+    opacity 350ms var(--ease),
+    background-color 500ms var(--ease);
+}
+.site-header[data-hidden]:not(:has(:focus-visible)) {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+main:has(> .page-enter > .hero--home) {
+  padding-top: 0;
+}
+.hero--home {
+  min-height: 100svh;
+}

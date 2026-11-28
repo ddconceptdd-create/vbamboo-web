@@ -58,6 +58,9 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
   }, []);
 
   const onLight = !menuOpen;
+  // Home opens on the full-screen film: the header waits until the visitor scrolls.
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
+  const hidden = isHome && !scrolled && !menuOpen;
   const items = [
     { href: `/${locale}/about`, label: dict.about },
     { href: `/${locale}/products`, label: dict.products },
@@ -72,10 +75,23 @@ export default function Header({ locale, dict, searchDict, index }: Props) {
       <header
         className="site-header"
         data-scrolled={scrolled || undefined}
+        data-hidden={hidden || undefined}
         data-menu={menuOpen || undefined}
       >
         <div className="site-header__inner container">
-          <Link href={`/${locale}`} className="site-header__brand" aria-label={`VBamboo · ${dict.home}`}>
+          <Link
+            href={`/${locale}`}
+            className="site-header__brand"
+            aria-label={`VBamboo · ${dict.home}`}
+            onClick={(e) => {
+              // From anywhere, the logo returns to the opening film; on the home page itself, scroll back up.
+              if (isHome) {
+                e.preventDefault();
+                setMenuOpen(false);
+                window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+              }
+            }}
+          >
             {/* Supplied artwork: bamboo-yellow over images and the moss menu, grey on ivory. */}
             <span className={`logo site-header__logo${onLight ? ' logo--grey' : ''}`} aria-hidden="true" />
           </Link>
