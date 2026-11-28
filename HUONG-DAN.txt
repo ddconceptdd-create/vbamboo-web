@@ -35,7 +35,7 @@ QUY TẮC CHUNG (giống website DDConcept v11)
   Khi khách chọn phiên bản (màu khung, vải), link giữ phiên bản đó: ...?finish=natural&fabric=sand-linen
 
 THÊM SẢN PHẨM MỚI
-  1. Chép content/products/_TEMPLATE thành content/products/27-ten-san-pham
+  1. Chép content/products/_TEMPLATE thành content/products/31-ten-san-pham
   2. Bỏ ảnh vào thư mục đó. Website nhận loại ảnh theo TÊN FILE:
        silhouette.jpg / .png / .webp   ảnh giới thiệu: sản phẩm tách nền hoặc chụp studio nền trắng
        hero.jpg, room-01.jpg, ...      ảnh sản phẩm trong không gian kiến trúc
@@ -44,7 +44,7 @@ THÊM SẢN PHẨM MỚI
        drawing-01.png, ...             bản vẽ kỹ thuật (mặt đứng, mặt bên, mặt bằng)
        swatch-....jpg                  ảnh mẫu vật liệu (vuông)
   3. Mở info.txt, điền các trường (xem ghi chú # ở đầu file) và phần mô tả [VI] / [EN].
-  4. Thêm tên thư mục "27-ten-san-pham" vào 1 dòng mới trong content/products/index.txt
+  4. Thêm tên thư mục "31-ten-san-pham" vào 1 dòng mới trong content/products/index.txt
 
   Các trường của sản phẩm:
     Name          tên sản phẩm (vd Bosento Sofa). Muốn tên tiếng Việt khác: Ghế Bosento | Bosento Sofa

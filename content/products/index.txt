@@ -6,6 +6,10 @@
 05-tabouret-table
 06-tabouret-chair
 07-nan-chair
+27-ponti-table
+28-ponti-chair-a
+29-ponti-chair-b
+30-maison-shelf
 08-gentleman-chair
 09-voyager
 10-captain-chair
